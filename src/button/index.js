@@ -1,6 +1,6 @@
 /**
  * 组件：button
- * 版本：v0.0.1
+ * 版本：v0.0.2
  * 维护人：Meeken
  */
 const joyComponent = require("../_common/joy-component")
