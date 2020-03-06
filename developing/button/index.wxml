@@ -1,4 +1,4 @@
-<button class="joy-button {{ _class }}" style="{{ _style }}" disabled="{{ disabled }}" bindtap="onTap">
+<button class="joy-button {{ _class }}" style="{{ _style }}" disabled="{{ disabled }}" open-type="{{ openType }}" bindgetuserinfo="bindGetUserInfo" bindcontact="bindContact" bindgetphonenumber="bindGetPhoneNumber" binderror="bindError" bindlaunchapp="bindLaunchApp" bindopensetting="bindOpenSetting" bindtap="onTap">
     <view class="content">
         <slot></slot>
     </view>
