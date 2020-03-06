@@ -12,5 +12,7 @@ page, view {
   width: 100vw;
   height: 100vh;
   background-color: var(--wrapper-color, #fff);
+  font-size: var(--font-size-normal, 24rpx);
   color: var(--font-color);
+  line-height: 1.5;
 }

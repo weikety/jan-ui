@@ -1,6 +1,6 @@
 .joy-button {
-  line-height: 88rpx;
-  height: 88rpx;
+  line-height: 80rpx;
+  height: 80rpx;
   font-size: var(--font-size-normal, 28rpx);
   display: inline-block;
   padding: 0 66rpx;
@@ -23,9 +23,9 @@ button.joy-button:not([size="mini"]) {
 
 .joy-button.joy-button-size-large {
   min-width: 100%;
-  height: 100rpx;
+  height: 90rpx;
   font-size: var(--font-size-large, 32rpx);
-  line-height: 100rpx;
+  line-height: 90rpx;
 }
 
 .joy-button.joy-button-size-small {
@@ -93,8 +93,7 @@ button.joy-button:not([size="mini"]) {
   color: var(--font-color, #fff);
 }
 
-.joy-button.joy-button-type-ghost:active,
-.joy-button.joy-button-line:active {
+.joy-button.joy-button-type-ghost:active, .joy-button.joy-button-line:active {
   opacity: 0.8;
 }
 
