@@ -1,10 +1,12 @@
 {
-  "pages": ["pages/index/index"],
+  "pages": [
+    "pages/index/index"
+  ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#212121",
     "navigationBarTitleText": "JoyUI",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

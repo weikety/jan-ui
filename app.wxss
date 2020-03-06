@@ -1,5 +1,16 @@
+@import "./developing/main.wxss";
+
+/* @import "./src/main.wxss"; */
+
+page, view {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
-  box-sizing: border-box;
+  background-color: var(--bg-color, #fff);
+  color: var(--font-color);
 }

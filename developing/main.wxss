@@ -1,0 +1,17 @@
+/**
+ * 全局样式表，在这里定制主题 
+ * 如可以添加一个class：page .dark，并将变量全部拷贝进去
+ * 并在页面头部添加 class="dark"，即可实现换肤
+ */
+
+page {
+  --font-color: #212121;
+  --primary-color: #212121;
+  --bg-color: #fafafa;
+}
+
+page .dark {
+  --font-color: #fafafa;
+  --primary-color: #fafafa;
+  --bg-color: #212121;
+}

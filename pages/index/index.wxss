@@ -1,0 +1,3 @@
+.tips {
+  color: var(--primary-color);
+}

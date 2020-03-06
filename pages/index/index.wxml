@@ -1,3 +1,5 @@
-<scroll-view scroll-y>
-    <view>这里用来调试组件</view>
-</scroll-view>
+<view class="container">
+  <scroll-view scroll-y>
+    <view class="tips">在这里调试组件</view>
+  </scroll-view>
+</view>
