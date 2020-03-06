@@ -10,6 +10,7 @@
   border-radius: 6rpx;
   overflow: hidden;
   font-weight: 500;
+  box-sizing: border-box;
 }
 
 button.joy-button:not([size="mini"]) {
@@ -138,6 +139,21 @@ button.joy-button:not([size="mini"]) {
   animation-fill-mode: forwards;
 }
 
+.joy-button.joy-button-round.button-hover::before,
+.joy-button.joy-button-round:active::before {
+  background: rgba(255, 255, 255, 0);
+  content: "";
+  border-radius: 44rpx;
+  width: 100%;
+  padding-top: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  animation: ripple-in-round 0.4s;
+  animation-fill-mode: forwards;
+  z-index: 0;
+}
+
 @keyframes ripple-in {
   from {
     transform: translate(-50%, -50%) scale(0);
@@ -147,6 +163,16 @@ button.joy-button:not([size="mini"]) {
   to {
     transform: translate(-50%, -50%) scale(1);
     background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+@keyframes ripple-in-round {
+  from {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  to {
+    background: rgba(255, 255, 255, 0.25);
   }
 }
 
