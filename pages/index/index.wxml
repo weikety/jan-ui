@@ -1,5 +1,6 @@
 <view class="container">
   <scroll-view scroll-y>
     <view class="tips">在这里调试组件</view>
+    <joy-button>aaa</joy-button>
   </scroll-view>
 </view>
