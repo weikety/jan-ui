@@ -1,6 +1,6 @@
 <button class="joy-button {{ _class }}" style="{{ _style }}" disabled="{{ disabled }}" open-type="{{ openType }}" bindgetuserinfo="bindGetUserInfo" bindcontact="bindContact" bindgetphonenumber="bindGetPhoneNumber" binderror="bindError" bindlaunchapp="bindLaunchApp" bindopensetting="bindOpenSetting" lang="{{ lang }}" open-type="{{ openType }}" business-id="{{ businessId }}" session-from="{{ sessionFrom }}" send-message-title="{{ sendMessageTitle }}" send-message-path="{{ sendMessagePath }}" send-message-img="{{ sendMessageImg }}" show-message-card="{{ showMessageCard }}" app-parameter="{{ appParameter }}" aria-label="{{ ariaLabel }}" bindtap="onTap">
     <view class="content">
-        <joy-icon name="{{ icon }}" />
+        <joy-icon wx:if="{{ icon }}" name="{{ icon }}" />
         <slot></slot>
     </view>
 </button>
