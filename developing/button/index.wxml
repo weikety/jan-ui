@@ -1,6 +1,5 @@
-<button class="mew-button {{color}}" bindtap="bindTest">
-  <text>
-        {{mew}}
+<button class="joy-button {{color}}" bindtap="bindTest">
+    <text>
         <slot></slot>
     </text>
 </button>
