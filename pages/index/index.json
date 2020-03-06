@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "joy-button": "../../developing/button"
+    "joy-button": "../../developing/button",
+    "joy-icon": "../../developing/icon"
   }
 }

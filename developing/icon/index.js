@@ -11,5 +11,11 @@ Component({
       type: String,
       value: "joy-icon"
     }
+  },
+
+  methods: {
+    onTap(e) {
+      this.triggerEvent("click", e)
+    }
   }
 })
