@@ -1,12 +1,25 @@
-// developing/icon/index.js
+/**
+ * 组件：icon
+ * 版本：v0.0.1
+ * 维护人：SU
+ */
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    name: String,
-    size: null,
-    color: String,
+    name: {
+      type: String,
+      value: ""
+    },
+    size: {
+      type: null,
+      value: null
+    },
+    color: {
+      type: String,
+      value: ""
+    },
     prefix: {
       type: String,
       value: "joy-icon"
