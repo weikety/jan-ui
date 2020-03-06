@@ -6,9 +6,14 @@ Page({
   data: {
     color: '#212121'
   },
+
   onClick(e) {
     this.setData({
       color: this.data.color == '#212121' ? '#515151' : '#212121'
     })
+  },
+
+  onLongtap() {
+    console.log(`我被长按了`)
   }
 })

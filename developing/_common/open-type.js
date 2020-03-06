@@ -4,7 +4,20 @@ const mapOpenType = function() {
       openType: {
         type: String,
         value: ""
-      }
+      },
+      id: String,
+      lang: {
+        type: String,
+        value: "en"
+      },
+      businessId: Number,
+      sessionFrom: String,
+      sendMessageTitle: String,
+      sendMessagePath: String,
+      sendMessageImg: String,
+      showMessageCard: Boolean,
+      appParameter: String,
+      ariaLabel: String
     },
     methods: {
       bindGetUserInfo(event) {

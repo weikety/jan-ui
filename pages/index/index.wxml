@@ -4,7 +4,7 @@
   <joy-button type="info" size="normal" bind:click="onClick" style="margin-right: 16px;">普通按钮</joy-button>
   <joy-button type="primary" size="large" icon="user" bind:click="onClick">大号按钮</joy-button>
 
-  <joy-button type="primary" size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)" bind:click="onClick">自定义颜色</joy-button>
+  <joy-button type="primary" size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)" bind:click="onClick" bindlongpress="onLongtap">自定义颜色</joy-button>
 
   <joy-button type="info" size="normal" bind:click="onClick" round style="margin-right: 16px;">圆形按钮</joy-button>
 
@@ -17,7 +17,10 @@
   <joy-button round type="primary" disabled>禁用状态</joy-button>
 
   <!-- icon test -->
-  <view><joy-icon name="user" />普通图标</view>
-  <view><joy-icon name="user" size="20" />自定义大小的图标</view>
-  <view><joy-icon name="user" color="red" />自定义颜色的图标</view>
+  <view>
+    <joy-icon name="user" />普通图标</view>
+  <view>
+    <joy-icon name="user" size="20" />自定义大小的图标</view>
+  <view>
+    <joy-icon name="user" color="red" />自定义颜色的图标</view>
 </view>
