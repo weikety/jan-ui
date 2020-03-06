@@ -5,14 +5,32 @@
  */
 
 page {
-  --primary-color: #212121;
-  --bg-color: #fafafa;
+  --font-color: #212121;
+  --default-color: #fafafa;
+  --primary-color: #07c160;
+  --info-color: #1989fa;
+  --danger-color: #db1129;
+  --warning-color: #ff976a;
+  --disabled-color: #c6c6c6;
+  --bg-color: #fff;
+  --wrapper-color: #fafafa;
+  --ripple-color: rgba(0, 0, 0, 0.25);
 }
 
 page .dark {
-  --primary-color: #fafafa;
+  --font-color: #fafafa;
+  --default-color: #fafafa;
+  --primary-color: #07c160;
+  --info-color: #1989fa;
+  --danger-color: #ee0a24;
+  --warning-color: #ff976a;
+  --disabled-color: #c6c6c6;
   --bg-color: #212121;
+  --wrapper-color: #212121;
+  --ripple-color: rgba(255, 255, 255, 0.25);
 }
+
+/* —————— 动画 —————— */
 
 @keyframes ripple-in {
   from {

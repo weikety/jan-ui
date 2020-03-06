@@ -12,7 +12,9 @@ page {
   --danger-color: #db1129;
   --warning-color: #ff976a;
   --disabled-color: #c6c6c6;
-  --bg-color: #fafafa;
+  --bg-color: #fff;
+  --wrapper-color: #fafafa;
+  --ripple-color: rgba(0, 0, 0, 0.25);
 }
 
 page .dark {
@@ -24,6 +26,8 @@ page .dark {
   --warning-color: #ff976a;
   --disabled-color: #c6c6c6;
   --bg-color: #212121;
+  --wrapper-color: #212121;
+  --ripple-color: rgba(255, 255, 255, 0.25);
 }
 
 /* —————— 动画 —————— */

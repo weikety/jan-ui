@@ -8,5 +8,5 @@
 }
 
 button {
-  margin-bottom: 22px;
+  margin: 11px 22px;
 }

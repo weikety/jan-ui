@@ -11,6 +11,6 @@ page, view {
 .container {
   width: 100vw;
   height: 100vh;
-  background-color: var(--bg-color, #fff);
+  background-color: var(--wrapper-color, #fff);
   color: var(--font-color);
 }

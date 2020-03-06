@@ -1,0 +1,2 @@
+<wxs src="./add-unit.wxs" module="module" />
+<text class="{{ prefix }} {{ prefix + '-' + name }}" style="color: {{ color }}; font-size: {{ module.addUnit(size) }};" bindtap="onTap"></text>
