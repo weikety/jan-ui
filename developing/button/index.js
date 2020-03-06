@@ -34,6 +34,10 @@ let options = joyComponent({
     disabled: {
       type: Boolean,
       value: false
+    },
+    icon: {
+      type: String,
+      value: ""
     }
   },
 

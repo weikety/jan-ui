@@ -1,8 +1,8 @@
 <view class="container dark">
-  <joy-button type="danger" size="mini" bind:click="onClick" style="margin-right: 16px;">迷你按钮</joy-button>
+  <joy-button type="danger" size="mini"  icon="user" bind:click="onClick" style="margin-right: 16px;">迷你按钮</joy-button>
   <joy-button type="warning" size="small" bind:click="onClick" style="margin-right: 16px;">小型按钮</joy-button>
   <joy-button type="info" size="normal" bind:click="onClick" style="margin-right: 16px;">普通按钮</joy-button>
-  <joy-button type="primary" size="large" bind:click="onClick">大号按钮</joy-button>
+  <joy-button type="primary" size="large" icon="user" bind:click="onClick">大号按钮</joy-button>
 
   <joy-button type="primary" size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)" bind:click="onClick" bindlongpress="onLongtap">自定义颜色</joy-button>
 
@@ -10,7 +10,7 @@
 
   <joy-button type="ghost" bind:click="onClick">幽灵按钮</joy-button>
 
-  <joy-button line type="warning" style="margin-right: 16px;">线框风格</joy-button>
+  <joy-button line type="warning" icon="user" style="margin-right: 16px;">线框风格</joy-button>
 
   <joy-button line color="#03f4d9">自定义线框颜色</joy-button>
 
