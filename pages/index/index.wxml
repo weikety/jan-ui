@@ -16,4 +16,8 @@
 
   <joy-button round type="primary" disabled>禁用状态</joy-button>
 
+  <!-- icon test -->
+  <view><joy-icon name="user" />普通图标</view>
+  <view><joy-icon name="user" size="20" />自定义大小的图标</view>
+  <view><joy-icon name="user" color="red" />自定义颜色的图标</view>
 </view>
