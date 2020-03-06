@@ -1,0 +1,5 @@
+<button class="mew-button {{color}}" bindtap="onTap">
+    <text>
+        <slot></slot>
+    </text>
+</button>

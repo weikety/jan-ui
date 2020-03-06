@@ -6,13 +6,21 @@
 
 page {
   --font-color: #212121;
-  --primary-color: #212121;
+  --default-color: #fafafa;
+  --primary-color: #07c160;
+  --info-color: #1989fa;
+  --danger-color: #ee0a24;
+  --warning-color: #ff976a;
   --bg-color: #fafafa;
 }
 
 page .dark {
   --font-color: #fafafa;
-  --primary-color: #fafafa;
+  --default-color: #fafafa;
+  --primary-color: #07c160;
+  --info-color: #1989fa;
+  --danger-color: #ee0a24;
+  --warning-color: #ff976a;
   --bg-color: #212121;
 }
 
