@@ -1,30 +1,130 @@
 .joy-button {
-  line-height: 1;
-  min-width: 100%;
+  line-height: 88rpx;
   height: 88rpx;
   font-size: 32rpx;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  padding: 0 66rpx;
   background: #2d2d2d;
   color: #fff;
-  padding: 0 !important;
   transition: all 0.3s;
   border-radius: 6rpx;
   overflow: hidden;
+  font-weight: 500;
 }
 
-.joy-button.black {
-  background-color: #212121;
+button.joy-button:not([size="mini"]) {
+  width: unset !important;
 }
 
-.joy-button.orange {
-  background-color: orange;
+.joy-button view {
+  width: 100%;
+}
+
+.joy-button.joy-button-size-large {
+  min-width: 100%;
+  height: 100rpx;
+  font-size: 36rpx;
+  line-height: 100rpx;
+}
+
+.joy-button.joy-button-size-small {
+  height: 66rpx;
+  font-size: 28rpx;
+  line-height: 66rpx;
+  padding: 0 33rpx;
+}
+
+.joy-button.joy-button-size-mini {
+  height: 50rpx;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  padding: 0 22rpx;
+}
+
+.joy-button.joy-button-type-primary {
+  background-color: var(--primary-color, #07c160);
+  color: #fff;
+}
+
+.joy-button.joy-button-type-info {
+  background-color: var(--info-color, #1989fa);
+  color: #fff;
+}
+
+.joy-button.joy-button-type-warning {
+  background-color: var(--warning-color, #ff976a);
+  color: #fff;
+}
+
+.joy-button.joy-button-type-danger {
+  background-color: var(--danger-color, #ee0a24);
+  color: #fff;
+}
+
+.joy-button-line {
+  border: 2rpx solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0) !important;
+  color: #fff;
+}
+
+.joy-button-line.joy-button-type-primary {
+  border: 2rpx solid var(--primary-color, #07c160);
+  color: var(--primary-color, #07c160);
+}
+
+.joy-button-line.joy-button-type-info {
+  border: 2rpx solid var(--info-color, #1989fa);
+  color: var(--info-color, #1989fa);
+}
+
+.joy-button-line.joy-button-type-warning {
+  border: 2rpx solid var(--warning-color, #ff976a);
+  color: var(--warning-color, #ff976a);
+}
+
+.joy-button-line.joy-button-type-danger {
+  border: 2rpx solid var(--danger-color, #ee0a24);
+  color: var(--danger-color, #ee0a24);
+}
+
+.joy-button.joy-button-type-ghost {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: var(--font-color, #fff);
+}
+
+.joy-button-round {
+  border-radius: 44rpx;
+}
+
+.joy-button-size-mini.joy-button-round {
+  border-radius: 25rpx;
+}
+
+.joy-button-size-small.joy-button-round {
+  border-radius: 33rpx;
+}
+
+.joy-button-size-large.joy-button-round {
+  border-radius: 50rpx;
 }
 
 .joy-button.button-hover::before,
 .joy-button:active::before {
+  position: absolute;
+  background: rgba(255, 255, 255, 0);
+  content: "";
+  /* border-radius: 50%; */
+  width: 100%;
+  padding-top: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  animation: ripple-in 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.joy-button.joy-button-size-large.button-hover::before,
+.joy-button.joy-button-size-large:active::before {
   position: absolute;
   background: rgba(255, 255, 255, 0);
   content: "";

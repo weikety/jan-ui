@@ -1,3 +1,12 @@
 .tips {
   color: var(--primary-color);
 }
+
+.container {
+  width: 100vw;
+  padding: 88rpx 40rpx;
+}
+
+button {
+  margin-bottom: 22px;
+}

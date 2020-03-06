@@ -3,8 +3,16 @@ const mixinComponent = require("./mixin-component")
 const joyComponent = function(options = {}) {
   options = mixinComponent(
     {
-      properties: {},
-      data: {},
+      properties: {
+        customClass: {
+          type: String,
+          value: ""
+        }
+      },
+      data: {
+        _class: "",
+        _style: ""
+      },
       methods: {}
     },
     options

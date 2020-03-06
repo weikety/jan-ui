@@ -1,5 +1,5 @@
-<button class="joy-button {{color}}" bindtap="bindTest">
-    <text>
-        <slot></slot>
-    </text>
+<button class="joy-button {{ _class }}" style="{{ _style }}" bindtap="onTap">
+  <view class="content">
+    <slot></slot>
+  </view>
 </button>

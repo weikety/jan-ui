@@ -9,7 +9,7 @@ page {
   --default-color: #fafafa;
   --primary-color: #07c160;
   --info-color: #1989fa;
-  --danger-color: #ee0a24;
+  --danger-color: #db1129;
   --warning-color: #ff976a;
   --bg-color: #fafafa;
 }
