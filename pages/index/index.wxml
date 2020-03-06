@@ -8,10 +8,12 @@
 
   <joy-button type="info" size="normal" bind:click="onClick" round style="margin-right: 16px;">圆形按钮</joy-button>
 
-  <joy-button type="ghost">幽灵按钮</joy-button>
+  <joy-button type="ghost" bind:click="onClick">幽灵按钮</joy-button>
 
   <joy-button line type="warning" style="margin-right: 16px;">线框风格</joy-button>
 
   <joy-button line color="#03f4d9">自定义线框颜色</joy-button>
+
+  <joy-button round type="primary" disabled>禁用状态</joy-button>
 
 </view>

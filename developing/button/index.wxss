@@ -109,8 +109,8 @@ button.joy-button:not([size="mini"]) {
   border-radius: 50rpx;
 }
 
-.joy-button.button-hover::before,
-.joy-button:active::before {
+.joy-button:not(.joy-button-disabled).button-hover::before,
+.joy-button:not(.joy-button-disabled):active::before {
   position: absolute;
   background: rgba(255, 255, 255, 0);
   content: "";
@@ -124,8 +124,8 @@ button.joy-button:not([size="mini"]) {
   animation-fill-mode: forwards;
 }
 
-.joy-button.joy-button-size-large.button-hover::before,
-.joy-button.joy-button-size-large:active::before {
+.joy-button.joy-button-size-large:not(.joy-button-disabled).button-hover::before,
+.joy-button.joy-button-size-large:not(.joy-button-disabled):active::before {
   position: absolute;
   background: rgba(255, 255, 255, 0);
   content: "";
@@ -139,8 +139,8 @@ button.joy-button:not([size="mini"]) {
   animation-fill-mode: forwards;
 }
 
-.joy-button.joy-button-round.button-hover::before,
-.joy-button.joy-button-round:active::before {
+.joy-button.joy-button-round.button-hover:not(.joy-button-disabled)::before,
+.joy-button.joy-button-round:not(.joy-button-disabled):active::before {
   background: rgba(255, 255, 255, 0);
   content: "";
   border-radius: 44rpx;
@@ -186,4 +186,10 @@ button.joy-button:not([size="mini"]) {
     transform: translate(-50%, -50%) scale(1);
     background: transparent;
   }
+}
+
+.joy-button-disabled {
+  background-color: var(--disabled-color, #c6c6c6) !important;
+  color: var(--font-color) !important;
+  opacity: 0.8;
 }

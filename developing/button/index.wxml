@@ -1,5 +1,5 @@
-<button class="joy-button {{ _class }}" style="{{ _style }}" bindtap="onTap">
-  <view class="content">
-    <slot></slot>
-  </view>
+<button class="joy-button {{ _class }}" style="{{ _style }}" disabled="{{ disabled }}" bindtap="onTap">
+    <view class="content">
+        <slot></slot>
+    </view>
 </button>

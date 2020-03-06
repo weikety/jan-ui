@@ -30,6 +30,10 @@ let options = joyComponent({
     line: {
       type: Boolean,
       value: false
+    },
+    disabled: {
+      type: Boolean,
+      value: false
     }
   },
 
@@ -43,11 +47,11 @@ let options = joyComponent({
 options = mixinComponent(options, openType())
 
 const onClassChange = function() {
-  const { type, size, round, line, customClass } = this.properties
+  const { type, size, round, line, disabled, customClass } = this.properties
   this.setData({
     _class: `joy-button-type-${type} joy-button-size-${size} ${customClass} ${
       round ? "joy-button-round" : ""
-    } ${line ? "joy-button-line" : ""}`
+    } ${line ? "joy-button-line" : ""} ${disabled ? "joy-button-disabled" : ""}`
   })
 }
 
