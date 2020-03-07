@@ -34,9 +34,10 @@
   </view>
 </view>
 
-<view class="container container-no-padding">
+<view class="container container-no-padding dark">
   <joy-cell-group>
     <joy-cell title="基础用法" value="Hi，Joy！"></joy-cell>
+    <joy-cell icon="twitter" title="我的推特" is-link clickable></joy-cell>
     <joy-cell title="我是标题文字" label="我是附加说明" value="我是内容"></joy-cell>
     <joy-cell title="欢迎使用 JoyUI" icon="phone" label="这是一个可以点击的 cell 哦" is-link align="center" value="看看" border clickable bind:click="onLongtap"></joy-cell>
     <joy-cell border="{{ false }}">
