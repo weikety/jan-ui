@@ -36,13 +36,19 @@
 
 <view class="container container-no-padding">
   <joy-cell-group>
-    <joy-cell title="我是标题文字" label="我是附加说明" value="value"></joy-cell>
-
+    <joy-cell title="基础用法" value="Hi，Joy！"></joy-cell>
+    <joy-cell title="我是标题文字" label="我是附加说明" value="我是内容"></joy-cell>
     <joy-cell title="欢迎使用 JoyUI" icon="phone" label="这是一个可以点击的 cell 哦" is-link align="center" value="看看" border clickable bind:click="onLongtap"></joy-cell>
-
     <joy-cell border="{{ false }}">
-      <view slot="title" style="color: #ee0a24;">使用 slot 作为标题</view>
-      <view slot="right-icon">右侧图标</view>
+      <view slot="title" style="color: #6712fb;">使用 slot 作为标题</view>
+      <view slot="label" style="font-size: 24rpx;margin-top: 4rpx;color: #6712fb;">自定义 label 也可以</view>
+      <view slot="right-icon">
+        <joy-icon name="github-fill" size="20" />
+      </view>
     </joy-cell>
+    <joy-button type="primary" size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)" bind:click="onClick" bindlongpress="onLongtap" style="margin-top: 22rpx;">
+      关闭页面
+    </joy-button>
   </joy-cell-group>
+
 </view>

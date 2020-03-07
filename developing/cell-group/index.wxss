@@ -1,3 +1,4 @@
 .joy-cell-group {
   width: 100%;
+  padding: 22rpx;
 }
