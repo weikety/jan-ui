@@ -1,4 +1,4 @@
-var REGEXP = getRegExp('^\d+(\.\d+)?$');
+var REGEXP = /^\d+(\.\d+)?$/;
 
 function addUnit(value) {
   if (value === null) {

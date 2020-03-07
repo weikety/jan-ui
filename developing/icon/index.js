@@ -1,6 +1,6 @@
 /**
  * 组件：icon
- * 版本：v0.0.1
+ * 版本：v0.0.2
  * 维护人：SU
  */
 const joyComponent = require("../_common/joy-component")
@@ -47,7 +47,7 @@ options = mixinComponent(options, openType())
 const onClassChange = function() {
   const { prefix, name } = this.properties
   this.setData({
-    _class: `${prefix} ${prefix + '-' + name}`
+    _class: `${prefix} ${prefix + "-" + name}`
   })
 }
 
@@ -61,10 +61,7 @@ const onStyleChange = function() {
 /* 当这些属性改变时，动态设置 class */
 options = mixinComponent(options, dataHook(["prefix", "name"], onClassChange))
 /* 当这些属性改变时，动态设置 style */
-options = mixinComponent(
-  options,
-  dataHook(["color", "size"], onStyleChange)
-)
+options = mixinComponent(options, dataHook(["color", "size"], onStyleChange))
 
 /* 在组件生命周期中初始化样式 */
 options = mixinComponent(options, {
