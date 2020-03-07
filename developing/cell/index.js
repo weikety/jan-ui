@@ -10,6 +10,10 @@ const dataHook = require("../_common/data-hook")
 /* 使用 joyComponent 初始化组件配置 */
 
 let options = joyComponent({
+  options: {
+    multipleSlots: true // 在组件定义时的选项中启用多slot支持
+  },
+  
   properties: {
     icon: String,
     title: String,

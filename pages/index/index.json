@@ -1,7 +1,7 @@
 {
   "usingComponents": {
-    "joy-button": "../../src/button",
-    "joy-icon": "../../src/icon",
+    "joy-button": "../../developing/button",
+    "joy-icon": "../../developing/icon",
     "joy-cell": "../../developing/cell"
   }
 }

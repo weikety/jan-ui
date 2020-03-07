@@ -1,8 +1,22 @@
-<view class="joy-cell {{ _class }}" style="{{ style }}">
+<view class="joy-cell-container" hover-class="joy-cell-hover">
+  <view class="joy-cell {{ _class }} ripple" style="{{ style }}">
     <view class="joy-cell-left">
-        <view class="joy-cell-title">
-            <slot></slot>
-        </view>
-        <view wx:if="{{ label }}" class="joy-cell-label">{{ label }}</view>
+      <view class="joy-cell-title">
+        <joy-icon wx:if="{{ icon }}" name="{{ icon }}" style="margin-right: 4rpx;"></joy-icon>
+        <slot wx:else name="icon"></slot>
+        <text wx:if="{{ title }}">{{ title }}</text>
+        <slot wx:else name="title"></slot>
+      </view>
+      <view wx:if="{{ label }}" class="joy-cell-label">{{ label }}</view>
     </view>
+    <view class="joy-cell-right" style="align-self: {{ (align == 'end' && 'flex-end') || align == 'center' && 'center' || 'flex-start' }};">
+      <view wx:if="{{ value }}" class="joy-cell-value">{{ value }}</view>
+      <slot wx:else name="value"></slot>
+      <joy-icon wx:if="{{ isLink }}" name="right"></joy-icon>
+      <slot wx:else name="right-icon"></slot>
+    </view>
+  </view>
+  <view wx:if="{{ border }}" class="joy-cell-divider-line">
+    <view />
+  </view>
 </view>
