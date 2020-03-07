@@ -42,8 +42,6 @@ let options = joyComponent({
   }
 })
 
-options = mixinComponent(options, openType())
-
 const onClassChange = function() {
   const { prefix, name } = this.properties
   this.setData({
