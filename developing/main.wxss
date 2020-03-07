@@ -26,7 +26,7 @@ page {
 page .dark {
   --font-color: #fafafa;
   --font-color-weight: #fdfbfb;
-  --font-color-light: #d0d7df;
+  --font-color-light: #d4d8dd;
   --default-color: #fafafa;
   --primary-color: #07c160;
   --info-color: #1989fa;

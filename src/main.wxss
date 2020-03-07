@@ -17,7 +17,6 @@ page {
   --bg-color: #fff;
   --wrapper-color: #fafafa;
   --ripple-color: rgba(0, 0, 0, 0.25);
-
   --font-size-normal: 28rpx;
   --font-size-large: 32rpx;
   --font-size-small: 24rpx;
@@ -27,7 +26,7 @@ page {
 page .dark {
   --font-color: #fafafa;
   --font-color-weight: #fdfbfb;
-  --font-color-light: #d0d7df;
+  --font-color-light: #d4d8dd;
   --default-color: #fafafa;
   --primary-color: #07c160;
   --info-color: #1989fa;
@@ -37,7 +36,6 @@ page .dark {
   --bg-color: #2b2a2a;
   --wrapper-color: #212121;
   --ripple-color: rgba(255, 255, 255, 0.25);
-
   --font-size-normal: 28rpx;
   --font-size-large: 32rpx;
   --font-size-small: 24rpx;
@@ -63,7 +61,7 @@ page .dark {
   pointer-events: none;
   background-image: radial-gradient(
     circle,
-    rgba(0, 0, 0, 0.212) 10%,
+    var(--ripple-color, rgba(0, 0, 0, 0.25)) 10%,
     transparent 10%
   );
   background-repeat: no-repeat;
