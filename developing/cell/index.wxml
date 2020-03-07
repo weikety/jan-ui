@@ -1,5 +1,5 @@
-<view class="joy-cell-container" hover-class="joy-cell-hover">
-  <view class="joy-cell {{ _class }} ripple" style="{{ style }}">
+<view class="joy-cell-container">
+  <view class="joy-cell {{ _class }}" hover-class="joy-cell-hover" style="{{ style }}">
     <view class="joy-cell-left">
       <view class="joy-cell-title">
         <joy-icon wx:if="{{ icon }}" name="{{ icon }}" style="margin-right: 4rpx;"></joy-icon>

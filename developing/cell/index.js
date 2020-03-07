@@ -13,7 +13,7 @@ let options = joyComponent({
   options: {
     multipleSlots: true // 在组件定义时的选项中启用多slot支持
   },
-  
+
   properties: {
     icon: String,
     title: String,
@@ -42,16 +42,14 @@ let options = joyComponent({
 /* 监听 class 和 style 变化的方法 */
 
 const onClassChange = function() {
-  //   const {
-  //     /* 需要读取的属性 */
-  //   } = this.properties
-  //   /**
-  //    * _class 和 _style 是组件内部维护的，
-  //    * 保存类名和样式的 data
-  //    */
-  //   this.setData({
-  //     _class: `新的类名`
-  //   })
+  const { clickable } = this.properties
+  /**
+   * _class 和 _style 是组件内部维护的，
+   * 保存类名和样式的 data
+   */
+  this.setData({
+    _class: `${clickable ? "joy-ripple joy-cell-clickable" : ""}`
+  })
 }
 
 const onStyleChange = function() {
@@ -70,10 +68,7 @@ const onStyleChange = function() {
 //   dataHook(["这些属性变化，会触发 _style 刷新"], onStyleChange)
 // )
 
-// options = mixinComponent(
-//   options,
-//   dataHook(["这些属性变化，会触发 _class 刷新"], onClassChange)
-// )
+options = mixinComponent(options, dataHook(["clickable"], onClassChange))
 
 /* 初始化样式，将 onStyleChange 和 onClassChange 添加到组件的 methods */
 
