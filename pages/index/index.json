@@ -2,6 +2,7 @@
   "usingComponents": {
     "joy-button": "../../developing/button",
     "joy-icon": "../../developing/icon",
-    "joy-cell": "../../developing/cell"
+    "joy-cell": "../../developing/cell",
+    "joy-cell-group": "../../developing/cell-group"
   }
 }

@@ -1,0 +1,3 @@
+<view class="joy-cell-group {{ customClass }}">
+    <slot></slot>
+</view>

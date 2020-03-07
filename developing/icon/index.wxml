@@ -1,5 +1,1 @@
-<text
-  class="{{ _class }}"
-  style="{{ _style }}"
-  bindtap="onTap"
-></text>
+<text class="{{ _class }} {{ customClass }}" style="{{ _style }}" bindtap="onTap"></text>

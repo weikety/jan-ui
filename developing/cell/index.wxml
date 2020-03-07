@@ -1,4 +1,4 @@
-<view class="joy-cell-container" bindtap="{{ !url ? 'onTap' : 'onLinkTap' }}">
+<view class="joy-cell-container {{ customClass }}" bindtap="{{ !url ? 'onTap' : 'onLinkTap' }}">
     <view class="joy-cell {{ _class }}" hover-class="joy-cell-hover" style="{{ style }}">
         <view class="joy-cell-left" style="{{ _titleWidth }}">
             <view class="joy-cell-title">
