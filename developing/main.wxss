@@ -6,6 +6,8 @@
 
 page {
   --font-color: #515a6e;
+  --font-color-weight: #212121;
+  --font-color-light: #7d8288;
   --default-color: #fafafa;
   --primary-color: #07c160;
   --info-color: #1989fa;
@@ -24,6 +26,8 @@ page {
 
 page .dark {
   --font-color: #fafafa;
+  --font-color-weight: #fdfbfb;
+  --font-color-light: #b4beca;
   --default-color: #fafafa;
   --primary-color: #07c160;
   --info-color: #1989fa;

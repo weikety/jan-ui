@@ -34,5 +34,6 @@
   </view>
 </view>
 
-<view class="container">
+<view class="container container-no-padding">
+  <joy-cell label="我是附加说明">我是标题文字</joy-cell>
 </view>

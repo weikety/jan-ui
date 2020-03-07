@@ -1,0 +1,18 @@
+.joy-cell {
+  width: 100%;
+  min-height: 88rpx;
+  background-color: var(--bg-color, #fff);
+  padding: 22rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: var(--font-size-normal, 28rpx);
+  color: var(--font-color-weight, #212121);
+}
+
+.joy-cell .joy-cell-label {
+  font-size: var(--font-size-mini, 20rpx);
+  color: var(--font-color-light, #7d8288);
+}

@@ -1,1 +1,8 @@
-<view class="{{ _class }}" style="{{ style }}">Hello, joy!</view>
+<view class="joy-cell {{ _class }}" style="{{ style }}">
+    <view class="joy-cell-left">
+        <view class="joy-cell-title">
+            <slot></slot>
+        </view>
+        <view wx:if="{{ label }}" class="joy-cell-label">{{ label }}</view>
+    </view>
+</view>
