@@ -67,8 +67,6 @@ const onStyleChange = function() {
   let colorArr = hex2Rgb(color),
     isDeepColor = isTextDeepColor(colorArr)
 
-  console.log(colorArr, isDeepColor)
-
   this.setData({
     _style: line
       ? `border: 2rpx solid ${color};color: ${color};`
