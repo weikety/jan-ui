@@ -5,7 +5,7 @@
  */
 
 page {
-  --font-color: #212121;
+  --font-color: #515a6e;
   --default-color: #fafafa;
   --primary-color: #07c160;
   --info-color: #1989fa;

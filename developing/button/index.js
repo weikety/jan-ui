@@ -1,11 +1,12 @@
 /**
  * 组件：button
- * 版本：v0.0.2
+ * 版本：v0.0.3
  * 维护人：Meeken
  */
 const joyComponent = require("../_common/joy-component")
 const mixinComponent = require("../_common/mixin-component")
 const dataHook = require("../_common/data-hook")
+const { hex2Rgb, isTextDeepColor } = require("../_common/color")
 
 const openType = require("../_common/open-type")
 
@@ -62,10 +63,16 @@ const onClassChange = function() {
 const onStyleChange = function() {
   const { color, line } = this.properties
   if (!color) return
+
+  let colorArr = hex2Rgb(color),
+    isDeepColor = isTextDeepColor(colorArr)
+
+  console.log(colorArr, isDeepColor)
+
   this.setData({
     _style: line
       ? `border: 2rpx solid ${color};color: ${color};`
-      : `background: ${color}`
+      : `background: ${color}; color: ${isDeepColor ? "#515a6e" : "#fff"};`
   })
 }
 

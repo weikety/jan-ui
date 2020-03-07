@@ -94,7 +94,7 @@ button.joy-button:not([size="mini"]) {
 }
 
 .joy-button.joy-button-type-ghost:active, .joy-button.joy-button-line:active {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .joy-button-round {
