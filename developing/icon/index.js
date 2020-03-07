@@ -1,13 +1,12 @@
 /**
  * 组件：icon
- * 版本：v0.0.2
+ * 版本：v0.0.3
  * 维护人：SU
  */
 const joyComponent = require("../_common/joy-component")
 const mixinComponent = require("../_common/mixin-component")
 const dataHook = require("../_common/data-hook")
 
-const openType = require("../_common/open-type")
 const addUnit = require("./add-unit").addUnit
 
 let options = joyComponent({
