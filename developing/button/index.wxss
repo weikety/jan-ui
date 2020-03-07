@@ -1,5 +1,3 @@
-@import "../main.wxss";
-
 .joy-button {
   line-height: 80rpx;
   height: 80rpx;
@@ -15,7 +13,7 @@
   box-sizing: border-box;
 }
 
-.joy-button:not(.joy-button-disabled)::before {
+.joy-button:not(.joy-button-disabled):not(.joy-button-line):not(.joy-button-type-ghost)::before {
   content: "";
   display: block;
   position: absolute;
@@ -37,14 +35,14 @@
   z-index: 0;
 }
 
-.joy-button:not(.joy-button-disabled):active::before {
+.joy-button:not(.joy-button-disabled):not(.joy-button-line):not(.joy-button-type-ghost):active::before {
   transform: scale(0, 0);
   opacity: 0.2;
   transition: 0s;
 }
 
 button.joy-button:not([size="mini"]) {
-  width: unset !important;
+  width: auto;
 }
 
 .joy-button view {

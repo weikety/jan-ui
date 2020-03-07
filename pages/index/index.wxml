@@ -1,4 +1,4 @@
-<view class="container">
+<view class="container" style="display: none;">
   <joy-button type="danger" size="mini" icon="user" bind:click="onClick" style="margin-right: 16px;">
     迷你按钮
   </joy-button>

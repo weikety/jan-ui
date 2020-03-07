@@ -1,5 +1,3 @@
-@import "../main.wxss";
-
 .joy-button {
   line-height: 80rpx;
   height: 80rpx;
@@ -15,7 +13,7 @@
   box-sizing: border-box;
 }
 
-.joy-button:not(.joy-button-disabled)::before {
+.joy-button:not(.joy-button-disabled):not(.joy-button-line):not(.joy-button-type-ghost)::before {
   content: "";
   display: block;
   position: absolute;
@@ -24,11 +22,7 @@
   top: 0;
   left: 0;
   pointer-events: none;
-  background-image: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 0.212) 10%,
-    transparent 10%
-  );
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.212) 10%, transparent 10%);
   background-repeat: no-repeat;
   background-position: 50%;
   transform: scale(10, 10);
@@ -37,14 +31,14 @@
   z-index: 0;
 }
 
-.joy-button:not(.joy-button-disabled):active::before {
+.joy-button:not(.joy-button-disabled):not(.joy-button-line):not(.joy-button-type-ghost):active::before {
   transform: scale(0, 0);
   opacity: 0.2;
   transition: 0s;
 }
 
 button.joy-button:not([size="mini"]) {
-  width: unset !important;
+  width: auto;
 }
 
 .joy-button view {
@@ -124,8 +118,7 @@ button.joy-button:not([size="mini"]) {
   color: var(--font-color, #fff);
 }
 
-.joy-button.joy-button-type-ghost:active,
-.joy-button.joy-button-line:active {
+.joy-button.joy-button-type-ghost:active, .joy-button.joy-button-line:active {
   opacity: 0.6;
 }
 
