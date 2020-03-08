@@ -1,0 +1,64 @@
+.joy-switch {
+  width: 112rpx;
+  height: 56rpx;
+  border-radius: 8rpx;
+  padding: 0 4rpx;
+
+  display: flex;
+  align-items: center;
+  background: #fefefe;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-left: 10rpx;
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
+}
+
+.joy-switch-node {
+  display: flex;
+  margin-left: 5%;
+  justify-content: center;
+  align-items: center;
+  width: 48rpx;
+  height: 44rpx;
+  margin: 0;
+  background: #fff;
+  border-radius: 6rpx;
+  transition: all 0.3s ease;
+  box-shadow: 0 3rpx 8rpx 0 rgba(0, 0, 0, 0.05),
+    0 2rpx 2rpx 0 rgba(0, 0, 0, 0.1), 0 3rpx 3rpx 0 rgba(0, 0, 0, 0.05);
+}
+
+.joy-switch.joy-switch-size-small {
+  width: 80rpx;
+  height: 40rpx;
+  border-radius: 8rpx;
+  padding: 0 4rpx;
+}
+
+.joy-switch.joy-switch-size-small .joy-switch-node {
+  width: 36rpx;
+  height: 32rpx;
+}
+
+.joy-switch.joy-switch-size-large {
+  width: 136rpx;
+  height: 67rpx;
+  border-radius: 8rpx;
+  padding: 0 4rpx;
+}
+
+.joy-switch.joy-switch-size-large .joy-switch-node {
+  width: 58rpx;
+  height: 52rpx;
+}
+
+/* .check-handler:before {
+  content: "\00D7";
+  color: white;
+  font-size: 20rpx;
+  font-weight: bold;
+} */
+
+.joy-switch.open .joy-switch-node {
+  margin-left: 50%;
+}

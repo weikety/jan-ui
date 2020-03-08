@@ -1,0 +1,67 @@
+.tips {
+  color: var(--primary-color);
+}
+
+.container {
+  width: 100vw;
+  padding: 88rpx 40rpx;
+}
+
+.container-no-padding {
+  width: 100vw;
+  padding: 0;
+}
+
+button {
+  margin: 11px 22px;
+}
+
+.block {
+  width: 100%;
+  height: 44px;
+  background: #e98282;
+}
+
+.check-trail {
+  display: flex;
+  align-items: center;
+  width: 112rpx;
+  height: 56rpx;
+  background: #fefefe;
+  border-radius: 8rpx;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  margin-left: 10rpx;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.check-handler {
+  display: flex;
+  margin-left: 5%;
+  justify-content: center;
+  align-items: center;
+  width: 48rpx;
+  height: 44rpx;
+  margin: 0;
+  background: #fff;
+  border-radius: 6rpx;
+  transition: all 0.5s ease;
+  box-shadow: 0 3rpx 8rpx 0 rgba(0, 0, 0, 0.05),
+                0 2rpx 2rpx 0 rgba(0, 0, 0, 0.1),
+                0 3rpx 3rpx 0 rgba(0, 0, 0, 0.05);
+}
+
+.check-handler:before {
+  content: "\00D7";
+  color: white;
+  font-size: 20rpx;
+  font-weight: bold;
+}
+
+.open .check-handler {
+  margin-left: 50%;
+}
+
+.open {
+  background: #07c160;
+}

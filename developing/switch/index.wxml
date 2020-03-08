@@ -1,0 +1,3 @@
+<view class="joy-switch {{ _size }} {{ _class }} {{ customClass }} {{ _checked ? 'open' : '' }}" style="{{ _switchStyle }}" bindtap="onSwitchTap">
+    <view class="joy-switch-node"></view>
+</view>
