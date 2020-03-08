@@ -64,7 +64,7 @@ const onValueChange = function() {
   this.setData({
     _switchStyle:
       (_checked
-        ? `background-color: ${activeColor || "var(--primary-color, #4379ff)"};`
+        ? `background-color: ${activeColor || "var(--style-color, #4379ff)"};`
         : `background-color: ${inactiveColor ||
             "var(--wrapper-color, #fafafa)"};`) +
       (disabled || this.data._disabled

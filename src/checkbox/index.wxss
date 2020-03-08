@@ -38,7 +38,7 @@
   align-items: center;
   font-weight: 900;
   border-radius: 4rpx;
-  background-color: #4379ff;
+  background-color: var(--style-color, #4379ff);
   animation: fadeOut 0.1s;
   animation-fill-mode: forwards;
 }

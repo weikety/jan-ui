@@ -6,7 +6,7 @@
     <jan-cell title="欢迎使用 JanUI" icon="phone" label="这是一个可以点击的 cell 哦" is-link align="center" value="看看" border clickable bind:click="onLongtap"></jan-cell>
     <jan-cell border="{{ false }}" title="使用 slot 作为标题">
       <view slot="value">
-        <jan-switch size="small" checked="{{ true }}"  bind:change="onSwitchChange" />
+        <jan-switch size="small" checked="{{ true }}" bind:change="onSwitchChange" />
       </view>
     </jan-cell>
     <jan-cell border="{{ false }}" title="禁用 switch">
