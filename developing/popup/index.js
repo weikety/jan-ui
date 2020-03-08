@@ -13,12 +13,18 @@ let options = joyComponent({
   properties: {
     show: {
       type: Boolean,
-      value: false
+      value: false,
+      observer: "onShowOrHide"
     },
 
     "zindex": {
       type: Number,
       value: 100
+    },
+
+    duration: {
+      type: Number,
+      value: 400
     },
 
     position: {
@@ -32,6 +38,10 @@ let options = joyComponent({
     }
   },
 
+  data: {
+    _show: false
+  },
+
   methods: {
     onBgTap() {
       if (!this.properties.model) {
@@ -41,6 +51,21 @@ let options = joyComponent({
 
     onPanelTap(e) {
       // 什么也不干
+    },
+
+    onShowOrHide() {
+      const { show, duration } = this.properties;
+      if (show) {
+        this.setData({
+          _show: true
+        })
+      } else {
+        setTimeout(() => {
+          this.setData({
+            _show: false
+          })
+        }, duration)
+      }
     }
   }
 })
