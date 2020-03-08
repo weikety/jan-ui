@@ -35,7 +35,7 @@
 </view>
 
 <view class="container container-no-padding dark">
-  <joy-cell-group>
+  <joy-cell-group border-radius="6px">
     <joy-cell title="基础用法" value="Hi，Joy！"></joy-cell>
     <joy-cell icon="twitter" title="我的推特" is-link clickable></joy-cell>
     <joy-cell title="我是标题文字" label="我是附加说明" value="我是内容"></joy-cell>

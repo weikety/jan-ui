@@ -1,3 +1,10 @@
 .joy-cell-group {
   width: 100%;
+  padding: 22rpx;
+  overflow: hidden;
+}
+
+.joy-cell-group-container {
+  width: 100%;
+  overflow: hidden;
 }
