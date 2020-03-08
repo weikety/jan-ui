@@ -1,74 +1,74 @@
-<joy-button type="info" size="large˝">跳转到表单页面</joy-button>
+<jan-button type="info" size="large˝">跳转到表单页面</jan-button>
 
 <view class="container" style="display: none;">
-  <joy-button type="danger" size="mini" icon="user" bind:click="onClick" style="margin-right: 16px;">
+  <jan-button type="danger" size="mini" icon="user" bind:click="onClick" style="margin-right: 16px;">
     迷你按钮
-  </joy-button>
-  <joy-button type="warning" size="small" bind:click="onClick" style="margin-right: 16px;">
+  </jan-button>
+  <jan-button type="warning" size="small" bind:click="onClick" style="margin-right: 16px;">
     小型按钮
-  </joy-button>
-  <joy-button type="info" size="normal" bind:click="onClick" style="margin-right: 16px;">
+  </jan-button>
+  <jan-button type="info" size="normal" bind:click="onClick" style="margin-right: 16px;">
     普通按钮
-  </joy-button>
-  <joy-button type="primary" size="large" icon="user" bind:click="onClick">大号按钮</joy-button>
-  <joy-button type="primary" size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)" bind:click="onClick" bindlongpress="onLongtap">
+  </jan-button>
+  <jan-button type="primary" size="large" icon="user" bind:click="onClick">大号按钮</jan-button>
+  <jan-button type="primary" size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)" bind:click="onClick" bindlongpress="onLongtap">
     自定义颜色
-  </joy-button>
-  <joy-button type="primary" size="large" color="#fff" bind:click="onClick" bindlongpress="onLongtap">
+  </jan-button>
+  <jan-button type="primary" size="large" color="#fff" bind:click="onClick" bindlongpress="onLongtap">
     文字底色自适应
-  </joy-button>
-  <joy-button type="info" size="normal" bind:click="onClick" round style="margin-right: 16px;">
+  </jan-button>
+  <jan-button type="info" size="normal" bind:click="onClick" round style="margin-right: 16px;">
     圆形按钮
-  </joy-button>
-  <joy-button type="ghost" bind:click="onClick">幽灵按钮</joy-button>
-  <joy-button line color="#7200fa" style="margin-right: 16px;">自定义线框颜色</joy-button>
-  <joy-button round type="primary" disabled>禁用状态</joy-button>
-  <joy-button line type="warning" icon="user" style="margin-right: 16px;">带图标</joy-button>
+  </jan-button>
+  <jan-button type="ghost" bind:click="onClick">幽灵按钮</jan-button>
+  <jan-button line color="#7200fa" style="margin-right: 16px;">自定义线框颜色</jan-button>
+  <jan-button round type="primary" disabled>禁用状态</jan-button>
+  <jan-button line type="warning" icon="user" style="margin-right: 16px;">带图标</jan-button>
   <!-- icon test -->
   <view>
-    <joy-icon name="user" /> 普通图标
+    <jan-icon name="user" /> 普通图标
   </view>
   <view>
-    <joy-icon name="user" size="20" /> 自定义大小的图标
+    <jan-icon name="user" size="20" /> 自定义大小的图标
   </view>
   <view>
-    <joy-icon name="user" color="red" /> 自定义颜色的图标
+    <jan-icon name="user" color="red" /> 自定义颜色的图标
   </view>
 </view>
 
 <view class="container container-no-padding" style="display: none;">
-  <joy-cell-group border-radius="6px">
-    <joy-cell title="基础用法" value="Hi，Joy！"></joy-cell>
-    <joy-cell icon="twitter" title="我的推特" is-link clickable></joy-cell>
-    <joy-cell title="我是标题文字" label="我是附加说明" value="我是内容"></joy-cell>
-    <joy-cell title="欢迎使用 JoyUI" icon="phone" label="这是一个可以点击的 cell 哦" is-link align="center" value="看看" border clickable bind:click="onLongtap"></joy-cell>
-    <joy-cell border="{{ false }}">
+  <jan-cell-group border-radius="6px">
+    <jan-cell title="基础用法" value="Hi，Jan！"></jan-cell>
+    <jan-cell icon="twitter" title="我的推特" is-link clickable></jan-cell>
+    <jan-cell title="我是标题文字" label="我是附加说明" value="我是内容"></jan-cell>
+    <jan-cell title="欢迎使用 JanUI" icon="phone" label="这是一个可以点击的 cell 哦" is-link align="center" value="看看" border clickable bind:click="onLongtap"></jan-cell>
+    <jan-cell border="{{ false }}">
       <view slot="title" style="color: #6712fb;">使用 slot 作为标题</view>
       <view slot="label" style="font-size: 24rpx;margin-top: 4rpx;color: #6712fb;">自定义 label 也可以</view>
       <view slot="right-icon">
-        <joy-icon name="github-fill" size="20" />
+        <jan-icon name="github-fill" size="20" />
       </view>
-    </joy-cell>
-    <joy-button type="primary" size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)" bind:click="onClick" bindlongpress="onLongtap" style="margin-top: 22rpx;">
+    </jan-cell>
+    <jan-button type="primary" size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)" bind:click="onClick" bindlongpress="onLongtap" style="margin-top: 22rpx;">
       关闭页面
-    </joy-button>
-  </joy-cell-group>
+    </jan-button>
+  </jan-cell-group>
 </view>
 
 <view class="container container-no-padding">
-  <joy-row gutter="{{ gutter }}">
-    <joy-col span="4" offset="0">
+  <jan-row gutter="{{ gutter }}">
+    <jan-col span="4" offset="0">
       <view class="block">啊啊啊啊啊啊啊啊啊啊啊啊</view>
-    </joy-col>
-    <joy-col span="8" offset="0">
+    </jan-col>
+    <jan-col span="8" offset="0">
       <view class="block" bindtap="changeGutter">啊啊啊啊啊啊啊啊啊啊啊啊</view>
-    </joy-col>
-    <joy-col span="12" offset="0">
+    </jan-col>
+    <jan-col span="12" offset="0">
       <view class="block" bindtap="changeGutter">啊啊啊啊啊啊啊啊啊啊啊啊</view>
-    </joy-col>
-  </joy-row>
+    </jan-col>
+  </jan-row>
   <button bind:tap="showPopup">打开 popup</button>
-  <joy-popup show="{{ show }}" position="center" model="{{ false }}" bind:close="closePopup">
+  <jan-popup show="{{ show }}" position="center" model="{{ false }}" bind:close="closePopup">
     内容
-  </joy-popup>
+  </jan-popup>
 </view>

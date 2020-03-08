@@ -1,4 +1,4 @@
-.joy-button {
+.jan-button {
   line-height: 80rpx;
   height: 80rpx;
   font-size: var(--font-size-normal, 28rpx);
@@ -13,7 +13,7 @@
   box-sizing: border-box;
 }
 
-.joy-button:not(.joy-button-disabled):not(.joy-button-line):not(.joy-button-type-ghost)::before {
+.jan-button:not(.jan-button-disabled):not(.jan-button-line):not(.jan-button-type-ghost)::before {
   content: "";
   display: block;
   position: absolute;
@@ -35,115 +35,115 @@
   z-index: 0;
 }
 
-.joy-button:not(.joy-button-disabled):not(.joy-button-line):not(.joy-button-type-ghost):active::before {
+.jan-button:not(.jan-button-disabled):not(.jan-button-line):not(.jan-button-type-ghost):active::before {
   transform: scale(0, 0);
   opacity: 0.2;
   transition: 0s;
 }
 
-button.joy-button:not([size="mini"]) {
+button.jan-button:not([size="mini"]) {
   width: auto;
 }
 
-.joy-button view {
+.jan-button view {
   width: 100%;
 }
 
-.joy-button.joy-button-size-large {
+.jan-button.jan-button-size-large {
   min-width: 100%;
   height: 90rpx;
   font-size: var(--font-size-large, 32rpx);
   line-height: 90rpx;
 }
 
-.joy-button.joy-button-size-small {
+.jan-button.jan-button-size-small {
   height: 66rpx;
   font-size: var(--font-size-small, 24rpx);
   line-height: 66rpx;
   padding: 0 33rpx;
 }
 
-.joy-button.joy-button-size-mini {
+.jan-button.jan-button-size-mini {
   height: 50rpx;
   font-size: var(--font-size-mini, 20rpx);
   line-height: 50rpx;
   padding: 0 22rpx;
 }
 
-.joy-button.joy-button-type-primary {
+.jan-button.jan-button-type-primary {
   background-color: var(--primary-color, #07c160);
   color: #fff;
 }
 
-.joy-button.joy-button-type-info {
+.jan-button.jan-button-type-info {
   background-color: var(--info-color, #1989fa);
   color: #fff;
 }
 
-.joy-button.joy-button-type-warning {
+.jan-button.jan-button-type-warning {
   background-color: var(--warning-color, #ff976a);
   color: #fff;
 }
 
-.joy-button.joy-button-type-danger {
+.jan-button.jan-button-type-danger {
   background-color: var(--danger-color, #ee0a24);
   color: #fff;
 }
 
-.joy-button-line {
+.jan-button-line {
   border: 2rpx solid rgba(255, 255, 255, 0.5);
   background: var(--bg-color, rgba(255, 255, 255, 0)) !important;
   color: #fff;
   overflow: hidden !important;
 }
 
-.joy-button-line.joy-button-type-primary {
+.jan-button-line.jan-button-type-primary {
   border: 2rpx solid var(--primary-color, #07c160);
   color: var(--primary-color, #07c160);
 }
 
-.joy-button-line.joy-button-type-info {
+.jan-button-line.jan-button-type-info {
   border: 2rpx solid var(--info-color, #1989fa);
   color: var(--info-color, #1989fa);
 }
 
-.joy-button-line.joy-button-type-warning {
+.jan-button-line.jan-button-type-warning {
   border: 2rpx solid var(--warning-color, #ff976a);
   color: var(--warning-color, #ff976a);
 }
 
-.joy-button-line.joy-button-type-danger {
+.jan-button-line.jan-button-type-danger {
   border: 2rpx solid var(--danger-color, #ee0a24);
   color: var(--danger-color, #ee0a24);
 }
 
-.joy-button.joy-button-type-ghost {
+.jan-button.jan-button-type-ghost {
   background-color: rgba(255, 255, 255, 0.25);
   color: var(--font-color, #fff);
 }
 
-.joy-button.joy-button-type-ghost:active,
-.joy-button.joy-button-line:active {
+.jan-button.jan-button-type-ghost:active,
+.jan-button.jan-button-line:active {
   opacity: 0.6;
 }
 
-.joy-button-round {
+.jan-button-round {
   border-radius: 44rpx;
 }
 
-.joy-button-size-mini.joy-button-round {
+.jan-button-size-mini.jan-button-round {
   border-radius: 25rpx;
 }
 
-.joy-button-size-small.joy-button-round {
+.jan-button-size-small.jan-button-round {
   border-radius: 33rpx;
 }
 
-.joy-button-size-large.joy-button-round {
+.jan-button-size-large.jan-button-round {
   border-radius: 50rpx;
 }
 
-.joy-button-disabled {
+.jan-button-disabled {
   background-color: var(--disabled-color, #c6c6c6) !important;
   color: var(--font-color) !important;
   opacity: 0.8;

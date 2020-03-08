@@ -1,4 +1,4 @@
-.joy-row:after {
+.jan-row:after {
   width: 100%;
   display: table;
   clear: both;

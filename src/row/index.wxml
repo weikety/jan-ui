@@ -1,4 +1,4 @@
-<view class="joy-row">
+<view class="jan-row">
     <!-- justify-content: {{ (justify === 'center' && 'center') || (justify === 'end' && 'flex-end') || (justify === 'between' && 'space-between') || (justify === 'around' && 'space-around') || 'flex-start' }};align-items: {{ (align === 'center' && 'center') || (align === 'end' && 'flex-end') || 'flex-start' }}" -->
     <slot></slot>
 </view>

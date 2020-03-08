@@ -3,13 +3,13 @@
  * 版本：v0.0.3
  * 维护人：Meeken
  */
-const joyComponent = require("../_common/joy-component")
+const janComponent = require("../_common/jan-component")
 const mixinComponent = require("../_common/mixin-component")
 const dataHook = require("../_common/data-hook")
 
-/* 使用 joyComponent 初始化组件配置 */
+/* 使用 janComponent 初始化组件配置 */
 
-let options = joyComponent({
+let options = janComponent({
   properties: {
     name: String,
     checked: {
@@ -71,8 +71,8 @@ const onValueChange = function() {
         ? "opacity: 0.5;background-color: var(--disabled-color, #c6c6c6);"
         : ""),
     _size:
-      (size === "large" && "joy-switch-size-large") ||
-      (size === "small" && "joy-switch-size-small") ||
+      (size === "large" && "jan-switch-size-large") ||
+      (size === "small" && "jan-switch-size-small") ||
       ""
   })
 }

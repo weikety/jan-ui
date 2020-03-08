@@ -3,13 +3,13 @@
  * 版本：v0.0.1
  * 维护人：SU
  */
-const joyComponent = require("../_common/joy-component")
+const janComponent = require("../_common/jan-component")
 const mixinComponent = require("../_common/mixin-component")
 const dataHook = require("../_common/data-hook")
 
-/* 使用 joyComponent 初始化组件配置 */
+/* 使用 janComponent 初始化组件配置 */
 
-let options = joyComponent({
+let options = janComponent({
   properties: {
     show: {
       type: Boolean,

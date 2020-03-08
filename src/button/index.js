@@ -3,14 +3,14 @@
  * 版本：v0.0.4
  * 维护人：Meeken
  */
-const joyComponent = require("../_common/joy-component")
+const janComponent = require("../_common/jan-component")
 const mixinComponent = require("../_common/mixin-component")
 const dataHook = require("../_common/data-hook")
 const { hex2Rgb, isTextDeepColor } = require("../_common/color")
 
 const openType = require("../_common/open-type")
 
-let options = joyComponent({
+let options = janComponent({
   properties: {
     type: {
       type: String,
@@ -54,9 +54,9 @@ options = mixinComponent(options, openType())
 const onClassChange = function() {
   const { type, size, round, line, disabled, customClass } = this.properties
   this.setData({
-    _class: `joy-button-type-${type} joy-button-size-${size} ${customClass} ${
-      round ? "joy-button-round" : ""
-    } ${line ? "joy-button-line" : ""} ${disabled ? "joy-button-disabled" : ""}`
+    _class: `jan-button-type-${type} jan-button-size-${size} ${customClass} ${
+      round ? "jan-button-round" : ""
+    } ${line ? "jan-button-line" : ""} ${disabled ? "jan-button-disabled" : ""}`
   })
 }
 

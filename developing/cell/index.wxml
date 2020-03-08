@@ -1,23 +1,23 @@
-<view class="joy-cell-container {{ customClass }}" bindtap="{{ !url ? 'onTap' : 'onLinkTap' }}">
-    <view class="joy-cell {{ _class }}" hover-class="joy-cell-hover" style="{{ style }}">
-        <view class="joy-cell-left" style="{{ _titleWidth }}">
-            <view class="joy-cell-title">
-                <joy-icon wx:if="{{ icon }}" name="{{ icon }}" style="margin-right: 16rpx;"></joy-icon>
+<view class="jan-cell-container {{ customClass }}" bindtap="{{ !url ? 'onTap' : 'onLinkTap' }}">
+    <view class="jan-cell {{ _class }}" hover-class="jan-cell-hover" style="{{ style }}">
+        <view class="jan-cell-left" style="{{ _titleWidth }}">
+            <view class="jan-cell-title">
+                <jan-icon wx:if="{{ icon }}" name="{{ icon }}" style="margin-right: 16rpx;"></jan-icon>
                 <slot wx:else name="icon"></slot>
                 <text wx:if="{{ title }}" style="{{ _titleMaxRows }}">{{ title }}</text>
                 <slot wx:else name="title"></slot>
             </view>
-            <view wx:if="{{ label }}" class="joy-cell-label">{{ label }}</view>
-            <slot wx:else name="label" class="joy-cell-label"></slot>
+            <view wx:if="{{ label }}" class="jan-cell-label">{{ label }}</view>
+            <slot wx:else name="label" class="jan-cell-label"></slot>
         </view>
-        <view class="joy-cell-right" style="align-self: {{ (align == 'end' && 'flex-end') || align == 'center' && 'center' || 'flex-start' }};">
-            <view wx:if="{{ value }}" class="joy-cell-value">{{ value }}</view>
+        <view class="jan-cell-right" style="align-self: {{ (align == 'end' && 'flex-end') || align == 'center' && 'center' || 'flex-start' }};">
+            <view wx:if="{{ value }}" class="jan-cell-value">{{ value }}</view>
             <slot wx:else name="value"></slot>
-            <joy-icon wx:if="{{ isLink }}" name="{{ _arrowDirection }}" style="margin-left: 16rpx;"></joy-icon>
+            <jan-icon wx:if="{{ isLink }}" name="{{ _arrowDirection }}" style="margin-left: 16rpx;"></jan-icon>
             <slot wx:else name="right"></slot>
         </view>
     </view>
-    <view wx:if="{{ border }}" class="joy-cell-divider-line">
+    <view wx:if="{{ border }}" class="jan-cell-divider-line">
         <view />
     </view>
 </view>

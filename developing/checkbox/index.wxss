@@ -1,11 +1,11 @@
-.joy-checkbox-container {
+.jan-checkbox-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
 }
 
-.joy-checkbox {
+.jan-checkbox {
   width: 56rpx;
   height: 56rpx;
   display: flex;
@@ -18,19 +18,19 @@
   font-size: 36rpx;
 }
 
-.joy-checkbox.joy-checkbox-size-large {
+.jan-checkbox.jan-checkbox-size-large {
   width: 67rpx;
   height: 67rpx;
   font-size: 40rpx;
 }
 
-.joy-checkbox.joy-checkbox-size-small {
+.jan-checkbox.jan-checkbox-size-small {
   width: 40rpx;
   height: 40rpx;
   font-size: 24rpx;
 }
 
-.joy-checkbox .joy-checkbox-node {
+.jan-checkbox .jan-checkbox-node {
   width: 100%;
   height: 100%;
   display: flex;
@@ -43,11 +43,11 @@
   animation-fill-mode: forwards;
 }
 
-.joy-checkbox.check .joy-checkbox-node {
+.jan-checkbox.check .jan-checkbox-node {
   animation: fadeIn 0.3s;
 }
 
-.joy-checkbox-hover {
+.jan-checkbox-hover {
   opacity: 0.8;
 }
 

@@ -1,5 +1,5 @@
-<view class="joy-cell-group {{ customClass }}">
-    <view class="joy-cell-group-container" style="{{ borderRadius ? 'border-radius: ' + borderRadius : '' }}">
+<view class="jan-cell-group {{ customClass }}">
+    <view class="jan-cell-group-container" style="{{ borderRadius ? 'border-radius: ' + borderRadius : '' }}">
         <slot></slot>
     </view>
 </view>

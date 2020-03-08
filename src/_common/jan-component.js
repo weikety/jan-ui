@@ -1,6 +1,6 @@
 const mixinComponent = require("./mixin-component")
 
-const joyComponent = function(options = {}) {
+const janComponent = function(options = {}) {
   options = mixinComponent(
     {
       properties: {
@@ -20,4 +20,4 @@ const joyComponent = function(options = {}) {
   return options
 }
 
-module.exports = joyComponent
+module.exports = janComponent

@@ -1,4 +1,4 @@
-.joy-switch {
+.jan-switch {
   width: 112rpx;
   height: 56rpx;
   border-radius: 8rpx;
@@ -13,7 +13,7 @@
   border: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
 }
 
-.joy-switch-node {
+.jan-switch-node {
   display: flex;
   margin-left: 5%;
   justify-content: center;
@@ -28,26 +28,26 @@
     0 2rpx 2rpx 0 rgba(0, 0, 0, 0.1), 0 3rpx 3rpx 0 rgba(0, 0, 0, 0.05);
 }
 
-.joy-switch.joy-switch-size-small {
+.jan-switch.jan-switch-size-small {
   width: 80rpx;
   height: 40rpx;
   border-radius: 8rpx;
   padding: 0 4rpx;
 }
 
-.joy-switch.joy-switch-size-small .joy-switch-node {
+.jan-switch.jan-switch-size-small .jan-switch-node {
   width: 36rpx;
   height: 32rpx;
 }
 
-.joy-switch.joy-switch-size-large {
+.jan-switch.jan-switch-size-large {
   width: 136rpx;
   height: 67rpx;
   border-radius: 8rpx;
   padding: 0 4rpx;
 }
 
-.joy-switch.joy-switch-size-large .joy-switch-node {
+.jan-switch.jan-switch-size-large .jan-switch-node {
   width: 58rpx;
   height: 52rpx;
 }
@@ -59,6 +59,6 @@
   font-weight: bold;
 } */
 
-.joy-switch.open .joy-switch-node {
+.jan-switch.open .jan-switch-node {
   margin-left: 50%;
 }

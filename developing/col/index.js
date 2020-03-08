@@ -3,13 +3,13 @@
  * 版本：v0.0.2
  * 维护人：Meeken
  */
-const joyComponent = require("../_common/joy-component")
+const janComponent = require("../_common/jan-component")
 const mixinComponent = require("../_common/mixin-component")
 const dataHook = require("../_common/data-hook")
 
-/* 使用 joyComponent 初始化组件配置 */
+/* 使用 janComponent 初始化组件配置 */
 
-let options = joyComponent({
+let options = janComponent({
   relations: {
     "../row/index": {
       type: "parent", // 关联的目标节点应为父节点

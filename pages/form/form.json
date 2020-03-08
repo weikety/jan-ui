@@ -1,9 +1,9 @@
 {
   "usingComponents": {
-    "joy-cell": "../../src/cell",
-    "joy-cell-group": "../../src/cell-group",
-    "joy-button": "../../src/button",
-    "joy-switch": "../../src/switch",
-    "joy-checkbox": "../../src/checkbox"
+    "jan-cell": "../../src/cell",
+    "jan-cell-group": "../../src/cell-group",
+    "jan-button": "../../src/button",
+    "jan-switch": "../../src/switch",
+    "jan-checkbox": "../../src/checkbox"
   }
 }

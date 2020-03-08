@@ -1,3 +1,3 @@
-<view class="joy-col" style="{{ _style }}">
+<view class="jan-col" style="{{ _style }}">
     <slot></slot>
 </view>

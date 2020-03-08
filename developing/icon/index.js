@@ -3,13 +3,13 @@
  * 版本：v0.0.3
  * 维护人：SU
  */
-const joyComponent = require("../_common/joy-component")
+const janComponent = require("../_common/jan-component")
 const mixinComponent = require("../_common/mixin-component")
 const dataHook = require("../_common/data-hook")
 
 const addUnit = require("./add-unit").addUnit
 
-let options = joyComponent({
+let options = janComponent({
   /**
    * 组件的属性列表
    */
@@ -28,7 +28,7 @@ let options = joyComponent({
     },
     prefix: {
       type: String,
-      value: "joy-icon"
+      value: "jan-icon"
     }
   },
 
