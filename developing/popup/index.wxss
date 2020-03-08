@@ -40,7 +40,7 @@
 }
 
 .joy-popup--overlay .joy-popup--panel {
-  background-color: white;
+  background-color: var(--bg-color);
   word-break: break-all;
   overflow-x: hidden;
   overflow-y: auto;

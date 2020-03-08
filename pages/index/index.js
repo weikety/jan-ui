@@ -4,7 +4,8 @@ const mixinComponent = require("../../developing/_common/mixin-component")
 
 Page({
   data: {
-    color: '#212121'
+    color: '#212121',
+    show: false
   },
 
   onClick(e) {
@@ -15,5 +16,17 @@ Page({
 
   onLongtap() {
     console.log(`我被长按了`)
+  },
+
+  showPopup() {
+    this.setData({
+      show: true
+    })
+  },
+
+  closePopup() {
+    this.setData({
+      show: false
+    })
   }
 })

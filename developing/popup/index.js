@@ -16,15 +16,27 @@ let options = joyComponent({
       value: false
     },
 
+    "zindex": {
+      type: Number,
+      value: 100
+    },
+
     position: {
       type: String,
       value: "center"
+    },
+
+    model: {
+      type: Boolean,
+      value: false
     }
   },
 
   methods: {
     onBgTap() {
-      this.triggerEvent("close")
+      if (!this.properties.model) {
+        this.triggerEvent("close")
+      }
     },
 
     onPanelTap(e) {
