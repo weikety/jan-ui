@@ -13,7 +13,7 @@
 
   "mp.weixin.qq.com": {
     "usr": "mewz@foxmail.com",
-    "pwd": "janUI123!"
+    "pwd": "joyUI123!"
   }
 }
 ```
