@@ -14,7 +14,7 @@
             <view wx:if="{{ value }}" class="joy-cell-value">{{ value }}</view>
             <slot wx:else name="value"></slot>
             <joy-icon wx:if="{{ isLink }}" name="{{ _arrowDirection }}" style="margin-left: 16rpx;"></joy-icon>
-            <slot wx:else name="right-icon"></slot>
+            <slot wx:else name="right"></slot>
         </view>
     </view>
     <view wx:if="{{ border }}" class="joy-cell-divider-line">

@@ -5,7 +5,7 @@
     <joy-cell title="我是标题文字" label="我是附加说明" value="我是内容"></joy-cell>
     <joy-cell title="欢迎使用 JoyUI" icon="phone" label="这是一个可以点击的 cell 哦" is-link align="center" value="看看" border clickable bind:click="onLongtap"></joy-cell>
     <joy-cell border="{{ false }}" title="使用 slot 作为标题">
-      <view slot="right-icon">
+      <view slot="value">
         <joy-switch size="normal" checked="{{ true }}" active-color="#4379ff" bind:change="onSwitchChange" />
       </view>
     </joy-cell>
