@@ -4,8 +4,8 @@
     "joy-icon": "../../developing/icon",
     "joy-cell": "../../developing/cell",
     "joy-cell-group": "../../developing/cell-group",
-    "joy-row": "../../src/row",
-    "joy-col": "../../src/col",
+    "joy-row": "../../developing/row",
+    "joy-col": "../../developing/col",
     "joy-popup": "../../developing/popup"
   }
 }

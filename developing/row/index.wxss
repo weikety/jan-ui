@@ -1,4 +1,6 @@
-.joy-row {
+.joy-row:after {
   width: 100%;
   display: table;
+  clear: both;
+  content: "";
 }
