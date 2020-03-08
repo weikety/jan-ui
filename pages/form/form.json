@@ -3,6 +3,7 @@
     "joy-cell": "../../src/cell",
     "joy-cell-group": "../../src/cell-group",
     "joy-button": "../../src/button",
-    "joy-switch": "../../src/switch"
+    "joy-switch": "../../developing/switch",
+    "joy-checkbox": "../../developing/checkbox"
   }
 }

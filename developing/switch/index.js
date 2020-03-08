@@ -1,6 +1,6 @@
 /**
  * 组件：switch
- * 版本：v0.0.2
+ * 版本：v0.0.3
  * 维护人：Meeken
  */
 const joyComponent = require("../_common/joy-component")
@@ -37,7 +37,8 @@ let options = joyComponent({
   data: {
     _switchStyle: "",
     _checked: false,
-    _size: ""
+    _size: "",
+    _disabled: false
   }
 })
 
@@ -52,20 +53,21 @@ const onPropsChange = function() {
   this.setData({
     _checked: checked
   })
-  this.onCheckedChange()
+  this.onValueChange()
 }
 
 options = mixinComponent(options, dataHook(["checked"], onPropsChange))
 
-const onCheckedChange = function() {
+const onValueChange = function() {
   const _checked = this.data._checked
   const { activeColor, inactiveColor, size, disabled } = this.properties
   this.setData({
     _switchStyle:
       (_checked
         ? `background-color: ${activeColor || "var(--primary-color, #4379ff)"};`
-        : `background-color: ${inactiveColor || "var(--bg-color, #fff)"};`) +
-      (disabled
+        : `background-color: ${inactiveColor ||
+            "var(--wrapper-color, #fafafa)"};`) +
+      (disabled || this.data._disabled
         ? "opacity: 0.5;background-color: var(--disabled-color, #c6c6c6);"
         : ""),
     _size:
@@ -79,8 +81,9 @@ const onCheckedChange = function() {
 options = mixinComponent(options, {
   methods: {
     onPropsChange,
-    onCheckedChange,
-    onSwitchTap() {
+    onValueChange,
+    onTap() {
+      if (this.properties.disabled) return
       this.setData({
         _checked: !this.data._checked
       })
@@ -88,7 +91,13 @@ options = mixinComponent(options, {
         ? this.properties.activeValue
         : this.properties.inactiveValue
       this.triggerEvent("change", val)
-      this.onCheckedChange()
+      this.onValueChange()
+    },
+    setDisabled() {
+      this.setData({
+        _disabled: true
+      })
+      this.onValueChange()
     }
   },
 
