@@ -34,7 +34,7 @@
   </view>
 </view>
 
-<view class="container container-no-padding dark">
+<view class="container container-no-padding" style="display: none;">
   <joy-cell-group border-radius="6px">
     <joy-cell title="基础用法" value="Hi，Joy！"></joy-cell>
     <joy-cell icon="twitter" title="我的推特" is-link clickable></joy-cell>
@@ -52,4 +52,18 @@
     </joy-button>
   </joy-cell-group>
 
+</view>
+
+<view class="container container-no-padding">
+  <joy-row gutter="{{ gutter }}">
+    <joy-col span="4" offset="0">
+      <view class="block">啊啊啊啊啊啊啊啊啊啊啊啊</view>
+    </joy-col>
+    <joy-col span="8" offset="0">
+      <view class="block" bindtap="changeGutter">啊啊啊啊啊啊啊啊啊啊啊啊</view>
+    </joy-col>
+    <joy-col span="12" offset="0">
+      <view class="block" bindtap="changeGutter">啊啊啊啊啊啊啊啊啊啊啊啊</view>
+    </joy-col>
+  </joy-row>
 </view>

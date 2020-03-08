@@ -4,7 +4,8 @@ const mixinComponent = require("../../developing/_common/mixin-component")
 
 Page({
   data: {
-    color: '#212121'
+    color: '#212121',
+    gutter: '0px'
   },
 
   onClick(e) {
@@ -15,5 +16,11 @@ Page({
 
   onLongtap() {
     console.log(`我被长按了`)
+  },
+
+  changeGutter() {
+    this.setData({
+      gutter: '20px'
+    })
   }
 })

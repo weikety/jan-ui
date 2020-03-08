@@ -3,6 +3,8 @@
     "joy-button": "../../developing/button",
     "joy-icon": "../../developing/icon",
     "joy-cell": "../../developing/cell",
-    "joy-cell-group": "../../developing/cell-group"
+    "joy-cell-group": "../../developing/cell-group",
+    "joy-row": "../../src/row",
+    "joy-col": "../../src/col"
   }
 }

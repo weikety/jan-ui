@@ -1,0 +1,4 @@
+.joy-col {
+  display: inline-block;
+  overflow: hidden;
+}
