@@ -9,6 +9,11 @@
         <joy-switch size="normal" checked="{{ true }}" active-color="#4379ff" bind:change="onSwitchChange" />
       </view>
     </joy-cell>
+    <joy-cell border="{{ false }}" title="禁用 switch">
+      <view slot="value">
+        <joy-switch size="normal" disabled checked="{{ true }}" active-color="#4379ff" bind:change="onSwitchChange" />
+      </view>
+    </joy-cell>
     <joy-button type="primary" size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)" bind:click="onClick" bindlongpress="onLongtap" style="margin-top: 22rpx;">
       关闭页面
     </joy-button>

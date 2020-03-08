@@ -1,8 +1,8 @@
 {
   "usingComponents": {
-    "joy-cell": "../../developing/cell",
-    "joy-cell-group": "../../developing/cell-group",
-    "joy-button": "../../developing/button",
-    "joy-switch": "../../developing/switch"
+    "joy-cell": "../../src/cell",
+    "joy-cell-group": "../../src/cell-group",
+    "joy-button": "../../src/button",
+    "joy-switch": "../../src/switch"
   }
 }
