@@ -1,4 +1,4 @@
-<view class="joy-cell-container" bindtap="{{ !url ? 'onTap' : 'onLinkTap' }}">
+<view class="joy-cell-container {{ customClass }}" bindtap="{{ !url ? 'onTap' : 'onLinkTap' }}">
     <view class="joy-cell {{ _class }}" hover-class="joy-cell-hover" style="{{ style }}">
         <view class="joy-cell-left" style="{{ _titleWidth }}">
             <view class="joy-cell-title">
@@ -8,6 +8,7 @@
                 <slot wx:else name="title"></slot>
             </view>
             <view wx:if="{{ label }}" class="joy-cell-label">{{ label }}</view>
+            <slot wx:else name="label" class="joy-cell-label"></slot>
         </view>
         <view class="joy-cell-right" style="align-self: {{ (align == 'end' && 'flex-end') || align == 'center' && 'center' || 'flex-start' }};">
             <view wx:if="{{ value }}" class="joy-cell-value">{{ value }}</view>
