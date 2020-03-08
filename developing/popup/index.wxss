@@ -4,6 +4,11 @@
   height: 100%;
   top: 0;
   left: 0;
+  transition-property: opacity;
+}
+
+.joy-popup--hide {
+  opacity: 0;
 }
 
 .joy-popup .joy-popup--overlay {

@@ -1,4 +1,7 @@
-<view class="joy-popup" style="display: {{ show ? 'block' : 'none'}}; z-index: {{ zindex }}">
+<view
+  class="joy-popup {{ show ? '' : 'joy-popup--hide' }}"
+  style="z-index: {{ zindex }}; visibility: {{ _show ? 'visible' : 'hidden' }}; transition-duration: {{ duration / 1000 }}s;"
+>
   <view class="joy-popup--overlay joy-popup--overlay--{{ position }}" catch:tap="onBgTap">
     <!-- 使用 catch 是为了阻止 overlay 层接收到点击事件 -->
     <view class="joy-popup--panel joy-popup--panel--{{ position }}" catch:tap="onPanelTap">
