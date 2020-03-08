@@ -1,6 +1,6 @@
 /**
  * 组件：checkbox
- * 版本：v0.0.2
+ * 版本：v0.0.3
  * 维护人：Meeken
  */
 const joyComponent = require("../_common/joy-component")
@@ -26,6 +26,7 @@ let options = joyComponent({
       value: false
     },
     iconSize: String,
+    size: String,
     checkedColor: String
   },
 
@@ -33,7 +34,8 @@ let options = joyComponent({
     _value: false,
     _disabled: false,
     _nodeStyle: "",
-    _shape: ""
+    _shape: "",
+    _size: ""
   }
 })
 
@@ -51,7 +53,7 @@ const onPropsChange = function() {
 
 options = mixinComponent(
   options,
-  dataHook(["value", "disabled"], onPropsChange)
+  dataHook(["value", "disabled", "shape", "size"], onPropsChange)
 )
 
 /* 初始化样式，将 onStyleChange 和 onClassChange 添加到组件的 methods */
@@ -61,7 +63,7 @@ options = mixinComponent(options, {
     onPropsChange,
     onValueChange() {
       const value = this.data._value
-      const { disabled, checkedColor, shape } = this.properties
+      const { disabled, checkedColor, shape, size } = this.properties
       this.setData({
         _class: value ? "check" : "",
         _style:
@@ -73,7 +75,12 @@ options = mixinComponent(options, {
         _nodeStyle: checkedColor
           ? "background-color: " + checkedColor + ";"
           : "",
-        _shape: shape == "circle" ? "border-radius: 50%;" : ""
+        _shape: shape == "circle" ? "border-radius: 50%;" : "",
+        _size:
+          "joy-checkbox-size-" +
+          ((size === "large" && "large") ||
+            (size === "small" && "small") ||
+            "normal")
       })
     },
 
