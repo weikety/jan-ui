@@ -5,6 +5,7 @@
     "joy-cell": "../../developing/cell",
     "joy-cell-group": "../../developing/cell-group",
     "joy-row": "../../src/row",
-    "joy-col": "../../src/col"
+    "joy-col": "../../src/col",
+    "joy-popup": "../../developing/popup"
   }
 }

@@ -66,4 +66,8 @@
       <view class="block" bindtap="changeGutter">啊啊啊啊啊啊啊啊啊啊啊啊</view>
     </joy-col>
   </joy-row>
+  <button bind:tap="showPopup">打开 popup</button>
+  <joy-popup show="{{ show }}" position="center" model="{{ false }}" bind:close="closePopup">
+    内容
+  </joy-popup>
 </view>
