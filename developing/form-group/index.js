@@ -33,10 +33,19 @@ let options = janComponent({
   data: {
     _data: [
       {
-        key: "测试",
+        key: "test",
         title: "测试",
         icon: "github-fill",
+        default: false,
         type: "switch"
+      },
+
+      {
+        key: "yooo",
+        title: "测试 checkbox",
+        icon: "github-fill",
+        default: false,
+        type: "checkbox"
       }
     ]
   }
@@ -51,7 +60,7 @@ const onClassChange = function() {
    * 保存类名和样式的 data
    */
   this.setData({
-    _class: `${clickable ? "jan-ripple jan-form-clickable" : ""}`
+    _class: `${clickable ? "jan-ripple jan-form-item-clickable" : ""}`
   })
 }
 
@@ -61,7 +70,23 @@ options = mixinComponent(options, dataHook(["data", "type"], onClassChange))
 
 options = mixinComponent(options, {
   methods: {
-    onClassChange
+    onClassChange,
+
+    onFormItemTap(e) {
+      const cls = "." + e.currentTarget.dataset.cls
+      let target = this.selectComponent(cls)
+      if (target) target.onTap()
+    },
+
+    onValueChange(e) {
+      const { idx, itm } = e.currentTarget.dataset
+      const value = e.detail
+      this.triggerEvent("change", {
+        value,
+        index: idx,
+        item: itm
+      })
+    }
   },
 
   attached() {

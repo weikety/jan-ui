@@ -32,7 +32,7 @@
   align-items: center;
 }
 
-.jan-form-item .jan-cell-right {
+.jan-form-item .jan-form-item-right {
   font-size: var(--font-size-normal, 20rpx);
   flex-shrink: 0;
   color: var(--font-color-light, #7d8288);
@@ -74,4 +74,9 @@
   transform: scale(0, 0);
   opacity: 0.2;
   transition: 0s;
+}
+
+.jan-form-item-hover.jan-form-item-clickable.jan-form-item {
+  background-color: var(--bg-color);
+  opacity: 0.8;
 }

@@ -1,6 +1,6 @@
 /**
  * 组件：checkbox
- * 版本：v0.0.4
+ * 版本：v0.0.5
  * 维护人：Meeken
  */
 const janComponent = require("../_common/jan-component")
@@ -25,6 +25,7 @@ let options = janComponent({
       type: Boolean,
       value: false
     },
+    showLabel: Boolean,
     labelPosition: {
       type: String,
       value: "right"

@@ -11,7 +11,7 @@
     </jan-cell>
     <jan-cell border="{{ false }}" title="禁用 switch" clickable>
       <view slot="value">
-        <jan-checkbox class="maye" value="{{ true }}" bind:change="onSwitchChange" shape="circle" label-position="right">神秘北极圈</jan-checkbox>
+        <jan-checkbox class="maye" value="{{ true }}" bind:change="onSwitchChange" shape="circle" label-position="right">神秘</jan-checkbox>
       </view>
     </jan-cell>
     <jan-button type="primary" size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)" bind:click="onClick" bindlongpress="onLongtap" style="margin-top: 22rpx;">
@@ -19,6 +19,6 @@
     </jan-button>
   </jan-cell-group>
 
-  <jan-form-group border-radius="6px" clickable />
+  <jan-form-group border-radius="6px" clickable bind:change="onSwitchChange" />
 
 </view>

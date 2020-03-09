@@ -1,7 +1,9 @@
 {
   "component": true,
   "usingComponents": {
-    "jan-cell": "../cell",
-    "jan-icon": "../icon"
+    "jan-cell": "../cell/index",
+    "jan-icon": "../icon/index",
+    "jan-switch": "../switch/index",
+    "jan-checkbox": "../checkbox/index"
   }
 }
