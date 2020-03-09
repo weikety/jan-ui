@@ -31,7 +31,11 @@ let options = janComponent({
     },
     iconSize: String,
     size: String,
-    checkedColor: String
+    checkedColor: String,
+    extraProps: {
+      type: Object,
+      value: {}
+    }
   },
 
   data: {
@@ -46,10 +50,11 @@ let options = janComponent({
 /* 监听 class 和 style 变化的方法 */
 
 const onPropsChange = function() {
-  const { value } = this.properties
+  const { value, extraProps } = this.properties
   this.setData({
     _value: value
   })
+  if (typeof extraProps === "object") this.setData(extraProps)
   this.onValueChange()
 }
 
@@ -57,7 +62,7 @@ const onPropsChange = function() {
 
 options = mixinComponent(
   options,
-  dataHook(["value", "disabled", "shape", "size"], onPropsChange)
+  dataHook(["value", "disabled", "shape", "size", "extraProps"], onPropsChange)
 )
 
 /* 初始化样式，将 onStyleChange 和 onClassChange 添加到组件的 methods */

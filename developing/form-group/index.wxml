@@ -1,0 +1,10 @@
+<view class="jan-form-group {{ customClass }}" style="{{ _style }}">
+    <view class="jan-form-group-container" style="{{ borderRadius ? 'border-radius: ' + borderRadius : '' }}">
+        <view class="jan-form-item {{ _class }}">
+            <view class="jan-form-title">
+                <jan-icon name="github-fill" style="margin-right: 16rpx;"></jan-icon>
+                <view>测试 title</view>
+            </view>
+        </view>
+    </view>
+</view>

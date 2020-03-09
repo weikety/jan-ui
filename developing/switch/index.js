@@ -16,7 +16,6 @@ let options = janComponent({
       type: Boolean,
       value: false
     },
-    loading: Boolean,
     disabled: Boolean,
     size: {
       type: String,
@@ -31,6 +30,10 @@ let options = janComponent({
     inactiveValue: {
       type: null,
       value: false
+    },
+    extraProps: {
+      type: Object,
+      value: {}
     }
   },
 
@@ -45,7 +48,7 @@ let options = janComponent({
 /* 监听 class 和 style 变化的方法 */
 
 const onPropsChange = function() {
-  const { checked } = this.properties
+  const { checked, extraProps } = this.properties
   /**
    * _class 和 _style 是组件内部维护的，
    * 保存类名和样式的 data
@@ -53,10 +56,25 @@ const onPropsChange = function() {
   this.setData({
     _checked: checked
   })
+
+  if (typeof extraProps === "object") this.setData(extraProps)
   this.onValueChange()
 }
 
-options = mixinComponent(options, dataHook(["checked"], onPropsChange))
+options = mixinComponent(
+  options,
+  dataHook(
+    [
+      "checked",
+      "activeColor",
+      "inactiveColor",
+      "size",
+      "disabled",
+      "extraProps"
+    ],
+    onPropsChange
+  )
+)
 
 const onValueChange = function() {
   const _checked = this.data._checked

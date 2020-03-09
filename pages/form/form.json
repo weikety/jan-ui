@@ -1,9 +1,10 @@
 {
   "usingComponents": {
-    "jan-cell": "../../src/cell",
-    "jan-cell-group": "../../src/cell-group",
+    "jan-cell": "../../developing/cell",
+    "jan-cell-group": "../../developing/cell-group",
     "jan-button": "../../src/button",
     "jan-switch": "../../developing/switch",
-    "jan-checkbox": "../../developing/checkbox"
+    "jan-checkbox": "../../developing/checkbox",
+    "jan-form-group": "../../developing/form-group"
   }
 }
