@@ -1,11 +1,12 @@
 /**
  * 组件：switch
- * 版本：v0.0.3
+ * 版本：v0.0.4
  * 维护人：Meeken
  */
 const janComponent = require("../_common/jan-component")
 const mixinComponent = require("../_common/mixin-component")
 const dataHook = require("../_common/data-hook")
+const extraProps = require("../_common/extra-props")
 
 /* 使用 janComponent 初始化组件配置 */
 
@@ -49,36 +50,31 @@ let options = janComponent({
 
 const onPropsChange = function() {
   const { value, extraProps } = this.properties
-  /**
-   * _class 和 _style 是组件内部维护的，
-   * 保存类名和样式的 data
-   */
   this.setData({
     _value: value
   })
 
-  if (typeof extraProps === "object") this.setData(extraProps)
+  if (typeof extraProps === "object")
+    this.setData({
+      _extraProps: extraProps
+    })
   this.onValueChange()
 }
 
 options = mixinComponent(
   options,
   dataHook(
-    [
-      "value",
-      "activeColor",
-      "inactiveColor",
-      "size",
-      "disabled",
-      "extraProps"
-    ],
+    ["value", "activeColor", "inactiveColor", "size", "disabled", "extraProps"],
     onPropsChange
   )
 )
 
 const onValueChange = function() {
   const _value = this.data._value
-  const { activeColor, inactiveColor, size, disabled } = this.properties
+  const { activeColor, inactiveColor, size, disabled } = extraProps(
+    this.properties,
+    this.data._extraProps
+  )
   this.setData({
     _switchStyle:
       (_value

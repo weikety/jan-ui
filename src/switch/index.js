@@ -1,22 +1,22 @@
 /**
  * 组件：switch
- * 版本：v0.0.3
+ * 版本：v0.0.4
  * 维护人：Meeken
  */
 const janComponent = require("../_common/jan-component")
 const mixinComponent = require("../_common/mixin-component")
 const dataHook = require("../_common/data-hook")
+const extraProps = require("../_common/extra-props")
 
 /* 使用 janComponent 初始化组件配置 */
 
 let options = janComponent({
   properties: {
     name: String,
-    checked: {
+    value: {
       type: Boolean,
       value: false
     },
-    loading: Boolean,
     disabled: Boolean,
     size: {
       type: String,
@@ -31,12 +31,16 @@ let options = janComponent({
     inactiveValue: {
       type: null,
       value: false
+    },
+    extraProps: {
+      type: Object,
+      value: {}
     }
   },
 
   data: {
     _switchStyle: "",
-    _checked: false,
+    _value: false,
     _size: "",
     _disabled: false
   }
@@ -45,25 +49,35 @@ let options = janComponent({
 /* 监听 class 和 style 变化的方法 */
 
 const onPropsChange = function() {
-  const { checked } = this.properties
-  /**
-   * _class 和 _style 是组件内部维护的，
-   * 保存类名和样式的 data
-   */
+  const { value, extraProps } = this.properties
   this.setData({
-    _checked: checked
+    _value: value
   })
+
+  if (typeof extraProps === "object")
+    this.setData({
+      _extraProps: extraProps
+    })
   this.onValueChange()
 }
 
-options = mixinComponent(options, dataHook(["checked"], onPropsChange))
+options = mixinComponent(
+  options,
+  dataHook(
+    ["value", "activeColor", "inactiveColor", "size", "disabled", "extraProps"],
+    onPropsChange
+  )
+)
 
 const onValueChange = function() {
-  const _checked = this.data._checked
-  const { activeColor, inactiveColor, size, disabled } = this.properties
+  const _value = this.data._value
+  const { activeColor, inactiveColor, size, disabled } = extraProps(
+    this.properties,
+    this.data._extraProps
+  )
   this.setData({
     _switchStyle:
-      (_checked
+      (_value
         ? `background-color: ${activeColor || "var(--style-color, #4379ff)"};`
         : `background-color: ${inactiveColor ||
             "var(--wrapper-color, #fafafa)"};`) +
@@ -85,9 +99,9 @@ options = mixinComponent(options, {
     onTap() {
       if (this.properties.disabled) return
       this.setData({
-        _checked: !this.data._checked
+        _value: !this.data._value
       })
-      const val = this.data._checked
+      const val = this.data._value
         ? this.properties.activeValue
         : this.properties.inactiveValue
       this.triggerEvent("change", val)

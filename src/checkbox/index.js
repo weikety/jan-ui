@@ -1,11 +1,12 @@
 /**
  * 组件：checkbox
- * 版本：v0.0.4
+ * 版本：v0.0.5
  * 维护人：Meeken
  */
 const janComponent = require("../_common/jan-component")
 const mixinComponent = require("../_common/mixin-component")
 const dataHook = require("../_common/data-hook")
+const extraProps = require("../_common/extra-props")
 
 /* 使用 janComponent 初始化组件配置 */
 
@@ -21,17 +22,22 @@ let options = janComponent({
       type: Boolean,
       value: false
     },
-    labelPosition: {
-      type: String,
-      value: "right"
-    },
     labelDisabled: {
       type: Boolean,
       value: false
     },
+    showLabel: Boolean,
+    labelPosition: {
+      type: String,
+      value: "right"
+    },
     iconSize: String,
     size: String,
-    checkedColor: String
+    checkedColor: String,
+    extraProps: {
+      type: Object,
+      value: {}
+    }
   },
 
   data: {
@@ -39,17 +45,22 @@ let options = janComponent({
     _disabled: false,
     _nodeStyle: "",
     _shape: "",
-    _size: ""
+    _size: "",
+    _extraProps: {}
   }
 })
 
 /* 监听 class 和 style 变化的方法 */
 
 const onPropsChange = function() {
-  const { value } = this.properties
+  const { value, extraProps } = this.properties
   this.setData({
     _value: value
   })
+  if (typeof extraProps === "object")
+    this.setData({
+      _extraProps: extraProps
+    })
   this.onValueChange()
 }
 
@@ -57,7 +68,7 @@ const onPropsChange = function() {
 
 options = mixinComponent(
   options,
-  dataHook(["value", "disabled", "shape", "size"], onPropsChange)
+  dataHook(["value", "disabled", "shape", "size", "extraProps"], onPropsChange)
 )
 
 /* 初始化样式，将 onStyleChange 和 onClassChange 添加到组件的 methods */
@@ -67,7 +78,13 @@ options = mixinComponent(options, {
     onPropsChange,
     onValueChange() {
       const value = this.data._value
-      const { disabled, checkedColor, shape, size } = this.properties
+      let { disabled, checkedColor, shape, size, showLabel } = extraProps(
+        this.properties,
+        this.data._extraProps
+      )
+      this.setData({
+        _disabled: disabled
+      })
       this.setData({
         _class: value ? "check" : "",
         _style:
@@ -79,16 +96,20 @@ options = mixinComponent(options, {
         _nodeStyle: checkedColor
           ? "background-color: " + checkedColor + ";"
           : "",
-        _shape: shape == "circle" ? "border-radius: 50%;" : "",
+        _shape:
+          (shape == "circle" ? "border-radius: 50%;" : "") +
+          (value && checkedColor ? `border-color: ${checkedColor}` : ""),
         _size:
           "jan-checkbox-size-" +
           ((size === "large" && "large") ||
             (size === "small" && "small") ||
-            "normal")
+            "normal"),
+        _showLabel: showLabel
       })
     },
 
     onTap() {
+      if (this.data._disabled) return
       this.setData({
         _value: !this.data._value
       })
@@ -102,11 +123,6 @@ options = mixinComponent(options, {
       })
       this.onValueChange()
     }
-  },
-
-  attached() {
-    // 在组件加载时执行样式的初始化
-    this.onPropsChange()
   }
 })
 

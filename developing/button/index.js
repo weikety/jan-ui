@@ -87,11 +87,6 @@ options = mixinComponent(options, {
   methods: {
     onClassChange,
     onStyleChange
-  },
-
-  attached() {
-    this.onClassChange()
-    this.onStyleChange()
   }
 })
 

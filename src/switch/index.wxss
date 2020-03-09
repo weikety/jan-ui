@@ -49,7 +49,7 @@
 
 .jan-switch.jan-switch-size-large .jan-switch-node {
   width: 58rpx;
-  height: 52rpx;
+  height: 56rpx;
 }
 
 /* .check-handler:before {
