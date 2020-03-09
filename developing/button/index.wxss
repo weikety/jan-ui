@@ -24,7 +24,7 @@
   pointer-events: none;
   background-image: radial-gradient(
     circle,
-    rgba(0, 0, 0, 0.212) 10%,
+    var(--ripple-color) 10%,
     transparent 10%
   );
   background-repeat: no-repeat;
@@ -37,7 +37,7 @@
 
 .jan-button:not(.jan-button-disabled):not(.jan-button-line):not(.jan-button-type-ghost):active::before {
   transform: scale(0, 0);
-  opacity: 0.2;
+  opacity: 0.6;
   transition: 0s;
 }
 

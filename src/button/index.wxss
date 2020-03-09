@@ -22,7 +22,11 @@
   top: 0;
   left: 0;
   pointer-events: none;
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.212) 10%, transparent 10%);
+  background-image: radial-gradient(
+    circle,
+    var(--ripple-color) 10%,
+    transparent 10%
+  );
   background-repeat: no-repeat;
   background-position: 50%;
   transform: scale(10, 10);
@@ -33,7 +37,7 @@
 
 .jan-button:not(.jan-button-disabled):not(.jan-button-line):not(.jan-button-type-ghost):active::before {
   transform: scale(0, 0);
-  opacity: 0.2;
+  opacity: 0.6;
   transition: 0s;
 }
 
@@ -118,7 +122,8 @@ button.jan-button:not([size="mini"]) {
   color: var(--font-color, #fff);
 }
 
-.jan-button.jan-button-type-ghost:active, .jan-button.jan-button-line:active {
+.jan-button.jan-button-type-ghost:active,
+.jan-button.jan-button-line:active {
   opacity: 0.6;
 }
 
