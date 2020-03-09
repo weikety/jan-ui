@@ -1,6 +1,6 @@
 .jan-switch {
-  width: 112rpx;
-  height: 56rpx;
+  width: 100rpx;
+  height: 50rpx;
   border-radius: 8rpx;
   padding: 0 4rpx;
 
@@ -18,8 +18,8 @@
   margin-left: 5%;
   justify-content: center;
   align-items: center;
-  width: 48rpx;
-  height: 44rpx;
+  width: 44rpx;
+  height: 42rpx;
   margin: 0;
   background: #fff;
   border-radius: 6rpx;

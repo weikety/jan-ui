@@ -3,7 +3,7 @@
     "jan-cell": "../../src/cell",
     "jan-cell-group": "../../src/cell-group",
     "jan-button": "../../src/button",
-    "jan-switch": "../../src/switch",
-    "jan-checkbox": "../../src/checkbox"
+    "jan-switch": "../../developing/switch",
+    "jan-checkbox": "../../developing/checkbox"
   }
 }
