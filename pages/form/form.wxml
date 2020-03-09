@@ -19,6 +19,6 @@
     </jan-button>
   </jan-cell-group>
 
-  <jan-form-group border-radius="6px" clickable data="{{ list }}" bind:change="onSwitchChange" extra-props="{{ {showLabel: false, checkedColor: 'pink', size: 'large', activeColor: 'pink', inactiveColor: 'yellow', disabled: false} }}" />
+  <jan-form-group border-radius="6px" clickable data="{{ list }}" bind:change="onSwitchChange" extra-props="{{ {showLabel: false, checkedColor: 'pink', size: 'normal', activeColor: 'pink', inactiveColor: 'yellow', disabled: false} }}" />
 
 </view>
