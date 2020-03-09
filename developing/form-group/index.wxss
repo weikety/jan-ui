@@ -9,6 +9,23 @@
   overflow: hidden;
 }
 
+.joy-form-item-wrapper {
+  width: 100%;
+}
+
+.jan-cell-divider-line {
+  width: 100%;
+  background-color: var(--bg-color, #fff);
+}
+
+.jan-cell-divider-line view {
+  width: calc(100% - 28rpx);
+  margin-left: 28rpx;
+  height: 1rpx;
+  background-color: var(--font-color, #fafafa);
+  opacity: 0.05;
+}
+
 .jan-form-item {
   width: 100%;
   box-sizing: border-box;
