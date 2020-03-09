@@ -1,10 +1,12 @@
 <view class="jan-form-group {{ customClass }}" style="{{ _style }}">
     <view class="jan-form-group-container" style="{{ borderRadius ? 'border-radius: ' + borderRadius : '' }}">
-        <view class="jan-form-item {{ _class }}">
+        <!-- 渲染 data 列表 -->
+        <view wx:for="{{ _data }}" wx:key="key" class="jan-form-item {{ _class }}">
             <view class="jan-form-title">
-                <jan-icon name="github-fill" style="margin-right: 16rpx;"></jan-icon>
-                <view>测试 title</view>
+                <jan-icon wx:if="{{ item.icon }}" name="{{ item.icon }}" style="margin-right: 16rpx;"></jan-icon>
+                <view>{{ item.title }}</view>
             </view>
+            <view></view>
         </view>
     </view>
 </view>

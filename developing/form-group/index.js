@@ -23,7 +23,22 @@ let options = janComponent({
       type: String,
       value: ""
     },
+    extraProps: {
+      type: Object,
+      value: {}
+    },
     clickable: Boolean
+  },
+
+  data: {
+    _data: [
+      {
+        key: "测试",
+        title: "测试",
+        icon: "github-fill",
+        type: "switch"
+      }
+    ]
   }
 })
 
