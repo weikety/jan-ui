@@ -1,3 +1,3 @@
-<view name="{{ name }}" class="jan-switch {{ _size }} {{ _class }} {{ customClass }} {{ value ? 'open' : '' }}" style="{{ _switchStyle }}" bindtap="{{ disabled ? '' : 'onTap' }}">
+<view name="{{ name }}" class="jan-switch {{ _size }} {{ _class }} {{ customClass }} {{ _value ? 'open' : '' }}" style="{{ _switchStyle }}" bindtap="{{ disabled ? '' : 'onTap' }}">
     <view class="jan-switch-node"></view>
 </view>
