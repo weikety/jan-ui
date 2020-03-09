@@ -1,6 +1,6 @@
 /**
  * 组件：checkbox
- * 版本：v0.0.3
+ * 版本：v0.0.4
  * 维护人：Meeken
  */
 const janComponent = require("../_common/jan-component")
@@ -24,6 +24,10 @@ let options = janComponent({
     labelDisabled: {
       type: Boolean,
       value: false
+    },
+    labelPosition: {
+      type: String,
+      value: "right"
     },
     iconSize: String,
     size: String,

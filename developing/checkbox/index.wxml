@@ -1,10 +1,13 @@
 <view class="jan-checkbox-container {{ customClass }}">
-    <view style="margin-right: 16rpx;" bindtap="{{ disabled || labelDisabled ? '' : 'onTap' }}">
+    <view wx:if="{{ labelPosition === 'left' }}" style="margin-right: 16rpx;" bindtap="{{ disabled || labelDisabled ? '' : 'onTap' }}">
         <slot></slot>
     </view>
     <view class="jan-checkbox {{ _class }} {{ _size }}" style="{{ _style }}{{ _shape }}" hover-class="jan-checkbox-hover" bindtap="{{ disabled ? '' : 'onTap' }}">
         <view class="jan-checkbox-node" style="{{ _nodeStyle }}{{ _shape }}">
             <jan-icon name="check" color="#fff" size="{{ iconSize }}" />
         </view>
+    </view>
+    <view wx:if="{{ labelPosition !== 'left' }}" style="margin-left: 16rpx;" bindtap="{{ disabled || labelDisabled ? '' : 'onTap' }}">
+        <slot></slot>
     </view>
 </view>
