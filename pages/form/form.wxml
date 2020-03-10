@@ -1,4 +1,4 @@
-<view class="container container-no-padding">
+<view class="container container-no-padding dark">
   <jan-cell-group border-radius="6px">
     <jan-cell title="基础用法" value="Hi，Jan！"></jan-cell>
     <jan-cell icon="twitter" title="我的推特" is-link clickable></jan-cell>

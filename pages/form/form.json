@@ -4,7 +4,7 @@
     "jan-cell-group": "../../developing/cell-group",
     "jan-button": "../../src/button",
     "jan-switch": "../../src/switch",
-    "jan-checkbox": "../../src/checkbox",
+    "jan-checkbox": "../../developing/checkbox",
     "jan-form-group": "../../developing/form-group"
   }
 }
