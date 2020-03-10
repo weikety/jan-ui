@@ -2,7 +2,7 @@
   "usingComponents": {
     "jan-cell": "../../developing/cell",
     "jan-cell-group": "../../developing/cell-group",
-    "jan-button": "../../src/button",
+    "jan-button": "../../developing/button",
     "jan-switch": "../../src/switch",
     "jan-checkbox": "../../developing/checkbox",
     "jan-form-group": "../../developing/form-group",

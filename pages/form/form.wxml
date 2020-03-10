@@ -9,9 +9,11 @@
 
   <jan-form-group border-radius="6px" clickable data="{{ list }}" bind:change="onSwitchChange" extra-props="{{ {showLabel: false, disabled: false} }}" />
 
-  <jan-field bind:change clearable />
+  <jan-field bind:change="onChange" value="啊啊啊是" error-message="手机号格式有误，请重试" clearable use-right-slot has-padding>
+    <jan-button type="info" size="mini" round>发送验证码</jan-button>
+  </jan-field>
 
-  <view style="width: calc(100% - 44rpx);margin: 0 22rpx;">
+  <view style="width: calc(100% - 44rpx);margin: 22rpx;">
     <jan-button type="primary" size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)" bind:click="onClick" bindlongpress="onLongtap">
       关闭页面
     </jan-button>

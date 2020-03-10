@@ -25,5 +25,9 @@ Page({
 
   onSwitchChange(e) {
     console.log(e)
+  },
+
+  onChange(e) {
+    console.log(e.detail)
   }
 })

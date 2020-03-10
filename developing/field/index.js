@@ -14,14 +14,12 @@ let options = janComponent({
   properties: {
     size: String,
     icon: String,
-    label: String,
     error: Boolean,
     fixed: Boolean,
     focus: Boolean,
-    center: Boolean,
-    isLink: Boolean,
-    leftIcon: String,
+    hasPadding: Boolean,
     rightIcon: String,
+    useRightSlot: Boolean,
     disabled: Boolean,
     autosize: Boolean,
     readonly: Boolean,
@@ -29,8 +27,6 @@ let options = janComponent({
     password: Boolean,
     iconClass: String,
     clearable: Boolean,
-    clickable: Boolean,
-    inputAlign: String,
     placeholder: String,
     customStyle: String,
     confirmType: String,
@@ -39,7 +35,10 @@ let options = janComponent({
     errorMessage: String,
     arrowDirection: String,
     placeholderStyle: String,
-    errorMessageAlign: String,
+    errorMessageStyle: {
+      type: String,
+      value: "text-align: left;color: red;"
+    },
     selectionEnd: {
       type: Number,
       value: -1
