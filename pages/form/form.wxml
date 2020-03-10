@@ -1,15 +1,15 @@
 <view class="container container-no-padding">
-  <!-- <jan-cell-group border-radius="6px">
+  <jan-cell-group border-radius="6px">
     <jan-cell title="基础用法" value="Hi，Jan！"></jan-cell>
     <jan-cell icon="twitter" title="我的推特" is-link clickable></jan-cell>
     <jan-cell title="我是标题文字" label="我是附加说明" value="我是内容"></jan-cell>
     <jan-cell title="欢迎使用 JanUI" icon="phone" label="这是一个可以点击的 cell 哦" is-link align="center" value="看看" border clickable bind:click="onLongtap"></jan-cell>
 
-  </jan-cell-group> -->
+  </jan-cell-group>
 
   <jan-form-group border-radius="6px" clickable data="{{ list }}" bind:change="onSwitchChange" extra-props="{{ {showLabel: false, disabled: false} }}" />
 
-  <jan-field bind:change="onChange" value="啊啊啊是" error-message="手机号格式有误，请重试" clearable use-right-slot has-padding>
+  <jan-field bind:change="onChange" value="啊啊啊是" error-message="手机号格式有误，请重试" placeholder="试试" clearable right-icon="github-fill" has-padding type="textarea" autosize show-confirm-bar="{{ false }}">
     <jan-button type="info" size="mini" round>发送验证码</jan-button>
   </jan-field>
 
