@@ -67,8 +67,13 @@
       <view class="block" bindtap="changeGutter">啊啊啊啊啊啊啊啊啊啊啊啊</view>
     </jan-col>
   </jan-row>
-  <button bind:tap="showPopup">打开 popup</button>
-  <jan-popup show="{{ show }}" position="bottom" model="{{ false }}" bind:close="closePopup">
+  <text>因为是下面五个用的同一个popup，所以切换方向时会发生偏移，再开一次就好</text>
+  <button bind:tap="showPopupCenter">从中间打开弹出层</button>
+  <button bind:tap="showPopupLeft">从左侧打开弹出层</button>
+  <button bind:tap="showPopupRight">从右侧打开弹出层</button>
+  <button bind:tap="showPopupTop">从上边打开弹出层</button>
+  <button bind:tap="showPopupBottom">从下边打开弹出层</button>
+  <jan-popup show="{{ show }}" position="{{ position }}" bind:close="closePopup">
     内容
   </jan-popup>
 </view>

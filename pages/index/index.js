@@ -6,7 +6,8 @@ Page({
   data: {
     color: "#212121",
     gutter: "0px",
-    show: false
+    show: false,
+    position: "center"
   },
 
   onClick(e) {
@@ -24,9 +25,35 @@ Page({
       gutter: "20px"
     })
   },
-  showPopup() {
+
+  showPopupCenter() {
     this.setData({
-      show: true
+      show: true,
+      position: "center"
+    })
+  },
+  showPopupLeft() {
+    this.setData({
+      show: true,
+      position: "left"
+    })
+  },
+  showPopupRight() {
+    this.setData({
+      show: true,
+      position: "right"
+    })
+  },
+  showPopupTop() {
+    this.setData({
+      show: true,
+      position: "top"
+    })
+  },
+  showPopupBottom() {
+    this.setData({
+      show: true,
+      position: "bottom"
     })
   },
 
