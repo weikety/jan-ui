@@ -5,6 +5,7 @@
     "jan-button": "../../src/button",
     "jan-switch": "../../src/switch",
     "jan-checkbox": "../../developing/checkbox",
-    "jan-form-group": "../../developing/form-group"
+    "jan-form-group": "../../developing/form-group",
+    "jan-field": "../../developing/field"
   }
 }

@@ -34,5 +34,11 @@ Page({
     this.setData({
       show: false
     })
+  },
+
+  handle2Form() {
+    wx.navigateTo({
+      url: '/pages/form/form',
+    })
   }
 })

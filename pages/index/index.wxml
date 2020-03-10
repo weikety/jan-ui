@@ -1,4 +1,4 @@
-<jan-button type="info" size="large˝">跳转到表单页面</jan-button>
+<jan-button type="info" size="large" bindtap="handle2Form">跳转到表单页面</jan-button>
 
 <view class="container" style="display: none;">
   <jan-button type="danger" size="mini" icon="user" bind:click="onClick" style="margin-right: 16px;">

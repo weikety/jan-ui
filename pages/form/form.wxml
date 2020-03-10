@@ -1,24 +1,20 @@
-<view class="container container-no-padding dark">
-  <jan-cell-group border-radius="6px">
+<view class="container container-no-padding">
+  <!-- <jan-cell-group border-radius="6px">
     <jan-cell title="基础用法" value="Hi，Jan！"></jan-cell>
     <jan-cell icon="twitter" title="我的推特" is-link clickable></jan-cell>
     <jan-cell title="我是标题文字" label="我是附加说明" value="我是内容"></jan-cell>
     <jan-cell title="欢迎使用 JanUI" icon="phone" label="这是一个可以点击的 cell 哦" is-link align="center" value="看看" border clickable bind:click="onLongtap"></jan-cell>
-    <jan-cell border="{{ false }}" title="使用 slot 作为标题">
-      <view slot="value">
-        <jan-switch value="{{ true }}" bind:change="onSwitchChange" />
-      </view>
-    </jan-cell>
-    <jan-cell border="{{ false }}" disabled title="禁用 switch" clickable>
-      <view slot="value">
-        <jan-checkbox class="maye" value="{{ true }}" bind:change="onSwitchChange" shape="circle" label-position="right">神秘</jan-checkbox>
-      </view>
-    </jan-cell>
-    <jan-button type="primary" size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)" bind:click="onClick" bindlongpress="onLongtap" style="margin-top: 22rpx;">
+
+  </jan-cell-group> -->
+
+  <jan-form-group border-radius="6px" clickable data="{{ list }}" bind:change="onSwitchChange" extra-props="{{ {showLabel: false, disabled: false} }}" />
+
+  <jan-field bind:change clearable />
+
+  <view style="width: calc(100% - 44rpx);margin: 0 22rpx;">
+    <jan-button type="primary" size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)" bind:click="onClick" bindlongpress="onLongtap">
       关闭页面
     </jan-button>
-  </jan-cell-group>
-
-  <jan-form-group border-radius="6px" clickable data="{{ list }}" bind:change="onSwitchChange" extra-props="{{ {showLabel: false, checkedColor: 'pink', size: 'normal', activeColor: 'pink', inactiveColor: 'yellow', disabled: false} }}" />
+  </view>
 
 </view>

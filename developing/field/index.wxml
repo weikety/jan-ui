@@ -1,0 +1,6 @@
+<view class="jan-field-container jan-field-has-padding">
+    <input class="jan-field-input" type="{{ type }}" focus="{{ focus }}" value="{{ _value }}" disabled="{{ disabled || readonly }}" maxlength="{{ maxlength }}" placeholder="{{ placeholder }}" placeholder-style="{{ placeholderStyle }}" placeholder-class="{{ utils.bem('field__placeholder', { error }) }}" confirm-type="{{ confirmType }}" confirm-hold="{{ confirmHold }}" hold-keyboard="{{ holdKeyboard }}" cursor-spacing="{{ cursorSpacing }}" adjust-position="{{ adjustPosition }}" selection-end="{{ selectionEnd }}" selection-start="{{ selectionStart }}" password="{{ password || type === 'password' }}" bindinput="onInput" bind:blur="onBlur" bind:focus="onFocus" bind:confirm="onConfirm" />
+    <view wx:if="{{ clearable && _value }}" class="jan-field-clear" catch:tap="onClear">
+        <jan-icon name="close-circle-fill" size="18" color="var(--font-color-light, #c6c6c6)" />
+    </view>
+</view>
