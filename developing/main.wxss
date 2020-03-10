@@ -5,6 +5,8 @@
  */
 
 page {
+  font-weight: bold;
+
   --font-color: #515a6e;
   --font-color-weight: #212121;
   --font-color-light: #7d8288;

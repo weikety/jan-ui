@@ -17,6 +17,7 @@ let options = janComponent({
     error: Boolean,
     fixed: Boolean,
     focus: Boolean,
+    title: String,
     hasPadding: Boolean,
     rightIcon: String,
     useRightSlot: Boolean,
@@ -130,7 +131,12 @@ options = mixinComponent(options, {
       this.triggerEvent("input", value)
       this.triggerEvent("change", value)
     },
-    noop() {}
+    noop() {},
+    onTap() {
+      this.setData({
+        _focused: true
+      })
+    }
   },
 
   attached() {

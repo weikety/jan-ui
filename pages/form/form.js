@@ -19,6 +19,17 @@ Page({
         icon: "github-fill",
         default: false,
         type: "checkbox"
+      },
+
+      {
+        key: "yoodo",
+        title: "测试 checkbox",
+        icon: "github-fill",
+        default: '',
+        type: "field",
+        extraProps: {
+          
+        }
       }
     ]
   },
