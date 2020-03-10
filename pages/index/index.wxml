@@ -68,7 +68,7 @@
     </jan-col>
   </jan-row>
   <button bind:tap="showPopup">打开 popup</button>
-  <jan-popup show="{{ show }}" position="center" model="{{ false }}" bind:close="closePopup">
+  <jan-popup show="{{ show }}" position="bottom" model="{{ false }}" bind:close="closePopup">
     内容
   </jan-popup>
 </view>

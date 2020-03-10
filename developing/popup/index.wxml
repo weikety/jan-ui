@@ -1,11 +1,12 @@
 <view
-  class="jan-popup {{ show ? '' : 'jan-popup--hide' }}"
-  style="z-index: {{ zindex }}; visibility: {{ _show ? 'visible' : 'hidden' }}; transition-duration: {{ duration / 1000 }}s;"
+  class="jan-popup--overlay {{ show ? '' : 'jan-popup--overlay--hide' }}"
+  bind:tap="onOverlayTap"
+  style="z-index: {{ zindex }}; visibility: {{ show ? 'visible' : 'hidden' }}; transition-duration: {{ duration / 1000 }}s;"
+></view>
+
+<view
+  class="jan-popup--container jan-popup--container--{{ position }} {{ show ? '' : 'jan-popup--container--' + position + '--hide' }}"
+  style="z-index: {{ zindex }}; visibility: {{ show ? 'visible' : 'hidden' }}; transition-duration: {{ duration / 1000 }}s;"
 >
-  <view class="jan-popup--overlay jan-popup--overlay--{{ position }}" catch:tap="onBgTap">
-    <!-- 使用 catch 是为了阻止 overlay 层接收到点击事件 -->
-    <view class="jan-popup--panel jan-popup--panel--{{ position }}" catch:tap="onPanelTap">
-      <slot></slot>
-    </view>
-  </view>
+  <slot></slot>
 </view>
