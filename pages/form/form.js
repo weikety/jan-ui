@@ -9,8 +9,7 @@ Page({
         key: "test",
         title: "测试",
         default: false,
-        type: "switch",
-        required: true
+        type: "switch"
       },
 
       {

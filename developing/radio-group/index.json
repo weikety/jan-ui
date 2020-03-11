@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "jan-checkbox": "../checkbox",
+    "jan-icon": "../icon"
+  }
+}

@@ -1,4 +1,4 @@
-<view class="container container-no-padding dark">
+<view class="container container-no-padding">
   <jan-cell-group border-radius="6px">
     <jan-cell title="基础用法" value="Hi，Jan！"></jan-cell>
     <jan-cell icon="twitter" title="我的推特" is-link clickable></jan-cell>
@@ -8,9 +8,11 @@
       <jan-button type="info" size="mini" round>发送验证码</jan-button>
     </jan-field>
 
+    <jan-radio-group clickable data="{{ list }}" bind:change="onSwitchChange" />
+
   </jan-cell-group>
 
-  <jan-form-group border-radius="6px" clickable data="{{ list }}" bind:change="onSwitchChange" extra-props="{{ {showLabel: false, disabled: false} }}" />
+  <jan-form-group border-radius="6px" clickable data="{{ list }}" bind:change="onSwitchChange" extra-props="{{ {showLabel: false, disabled: false, size: 'small'} }}" />
 
   <view style="width: calc(100% - 44rpx);margin: 22rpx;">
     <jan-button type="primary" size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)" bind:click="onClick" bindlongpress="onLongtap">

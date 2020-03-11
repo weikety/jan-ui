@@ -6,6 +6,7 @@
     "jan-switch": "../../src/switch",
     "jan-checkbox": "../../developing/checkbox",
     "jan-form-group": "../../developing/form-group",
-    "jan-field": "../../developing/field"
+    "jan-field": "../../developing/field",
+    "jan-radio-group": "../../developing/radio-group"
   }
 }

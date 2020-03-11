@@ -1,0 +1,106 @@
+.jan-radio-group {
+  width: 100%;
+  /* padding: 22rpx; */
+  overflow: hidden;
+}
+
+.jan-radio-group-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.joy-radio-item-wrapper {
+  width: 100%;
+}
+
+.jan-cell-divider-line {
+  width: 100%;
+  background-color: var(--bg-color, #fff);
+}
+
+.jan-cell-divider-line view {
+  width: calc(100% - 28rpx);
+  margin-left: 28rpx;
+  height: 1rpx;
+  background-color: var(--font-color, #fafafa);
+  opacity: 0.05;
+}
+
+.jan-radio-item {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 88rpx;
+  background-color: var(--bg-color, #fff);
+  padding: 28rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  font-size: var(--font-size-normal, 28rpx);
+  color: var(--font-color-weight, #212121);
+}
+
+.jan-radio-item .jan-radio-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.jan-radio-title-required::before {
+  content: "*";
+  position: absolute;
+  left: 8rpx;
+  color: red;
+}
+
+.jan-radio-item .jan-radio-item-right {
+  font-size: var(--font-size-normal, 20rpx);
+  flex-shrink: 0;
+  color: var(--font-color-light, #7d8288);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.jan-ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.jan-ripple::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(
+    circle,
+    var(--ripple-color) 10%,
+    transparent 10%
+  );
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 0.5s, opacity 1s;
+  z-index: 0;
+}
+
+.jan-ripple:active::after {
+  transform: scale(0, 0);
+  opacity: 0.2;
+  transition: 0s;
+}
+
+.jan-radio-item-hover.jan-radio-item-clickable.jan-radio-item {
+  background-color: var(--bg-color);
+  opacity: 0.8;
+}
