@@ -96,7 +96,6 @@ options = mixinComponent(options, {
           list[i]["value"] = false
         }
         list[idx]["value"] = true
-        console.log(list)
         this.setData({
           _data: list
         })
