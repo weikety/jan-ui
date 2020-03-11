@@ -76,4 +76,6 @@
   <jan-popup show="{{ show }}" position="{{ position }}" bind:close="closePopup">
     内容
   </jan-popup>
+
+  <jan-rate value="{{ 1 }}" disabled="{{ true }}"></jan-rate>
 </view>

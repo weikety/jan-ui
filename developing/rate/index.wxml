@@ -1,0 +1,26 @@
+<wxs src="../_common/utils.wxs" module="utils" />
+
+<view class="jan-rate">
+  <view
+    class="jan-rate--item"
+    wx:for="{{ items }}"
+    wx:key="index"
+    style="font-size: {{ utils.addUnit(size) }}; padding-right: {{ index === count - 1 ? '' : utils.addUnit(gutter) }}"
+  >
+    <jan-icon
+      name="{{ voidIcon }}"
+      color="{{ disabled ? disabledColor : voidColor }}"
+      data-index="{{ index }}"
+      bind:click="onSelect"
+    ></jan-icon>
+
+    <jan-icon
+      wx:if="{{ index < _value }}"
+      name="{{ icon }}"
+      color="{{ disabled ? disabledColor : color }}"
+      class="jan-rate--item--fill"
+      data-index="{{ index }}"
+      bind:click="onSelect"
+    ></jan-icon>
+  </view>
+</view>
