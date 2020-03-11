@@ -4,6 +4,7 @@
     "jan-cell": "../cell/index",
     "jan-icon": "../icon/index",
     "jan-switch": "../switch/index",
-    "jan-checkbox": "../checkbox/index"
+    "jan-checkbox": "../checkbox/index",
+    "jan-field": "../field/index"
   }
 }

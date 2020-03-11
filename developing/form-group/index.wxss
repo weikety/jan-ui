@@ -49,6 +49,13 @@
   align-items: center;
 }
 
+.jan-form-title-required::before {
+  content: "*";
+  position: absolute;
+  left: 8rpx;
+  color: red;
+}
+
 .jan-form-item .jan-form-item-right {
   font-size: var(--font-size-normal, 20rpx);
   flex-shrink: 0;

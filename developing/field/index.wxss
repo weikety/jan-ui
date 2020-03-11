@@ -83,3 +83,10 @@
   margin-right: 11rpx;
   font-family: PingFang SC, "Helvetica Neue", Arial, sans-serif;
 }
+
+.jan-field-title-required::before {
+  content: "*";
+  position: absolute;
+  left: 26rpx;
+  color: red;
+}

@@ -1,16 +1,19 @@
 <view class="jan-field-wrapper {{ hasPadding ? 'jan-field-has-padding' : '' }}">
     <view class="jan-field-container">
-        <view wx:if="{{ title }}" class="jan-field-title">{{ title }}</view>
+        <view wx:if="{{ title }}" class="jan-field-title {{ required ? 'jan-field-title-required' : '' }}">
+            <jan-icon wx:if="{{ icon }}" name="{{ icon }}" style="margin-right: 16rpx;"></jan-icon>
+            <view>{{ title }}</view>
+        </view>
         <textarea wx:if="{{ type === 'textarea' }}" class="jan-field-textarea" fixed="{{ fixed }}" focus="{{ focus }}" value="{{ _value }}" disabled="{{ disabled || readonly }}" maxlength="{{ maxlength }}" placeholder="{{ placeholder }}" placeholder-style="{{ placeholderStyle }}" auto-height="{{ autosize }}" cursor-spacing="{{ cursorSpacing }}" adjust-position="{{ adjustPosition }}" show-confirm-bar="{{ showConfirmBar }}" hold-keyboard="{{ holdKeyboard }}" selection-end="{{ selectionEnd }}" selection-start="{{ selectionStart }}" bindinput="onInput" bind:blur="onBlur" bind:focus="onFocus" bind:confirm="onConfirm" />
         <input wx:else class="jan-field-input" type="{{ type }}" focus="{{ focus }}" value="{{ _value }}" disabled="{{ disabled || readonly }}" maxlength="{{ maxlength }}" placeholder="{{ placeholder }}" placeholder-style="{{ placeholderStyle }}" confirm-type="{{ confirmType }}" confirm-hold="{{ confirmHold }}" hold-keyboard="{{ holdKeyboard }}" cursor-spacing="{{ cursorSpacing }}" adjust-position="{{ adjustPosition }}" selection-end="{{ selectionEnd }}" selection-start="{{ selectionStart }}" password="{{ password || type === 'password' }}" bindinput="onInput" bind:blur="onBlur" bind:focus="onFocus" bind:confirm="onConfirm" />
         <view wx:if="{{ !(disabled || readonly) && clearable && _value }}" class="jan-field-clear" catch:tap="onClear">
-            <jan-icon name="close-circle-fill" size="18" color="var(--font-color-light, #c6c6c6)" />
+            <jan-icon name="close-circle-fill" color="var(--font-color-light, #c6c6c6)" />
         </view>
         <view wx:if="{{ useRightSlot }}" class="jan-field-right-slot">
             <slot></slot>
         </view>
         <view wx:elif="{{ rightIcon }}" class="jan-field-right-icon" bindtap="onClickIcon">
-            <jan-icon name="{{ rightIcon }}" size="18"></jan-icon>
+            <jan-icon name="{{ rightIcon }}"></jan-icon>
         </view>
     </view>
     <view wx:if="{{ error }}" class="jan-field-error" style="{{ errorMessageStyle }}">

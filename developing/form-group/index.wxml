@@ -3,7 +3,7 @@
         <!-- 渲染 data 列表 -->
         <view wx:for="{{ _data }}" wx:key="key" class="joy-form-item-wrapper">
             <view class="jan-form-item {{ _class }}" hover-class="jan-form-item-hover" data-cls="{{ 'jan-form-item-' + (item.key || index) }}" catchtap="onFormItemTap">
-                <view class="jan-form-title" style="{{ _labelWidth }}">
+                <view class="jan-form-title {{ item.required ? 'jan-form-title-required' : '' }}" style="{{ _labelWidth }}">
                     <jan-icon wx:if="{{ item.icon }}" name="{{ item.icon }}" style="margin-right: 16rpx;"></jan-icon>
                     <view>{{ item.title }}</view>
                 </view>

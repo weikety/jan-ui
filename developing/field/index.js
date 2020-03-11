@@ -1,6 +1,6 @@
 /**
  * 组件：field
- * 版本：v0.0.1
+ * 版本：v0.0.2
  * 维护人：Meeken
  */
 const janComponent = require("../_common/jan-component")
@@ -18,6 +18,7 @@ let options = janComponent({
     fixed: Boolean,
     focus: Boolean,
     title: String,
+    required: Boolean,
     hasPadding: Boolean,
     rightIcon: String,
     useRightSlot: Boolean,

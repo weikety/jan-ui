@@ -3,15 +3,15 @@
         <!-- 渲染 data 列表 -->
         <view wx:for="{{ _data }}" wx:key="key" class="joy-form-item-wrapper">
             <view class="jan-form-item {{ _class }}" hover-class="jan-form-item-hover" data-cls="{{ 'jan-form-item-' + (item.key || index) }}" catchtap="onFormItemTap">
-                <view class="jan-form-title" style="{{ _labelWidth }}">
+                <view class="jan-form-title {{ item.required ? 'jan-form-title-required' : '' }}" style="{{ _labelWidth }}">
                     <jan-icon wx:if="{{ item.icon }}" name="{{ item.icon }}" style="margin-right: 16rpx;"></jan-icon>
                     <view>{{ item.title }}</view>
                 </view>
                 <view wx:if="{{ item.type === 'switch' }}" class="jan-form-item-right {{ 'jan-form-item-' + (item.key || index) }}" style="{{ _rightWidth }}">
-                    <jan-switch class="{{ 'jan-form-item-' + (item.key || index) }}" value="{{ item.default || false }}" data-itm="{{ item }}" data-idx="{{ index }}" extra-props="{{ extraProps }}" bind:change="onValueChange"></jan-switch>
+                    <jan-switch class="{{ 'jan-form-item-' + (item.key || index) }}" value="{{ item.default || false }}" data-itm="{{ item }}" data-idx="{{ index }}" extra-props="{{ item.extraProps || extraProps }}" bind:change="onValueChange"></jan-switch>
                 </view>
                 <view wx:elif="{{ item.type === 'checkbox' }}" class="jan-form-item-right {{ 'jan-form-item-' + (item.key || index) }}" style="{{ _rightWidth }}">
-                    <jan-checkbox class="{{ 'jan-form-item-' + (item.key || index) }}" value="{{ item.default || false }}" data-itm="{{ item }}" data-idx="{{ index }}" extra-props="{{ extraProps }}" bind:change="onValueChange"></jan-checkbox>
+                    <jan-checkbox class="{{ 'jan-form-item-' + (item.key || index) }}" value="{{ item.default || false }}" data-itm="{{ item }}" data-idx="{{ index }}" extra-props="{{ item.extraProps || extraProps }}" bind:change="onValueChange"></jan-checkbox>
                 </view>
             </view>
             <view wx:if="{{ _data.length && index < _data.length - 1 }}" class="jan-cell-divider-line">
