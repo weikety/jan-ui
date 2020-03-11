@@ -19,6 +19,27 @@ Page({
         default: false,
         type: "checkbox"
       }
+    ],
+
+    list2: [{
+        key: "test",
+        title: "测试",
+        value: true,
+      },
+
+      {
+        key: "yooo",
+        title: "测试 checkbox",
+        icon: "github-fill",
+        value: false,
+      },
+
+      {
+        key: "yooo1",
+        title: "测试 checkbox",
+        icon: "github-fill",
+        value: false,
+      }
     ]
   },
 

@@ -114,15 +114,22 @@ options = mixinComponent(options, {
       if (this.properties.asyncChange) {
         this.triggerEvent(
           "willchange",
-          typeof setValue !== "undefined" ? setValue : !this.data._value
+          typeof setValue === "boolean" ? setValue : !this.data._value
         )
       } else {
         this.setData({
-          _value: typeof setValue !== "undefined" ? setValue : !this.data._value
+          _value: typeof setValue === "boolean" ? setValue : !this.data._value
         })
         this.onValueChange()
         this.triggerEvent("change", this.data._value)
       }
+    },
+
+    clear() {
+      this.setData({
+        _value: false
+      })
+      this.onValueChange()
     },
 
     setDisabled() {

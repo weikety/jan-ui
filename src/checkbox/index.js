@@ -33,6 +33,7 @@ let options = janComponent({
     },
     iconSize: String,
     size: String,
+    asyncChange: Boolean,
     checkedColor: String,
     extraProps: {
       type: Object,
@@ -108,13 +109,27 @@ options = mixinComponent(options, {
       })
     },
 
-    onTap() {
+    onTap(setValue) {
       if (this.data._disabled) return
+      if (this.properties.asyncChange) {
+        this.triggerEvent(
+          "willchange",
+          typeof setValue === "boolean" ? setValue : !this.data._value
+        )
+      } else {
+        this.setData({
+          _value: typeof setValue === "boolean" ? setValue : !this.data._value
+        })
+        this.onValueChange()
+        this.triggerEvent("change", this.data._value)
+      }
+    },
+
+    clear() {
       this.setData({
-        _value: !this.data._value
+        _value: false
       })
       this.onValueChange()
-      this.triggerEvent("change", this.data._value)
     },
 
     setDisabled() {

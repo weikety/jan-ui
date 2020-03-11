@@ -12,7 +12,7 @@ const dataHook = require("../_common/data-hook")
 let options = janComponent({
   properties: {
     data: {
-      type: Array,
+      type: null,
       value: []
     },
     type: {
@@ -42,14 +42,25 @@ let options = janComponent({
 const onPropsChange = function() {
   let { clickable, data, labelWidth, rightWidth } = this.properties
   let whiteList = []
-  data = data.map(item => {
-    if (typeof item === "object" && item.key && !whiteList.includes(item.key)) {
-      whiteList.push(item.key)
-      return item
-    } else {
-      throw new Error(`${JSON.stringify(item)} 必须包含唯一的、非中文的 key！`)
-    }
-  })
+  if (typeof data === "object" && !data instanceof Array) {
+    data = [data]
+  } else {
+    data = data.map(item => {
+      if (
+        typeof item === "object" &&
+        item.key &&
+        !whiteList.includes(item.key)
+      ) {
+        whiteList.push(item.key)
+        return item
+      } else {
+        throw new Error(
+          `${JSON.stringify(item)} 必须包含唯一的、非中文的 key！`
+        )
+      }
+    })
+  }
+
   this.setData({
     _class: `${clickable ? "jan-ripple jan-form-item-clickable" : ""}`,
     _data: data,
