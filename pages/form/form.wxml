@@ -1,5 +1,5 @@
 <view class="container container-no-padding dark">
-  <jan-search value="hahah" placeholder="hhhh" right-icon="search" shape="round" />
+  <jan-search value="hahah" placeholder="hhhh" shape="round" input-align="center" bind:search="onChange" bind:change="onChange" show-action bind:action="onChange" />
   <jan-cell-group border-radius="6px">
     <!-- <jan-cell title="基础用法" value="Hi，Jan！"></jan-cell>
     <jan-cell icon="twitter" title="我的推特" is-link clickable></jan-cell>

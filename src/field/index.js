@@ -144,6 +144,9 @@ options = mixinComponent(options, {
       this.setData({
         _focused: true
       })
+    },
+    onKeyboardheightchange(event) {
+      this.triggerEvent("keyboardheightchange", event.detail)
     }
   },
 
