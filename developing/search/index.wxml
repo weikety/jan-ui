@@ -1,0 +1,6 @@
+<view class="jan-search-container" style="{{ _background }}">
+    <view class="jan-search-node">
+        <jan-icon name="{{ leftIcon }}"></jan-icon>
+    </view>
+    <view class="jan-search-action">撤销</view>
+</view>

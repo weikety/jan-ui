@@ -7,6 +7,7 @@
     "jan-checkbox": "../../developing/checkbox",
     "jan-form-group": "../../developing/form-group",
     "jan-field": "../../developing/field",
-    "jan-radio-group": "../../developing/radio-group"
+    "jan-radio-group": "../../developing/radio-group",
+    "jan-search": "../../developing/search"
   }
 }
