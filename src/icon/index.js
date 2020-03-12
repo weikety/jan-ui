@@ -1,13 +1,12 @@
 /**
  * 组件：icon
- * 版本：v0.0.2
+ * 版本：v0.0.4
  * 维护人：SU
  */
 const janComponent = require("../_common/jan-component")
 const mixinComponent = require("../_common/mixin-component")
 const dataHook = require("../_common/data-hook")
 
-const openType = require("../_common/open-type")
 const addUnit = require("./add-unit").addUnit
 
 let options = janComponent({
@@ -21,7 +20,7 @@ let options = janComponent({
     },
     size: {
       type: null,
-      value: null
+      value: "var(--font-size-normal)"
     },
     color: {
       type: String,
@@ -41,8 +40,6 @@ let options = janComponent({
     addUnit
   }
 })
-
-options = mixinComponent(options, openType())
 
 const onClassChange = function() {
   const { prefix, name } = this.properties
