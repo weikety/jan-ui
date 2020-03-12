@@ -1,0 +1,5 @@
+<view class="jan-slider">
+  <view class="jan-slider--active"></view>
+  <view class="jan-slider--holder"></view>
+  <view class="jan-slider--inactive"></view>
+</view>

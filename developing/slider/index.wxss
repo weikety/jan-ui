@@ -1,0 +1,29 @@
+.jan-slider {
+  display: flex;
+  padding: 0 15px;
+  align-items: center;
+}
+
+.jan-slider--active {
+  width: 50%;
+  height: 2px;
+  background-color: blue;
+  margin-right: -15rpx;
+}
+
+.jan-slider--inactive {
+  width: 50%;
+  height: 2px;
+  background-color: #ccc;
+  margin-left: -15rpx;
+}
+
+.jan-slider--holder {
+  width: 50rpx;
+  height: 50rpx;
+  box-shadow: 2px 2px 5px #999;
+  border-radius: 50%;
+  background-color: white;
+  flex-shrink: 0;
+  z-index: 1;
+}

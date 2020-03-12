@@ -78,4 +78,5 @@
   </jan-popup>
 
   <jan-rate value="{{ 2.5 }}" allowHalf="{{ true }}"></jan-rate>
+  <jan-slider></jan-slider>
 </view>
