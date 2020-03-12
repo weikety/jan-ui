@@ -81,6 +81,11 @@ let options = janComponent({
     touchable: {
       type: Boolean,
       value: true
+    },
+
+    allowHalf: {
+      type: Boolean,
+      value: false
     }
   },
 
@@ -100,13 +105,53 @@ let options = janComponent({
 
   methods: {
     onSelect(event) {
+      console.log("onSelect", event);
       const { disabled, readonly } = this.properties;
+      const { _value } = this.data;
       const { index } = event.currentTarget.dataset;
-      if (!disabled && !readonly) {
-        this.setData({ _value: index + 1 });
-        this.triggerEvent('input', index + 1);
-        this.triggerEvent('change', index + 1);
+      if (!disabled && !readonly && _value !== index) {
+        this.setData({ _value: index });
+        this.triggerEvent('input', index);
+        this.triggerEvent('change', index);
       }
+    },
+
+    onTouchMove(event) {
+      console.log("onTouchMove", event);
+      const { touchable } = this.properties;
+      if (!touchable) return;
+
+      const { clientX } = event.touches[0];
+
+      this.getRect('.jan-rate--icon', true).then((list) => {
+          const target = list
+            .sort(item => item.left - item.right)
+            .find(item => clientX >= item.left && clientX <= item.right);
+          if (target != null) {
+            this.onSelect({
+              ...event,
+              currentTarget: target
+            });
+          }
+        }
+      );
+    },
+
+    getRect(selector, all) {
+      return new Promise(resolve => {
+        wx.createSelectorQuery()
+          .in(this)[all ? 'selectAll' : 'select'](selector)
+          .boundingClientRect(rect => {
+            if (all && Array.isArray(rect) && rect.length) {
+              resolve(rect);
+            }
+
+            if (!all && rect) {
+              resolve(rect);
+            }
+          })
+          .exec();
+      });
     }
   }
 })
