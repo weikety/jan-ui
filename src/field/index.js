@@ -1,6 +1,6 @@
 /**
  * 组件：field
- * 版本：v0.0.2
+ * 版本：v0.0.3
  * 维护人：Meeken
  */
 const janComponent = require("../_common/jan-component")
@@ -34,7 +34,6 @@ let options = janComponent({
     confirmHold: Boolean,
     holdKeyboard: Boolean,
     errorMessage: String,
-    arrowDirection: String,
     placeholderStyle: {
       type: String,
       value: "color: var(--font-color-light, #c6c6c6);opacity: 0.8;"

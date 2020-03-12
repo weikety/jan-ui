@@ -11,9 +11,7 @@ const dataHook = require("../_common/data-hook")
 
 let options = janComponent({
   properties: {
-    label: String,
     focus: Boolean,
-    error: Boolean,
     disabled: Boolean,
     readonly: Boolean,
     inputAlign: String,
@@ -28,7 +26,10 @@ let options = janComponent({
     },
     rightIcon: String,
     placeholder: String,
-    placeholderStyle: String,
+    placeholderStyle: {
+      type: String,
+      value: "color: var(--font-color-light, #c6c6c6);opacity: 0.8;"
+    },
     actionText: {
       type: String,
       value: "取消"
@@ -55,14 +56,18 @@ let options = janComponent({
 /* 监听 class 和 style 变化的方法 */
 
 const onPropsChange = function() {
-  const { value, background } = this.properties
+  const { value, background, shape } = this.properties
   this.setData({
     _value: value || "",
-    _background: `background: ${background};`
+    _background: `background: ${background};`,
+    _shape: shape === "round" ? "border-radius: 33rpx" : ""
   })
 }
 
-options = mixinComponent(options, dataHook(["value"], onPropsChange))
+options = mixinComponent(
+  options,
+  dataHook(["value", "background", "shape"], onPropsChange)
+)
 
 /* 初始化样式，将 onStyleChange 和 onPropsChange 添加到组件的 methods */
 

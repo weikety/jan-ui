@@ -1,6 +1,23 @@
 <view class="jan-search-container" style="{{ _background }}">
-    <view class="jan-search-node">
-        <jan-icon name="{{ leftIcon }}"></jan-icon>
+    <view class="jan-search-node" style="{{ _shape }}">
+        <view wx:if="{{ leftIcon && !useRightIconSlot }}" class="jan-search-icon" style="padding-right: 22rpx;">
+            <jan-icon name="{{ leftIcon }}"></jan-icon>
+        </view>
+        <view wx:if="{{ useLeftIconSlot }}">
+            <slot name="left-icon"></slot>
+        </view>
+        <input class="jan-search-input" placeholder="{{ placeholder }}" placeholder-style="{{ placeholderStyle }}" maxlength="{{ maxlength }}" disabled="{{ disabled }}" readonly="{{ readonly }}" />
+        <view wx:if="{{ rightIcon && !useRightIconSlot }}" class="jan-search-icon" style="padding-left: 22rpx;">
+            <jan-icon name="{{ rightIcon }}"></jan-icon>
+        </view>
+        <view wx:if="{{ useRightIconSlot }}">
+            <slot name="right-icon"></slot>
+        </view>
     </view>
-    <view class="jan-search-action">撤销</view>
+    <view wx:if="{{ !useActionSlot && showAction && actionText }}" class="jan-search-action">
+        {{ actionText }}
+    </view>
+    <view wx:if="{{ useActionSlot && showAction }}" class="jan-search-action">
+        <slot name="action"></slot>
+    </view>
 </view>
