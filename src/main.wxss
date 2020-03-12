@@ -4,7 +4,7 @@
  * 并在页面头部添加 class="dark"，即可实现换肤
  */
 
-page {
+ page {
   --font-color: #515a6e;
   --font-color-weight: #212121;
   --font-color-light: #7d8288;
@@ -44,6 +44,10 @@ page .dark {
   --font-size-large: 32rpx;
   --font-size-small: 24rpx;
   --font-size-mini: 20rpx;
+}
+
+.jan-form-style {
+  font-weight: 500;
 }
 
 /* —————— 动画 —————— */

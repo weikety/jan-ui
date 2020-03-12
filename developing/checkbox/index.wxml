@@ -1,4 +1,4 @@
-<view class="jan-checkbox-container {{ customClass }}">
+<view class="jan-form-style jan-checkbox-container {{ customClass }}">
     <view wx:if="{{ _showLabel && labelPosition === 'left' }}" style="margin-right: 16rpx;" catchtap="{{ _disabled || labelDisabled ? '' : 'onTap' }}">
         <slot></slot>
     </view>

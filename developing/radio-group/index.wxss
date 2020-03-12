@@ -1,3 +1,5 @@
+@import "../main.wxss";
+
 .jan-radio-group {
   width: 100%;
   /* padding: 22rpx; */

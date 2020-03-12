@@ -1,4 +1,4 @@
-<view class="jan-form-group {{ customClass }}" style="{{ _style }}">
+<view class="jan-form-style jan-form-group {{ customClass }}" style="{{ _style }}">
     <view class="jan-form-group-container" style="{{ borderRadius ? 'border-radius: ' + borderRadius : '' }}">
         <!-- 渲染 data 列表 -->
         <view wx:for="{{ _data }}" wx:key="key" class="joy-form-item-wrapper">

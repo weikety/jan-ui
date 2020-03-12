@@ -1,4 +1,4 @@
-<view class="jan-cell-group {{ customClass }}">
+<view class="jan-form-style jan-cell-group {{ customClass }}">
     <view class="jan-cell-group-container" style="{{ borderRadius ? 'border-radius: ' + borderRadius : '' }}">
         <slot></slot>
     </view>

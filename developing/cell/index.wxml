@@ -1,4 +1,4 @@
-<view class="jan-cell-container {{ customClass }}" bindtap="{{ !url ? 'onTap' : 'onLinkTap' }}">
+<view class="jan-form-style jan-cell-container {{ customClass }}" bindtap="{{ !url ? 'onTap' : 'onLinkTap' }}">
     <view class="jan-cell {{ _class }}" hover-class="jan-cell-hover" style="{{ style }}">
         <view class="jan-cell-left" style="{{ _titleWidth }}">
             <view class="jan-cell-title">

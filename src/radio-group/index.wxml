@@ -1,4 +1,4 @@
-<view class="jan-radio-group {{ customClass }}" style="{{ _style }}">
+<view class="jan-form-style jan-radio-group {{ customClass }}" style="{{ _style }}">
     <view class="jan-radio-group-container" style="{{ borderRadius ? 'border-radius: ' + borderRadius : '' }}">
         <!-- 渲染 data 列表 -->
         <view wx:for="{{ _data }}" wx:key="key" class="joy-radio-item-wrapper" data-cls="{{ 'jan-radio-item-' + (item.key || index) }}" catchtap="onFormItemTap">
