@@ -1,0 +1,35 @@
+<wxs src="../_common/utils.wxs" module="utils" />
+
+<view class="jan-rate">
+  <view
+    class="jan-rate--item"
+    wx:for="{{ items }}"
+    wx:key="index"
+    style="font-size: {{ utils.addUnit(size) }}; padding-right: {{ index === count - 1 ? '' : utils.addUnit(gutter) }}"
+    catch:touchmove="onTouchMove"
+  >
+    <!-- 未选中状态的星星 -->
+    <jan-icon
+      name="{{ voidIcon }}"
+      color="{{ disabled ? disabledColor : voidColor }}"
+    ></jan-icon>
+
+    <!-- 选中状态的星星 -->
+    <jan-icon
+      name="{{ icon }}"
+      color="{{ disabled ? disabledColor : color }}"
+      class="jan-rate--icon jan-rate--item--fill {{ index + 0.5 < _value ? '' : 'jan-rate--item--hidden' }}"
+      data-index="{{ index + 1 }}"
+      bind:click="onSelect"
+    ></jan-icon>
+
+    <!-- 选中状态的左半边星星 -->
+    <jan-icon
+      name="{{ icon }}"
+      color="{{ disabled ? disabledColor : color }}"
+      class="jan-rate--icon jan-rate--item--left {{ index < _value ? '' : 'jan-rate--item--hidden' }}"
+      data-index="{{ allowHalf ? index + 0.5 : index + 1 }}"
+      bind:click="onSelect"
+    ></jan-icon>
+  </view>
+</view>

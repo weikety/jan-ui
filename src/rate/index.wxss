@@ -1,0 +1,30 @@
+.jan-rate {
+  display: inline-flex;
+  user-select: none;
+}
+
+.jan-rate--disabled {
+  cursor: not-allowed;
+}
+
+.jan-rate--item {
+  position: relative;
+}
+
+.jan-rate--item--hidden {
+  opacity: 0;
+}
+
+.jan-rate--item--left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0.5em;
+  overflow: hidden;
+}
+
+.jan-rate--item--fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
