@@ -1,15 +1,15 @@
 .jan-field-wrapper {
   width: 100%;
-  min-height: 88rpx;
   background-color: var(--bg-color, #fff);
   color: var(--font-color-weight, #212121);
   box-sizing: border-box;
   overflow: hidden;
+  padding: 22rpx 28rpx;
 }
 
 .jan-field-container {
   width: 100%;
-  min-height: 88rpx;
+  min-height: 70rpx;
   overflow: hidden;
   box-sizing: border-box;
   font-size: inherit;

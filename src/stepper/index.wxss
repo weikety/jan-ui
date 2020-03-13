@@ -1,0 +1,49 @@
+.jan-stepper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-radius: 8rpx;
+  overflow: hidden;
+  border: 1rpx solid var(--border-color);
+}
+
+.jan-stepper-node {
+  width: 112rpx;
+  min-height: 56rpx;
+  background-color: var(--bg-color, #fafafa);
+  text-align: center;
+}
+
+.jan-stepper-button {
+  width: 66rpx;
+  height: 56rpx;
+  background-color: var(--bg-color, #fafafa);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.jan-stepper-button.disabled,
+.jan-stepper-node.disabled {
+  color: var(--font-color-light, #d4d8dd) !important;
+  opacity: 0.6;
+}
+
+.jan-stepper-button.hover:not(.disabled) {
+  background-color: var(--ripple-color, #fafafa);
+  opacity: 0.6;
+}
+
+.jan-stepper-button.minus {
+  border-top-left-radius: 8rpx;
+  border-bottom-left-radius: 8rpx;
+}
+
+.jan-stepper-button.plus {
+  border-top-right-radius: 8rpx;
+  border-bottom-right-radius: 8rpx;
+}

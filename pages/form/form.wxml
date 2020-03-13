@@ -1,4 +1,4 @@
-<view class="container container-no-padding">
+<view class="container container-no-padding dark">
   <jan-search value="hahah" placeholder="hhhh" shape="round" input-align="center" bind:search="onChange" bind:change="onChange" show-action bind:action="onChange" />
 
 

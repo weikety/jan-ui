@@ -6,9 +6,9 @@
     "jan-switch": "../../src/switch",
     "jan-checkbox": "../../src/checkbox",
     "jan-form-group": "../../src/form-group",
-    "jan-field": "../../developing/field",
+    "jan-field": "../../src/field",
     "jan-radio-group": "../../src/radio-group",
     "jan-search": "../../src/search",
-    "jan-stepper": "../../developing/stepper"
+    "jan-stepper": "../../src/stepper"
   }
 }
