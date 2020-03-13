@@ -21,7 +21,8 @@
 .jan-slider--holder {
   width: 50rpx;
   height: 50rpx;
-  box-shadow: 2px 2px 5px #999;
+  box-shadow: 0 3rpx 8rpx 0 rgba(0, 0, 0, 0.05),
+    0 2rpx 2rpx 0 rgba(0, 0, 0, 0.1), 0 3rpx 3rpx 0 rgba(0, 0, 0, 0.05);
   border-radius: 50%;
   background-color: white;
   flex-shrink: 0;
