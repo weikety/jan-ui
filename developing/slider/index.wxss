@@ -1,21 +1,21 @@
 .jan-slider {
   display: flex;
-  padding: 0 15px;
+  margin: 0 16px;
   align-items: center;
 }
 
 .jan-slider--active {
-  width: 50%;
+  width: 0%;
   height: 2px;
   background-color: blue;
-  margin-right: -15rpx;
+  margin-right: -16rpx;
 }
 
 .jan-slider--inactive {
-  width: 50%;
+  width: 100%;
   height: 2px;
   background-color: #ccc;
-  margin-left: -15rpx;
+  margin-left: -16rpx;
 }
 
 .jan-slider--holder {
