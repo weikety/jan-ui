@@ -1,78 +1,197 @@
-// /**
-//  * 组件：Mixin 组件模版
-//  * 版本：v0.0.1
-//  * 维护人：Meeken
-//  */
-// const janComponent = require("../_common/jan-component")
-// const mixinComponent = require("../_common/mixin-component")
-// const dataHook = require("../_common/data-hook")
+/**
+ * 组件：stepper
+ * 版本：v0.0.1
+ * 维护人：Meeken
+ */
+const janComponent = require("../_common/jan-component")
+const mixinComponent = require("../_common/mixin-component")
+const dataHook = require("../_common/data-hook")
 
-// /* 使用 janComponent 初始化组件配置 */
+/* 使用 janComponent 初始化组件配置 */
 
-// let options = janComponent({
-//   properties: {
-//     属性名: {
-//       type: String,
-//       value: "默认值"
-//     }
-//   }
-// })
+let options = janComponent({
+  properties: {
+    value: {
+      type: null,
+      value: 0,
+      observer: "check"
+    },
+    integer: {
+      type: Boolean,
+      observer: "check"
+    },
+    disabled: Boolean,
+    inputWidth: null,
+    buttonSize: null,
+    asyncChange: Boolean,
+    disableInput: Boolean,
+    decimalLength: {
+      type: Number,
+      value: null,
+      observer: "check"
+    },
+    min: {
+      type: null,
+      value: 1,
+      observer: "check"
+    },
+    max: {
+      type: null,
+      value: Number.MAX_SAFE_INTEGER,
+      observer: "check"
+    },
+    step: {
+      type: null,
+      value: 1
+    },
+    showPlus: {
+      type: Boolean,
+      value: true
+    },
+    showMinus: {
+      type: Boolean,
+      value: true
+    },
+    disablePlus: Boolean,
+    disableMinus: Boolean,
+    longPress: {
+      type: Boolean,
+      value: true
+    }
+  },
 
-// /* 监听 class 和 style 变化的方法 */
+  data: {
+    _value: 0,
+    _disabled: false,
+    _timeoutCb: 0,
+    _propsValue: 0
+  }
+})
 
-// const onClassChange = function() {
-//   const {
-//     /* 需要读取的属性 */
-//   } = this.properties
-//   /**
-//    * _class 和 _style 是组件内部维护的，
-//    * 保存类名和样式的 data
-//    */
-//   this.setData({
-//     _class: `新的类名`
-//   })
-// }
+const onPropsChange = function() {
+  const { disabled, value, max, min } = this.properties
+  this.setData({
+    _disabled: disabled,
+    _propsValue: this.check(
+      (value * 1 >= max * 1 && max) ||
+        (value * 1 <= min * 1 && min) ||
+        value ||
+        min ||
+        0
+    )
+  })
+}
 
-// const onStyleChange = function() {
-//   const {
-//     /* 需要读取的属性 */
-//   } = this.properties
-//   this.setData({
-//     _style: `新的样式`
-//   })
-// }
+options = mixinComponent(
+  options,
+  dataHook(["disabled", "value"], onPropsChange)
+)
 
-// /* 使用 dataHook 来监听 props 或 data 的变化 */
+options = mixinComponent(options, {
+  methods: {
+    onPropsChange,
+    check(val) {
+      let { max, min, integer, value } = this.properties
+      if (typeof val === "string" || typeof val === "number") value = val
+      if (integer) value = parseInt(value)
+      if (value >= max) {
+        value = max * 1
+      } else if (value <= min) {
+        value = min * 1
+      }
+      value = value || min || 0
+      if (this.properties.decimalLength) {
+        value = value.toFixed(this.properties.decimalLength)
+      }
+      this.setData({
+        _value: value
+      })
 
-// options = mixinComponent(
-//   options,
-//   dataHook(["这些属性变化，会触发 _style 刷新"], onStyleChange)
-// )
+      return value
+    },
 
-// options = mixinComponent(
-//   options,
-//   dataHook(["这些属性变化，会触发 _class 刷新"], onClassChange)
-// )
+    onIncrease() {
+      let _value = this.data._value || this.properties.min || 0
+      let { max, min, step, asyncChange } = this.properties
+      _value = _value * 1 + step * 1
+      if (_value >= max) {
+        _value = max * 1
+      } else if (_value <= min) {
+        _value = min * 1
+      }
+      this.triggerEvent("plus", this.check(_value))
+      this.triggerEvent("change", this.check(_value))
+      if (asyncChange) return
+      this.check(_value)
+    },
 
-// /* 初始化样式，将 onStyleChange 和 onClassChange 添加到组件的 methods */
+    onDecrease() {
+      let _value = this.data._value || this.properties.min || 0
+      let { max, min, step, asyncChange } = this.properties
+      _value = _value * 1 - step * 1
+      if (_value >= max) {
+        _value = max * 1
+      } else if (_value <= min) {
+        _value = min * 1
+      }
+      this.triggerEvent("minus", this.check(_value))
+      this.triggerEvent("change", this.check(_value))
+      if (asyncChange) return
+      this.check(_value)
+    },
 
-// options = mixinComponent(options, {
-//   methods: {
-//     onClassChange,
-//     onStyleChange
-//   },
+    onStartIncrease() {
+      if (!this.properties.longPress) return
+      let cb = setInterval(() => {
+        this.onIncrease()
+      }, 200)
+      this.setData({
+        _timeoutCb: cb
+      })
+    },
 
-//   attached() {
-//     // 在组件加载时执行样式的初始化
-//     this.onClassChange()
-//     this.onStyleChange()
-//   }
-// })
+    onStartDecrease() {
+      if (!this.properties.longPress) return
+      let cb = setInterval(() => {
+        this.onDecrease()
+      }, 200)
+      this.setData({
+        _timeoutCb: cb
+      })
+    },
 
-// /* 混入其他配置项 */
+    onCancel() {
+      clearInterval(this.data._timeoutCb)
+    },
 
-// // options = mixinComponent(options, {
-// //   /* 要混入的配置项 */
-// // })
+    onInputChange(e) {
+      let { value } = e.detail
+      this.triggerEvent("change", this.check(value))
+    },
 
-// Component(options)
+    onInputConfirm(e) {
+      let { value } = e.detail
+      let { max, min } = this.properties
+      if (value >= max) {
+        value = max * 1
+      } else if (value <= min) {
+        value = min * 1
+      }
+      this.triggerEvent("change", this.check(value))
+    },
+
+    onFocus() {
+      this.triggerEvent("focus", null)
+    },
+
+    onBlur() {
+      this.triggerEvent("blur", null)
+    },
+
+    onEnabled() {
+      this.triggerEvent("enabled", null)
+    }
+  }
+})
+
+Component(options)

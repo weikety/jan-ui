@@ -1,1 +1,9 @@
-<view class="{{ _class }}" style="{{ style }}">Hello, jan!</view>
+<view class="jan-stepper {{ _class }}" style="{{ _style }}">
+    <view wx:if="{{ showMinus }}" class="jan-stepper-button minus {{ _value * 1 <= min * 1 || disabled || disableMinus ? 'disabled' : '' }}" hover-class="hover" bind:tap="{{ disabled || disableMinus ? 'onEnabled' : 'onDecrease' }}" bind:touchstart="{{ disabled || disableMinus ? 'onEnabled' : 'onStartDecrease' }}" bind:touchend="onCancel">
+        <jan-icon name="minus" />
+    </view>
+    <input class="jan-stepper-node {{ disabled ? 'disabled' : '' }}" disabled="{{ disabled }}" value="{{ asyncChange ? _propsValue :  _value }}" type="{{ integer ? 'number' : 'digit' }}" bindinput="onInputChange" bindconfirm="onInputConfirm" bindfocus="onFocus" bindblur="onBlur" />
+    <view wx:if="{{ showPlus }}" class="jan-stepper-button plus {{ _value * 1 >= max * 1 || disabled || disablePlus ? 'disabled' : '' }}" hover-class="hover" bind:tap="{{ disabled || disablePlus ? 'onEnabled' : 'onIncrease' }}" bind:touchstart="{{ disabled || disablePlus ? 'onEnabled' : 'onStartIncrease' }}" bind:touchend="onCancel">
+        <jan-icon name="plus" />
+    </view>
+</view>

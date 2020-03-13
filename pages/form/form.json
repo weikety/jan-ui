@@ -8,6 +8,7 @@
     "jan-form-group": "../../src/form-group",
     "jan-field": "../../developing/field",
     "jan-radio-group": "../../src/radio-group",
-    "jan-search": "../../src/search"
+    "jan-search": "../../src/search",
+    "jan-stepper": "../../developing/stepper"
   }
 }

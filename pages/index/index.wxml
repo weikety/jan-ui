@@ -36,7 +36,7 @@
   </view>
 </view>
 
-<view class="container container-no-padding" style="display: none;">
+<view class="container container-no-padding" style="display: ;">
   <jan-cell-group border-radius="6px">
     <jan-cell title="基础用法" value="Hi，Jan！"></jan-cell>
     <jan-cell icon="twitter" title="我的推特" is-link clickable></jan-cell>
@@ -45,7 +45,7 @@
     <jan-cell border="{{ false }}">
       <view slot="title" style="color: #6712fb;">使用 slot 作为标题</view>
       <view slot="label" style="font-size: 24rpx;margin-top: 4rpx;color: #6712fb;">自定义 label 也可以</view>
-      <view slot="right-icon">
+      <view slot="right">
         <jan-icon name="github-fill" size="20" />
       </view>
     </jan-cell>
