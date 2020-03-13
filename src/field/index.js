@@ -20,6 +20,7 @@ let options = janComponent({
     title: String,
     required: Boolean,
     hasPadding: Boolean,
+    border: Boolean,
     rightIcon: String,
     useRightSlot: Boolean,
     disabled: Boolean,
