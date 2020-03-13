@@ -1,0 +1,1 @@
+<view class="{{ _class }}" style="{{ style }}">Hello, jan!</view>

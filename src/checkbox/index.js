@@ -98,7 +98,7 @@ options = mixinComponent(options, {
           ? "background-color: " + checkedColor + ";"
           : "",
         _shape:
-          (shape == "circle" ? "border-radius: 50%;" : "") +
+          (shape == "round" ? "border-radius: 50%;" : "") +
           (value && checkedColor ? `border-color: ${checkedColor}` : ""),
         _size:
           "jan-checkbox-size-" +

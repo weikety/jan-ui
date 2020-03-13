@@ -9,7 +9,7 @@
       <jan-button type="info" size="mini" round>发送验证码</jan-button>
     </jan-field>
 
-    <jan-radio-group clickable data="{{ list2 }}" bind:change="onSwitchChange" extra-props="{{ { size: 'small' } }}" />
+    <jan-radio-group clickable data="{{ list2 }}" bind:change="onSwitchChange" extra-props="{{ { size: 'small', shape: 'round' } }}" />
 
   </jan-cell-group>
 
