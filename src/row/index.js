@@ -21,9 +21,7 @@ let options = janComponent({
   relations: {
     "../col/index": {
       type: "child",
-      linked(target) {
-        console.log(target)
-      }
+      linked(target) {}
     }
   },
 
