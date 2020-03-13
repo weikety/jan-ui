@@ -4,8 +4,6 @@
  * 维护人：SU
  */
 const janComponent = require("../_common/jan-component")
-const mixinComponent = require("../_common/mixin-component")
-const dataHook = require("../_common/data-hook")
 
 /* 使用 janComponent 初始化组件配置 */
 
@@ -20,7 +18,7 @@ let options = janComponent({
       value: 0,
       observer(value) {
         if (value !== this.data._value) {
-          this.setData({ _value: value });
+          this.setData({ _value: value })
         }
       }
     },
@@ -29,13 +27,13 @@ let options = janComponent({
       type: Number,
       value: 5,
       observer(value) {
-        this.setData({ items: new Array(value) });
+        this.setData({ items: new Array(value) })
       }
     },
 
     size: {
       type: String | Number,
-      value: "20px"
+      value: "var(--font-size-normal, 28rpx)"
     },
 
     gutter: {
@@ -45,12 +43,12 @@ let options = janComponent({
 
     color: {
       type: String,
-      value: '#ffd21e'
+      value: "#ffd21e"
     },
 
     voidColor: {
       type: String,
-      value: '#c7c7c7'
+      value: "#c7c7c7"
     },
 
     icon: {
@@ -75,7 +73,7 @@ let options = janComponent({
 
     disabledColor: {
       type: String,
-      value: '#bdbdbd'
+      value: "#bdbdbd"
     },
 
     touchable: {
@@ -95,7 +93,7 @@ let options = janComponent({
   },
 
   attached() {
-    const { count, value } = this.properties;
+    const { count, value } = this.properties
 
     this.setData({
       _value: value,
@@ -105,112 +103,53 @@ let options = janComponent({
 
   methods: {
     onSelect(event) {
-      console.log("onSelect", event);
-      const { disabled, readonly } = this.properties;
-      const { _value } = this.data;
-      const { index } = event.currentTarget.dataset;
+      const { disabled, readonly } = this.properties
+      const { _value } = this.data
+      const { index } = event.currentTarget.dataset
       if (!disabled && !readonly && _value !== index) {
-        this.setData({ _value: index });
-        this.triggerEvent('input', index);
-        this.triggerEvent('change', index);
+        this.setData({ _value: index })
+        this.triggerEvent("input", index)
+        this.triggerEvent("change", index)
       }
     },
 
     onTouchMove(event) {
-      console.log("onTouchMove", event);
-      const { touchable } = this.properties;
-      if (!touchable) return;
+      const { touchable } = this.properties
+      if (!touchable) return
 
-      const { clientX } = event.touches[0];
+      const { clientX } = event.touches[0]
 
-      this.getRect('.jan-rate--icon', true).then((list) => {
-          const target = list
-            .sort(item => item.left - item.right)
-            .find(item => clientX >= item.left && clientX <= item.right);
-          if (target != null) {
-            this.onSelect({
-              ...event,
-              currentTarget: target
-            });
-          }
+      this.getRect(".jan-rate--icon", true).then(list => {
+        const target = list
+          .sort(item => item.left - item.right)
+          .find(item => clientX >= item.left && clientX <= item.right)
+        if (target != null) {
+          this.onSelect({
+            ...event,
+            currentTarget: target
+          })
         }
-      );
+      })
     },
 
     getRect(selector, all) {
       return new Promise(resolve => {
         wx.createSelectorQuery()
-          .in(this)[all ? 'selectAll' : 'select'](selector)
+          .in(this)
+          [all ? "selectAll" : "select"](selector)
           .boundingClientRect(rect => {
             if (all && Array.isArray(rect) && rect.length) {
-              resolve(rect);
+              resolve(rect)
             }
 
             if (!all && rect) {
-              resolve(rect);
+              resolve(rect)
             }
           })
-          .exec();
-      });
+          .exec()
+      })
     }
   }
 })
-
-// /* 监听 class 和 style 变化的方法 */
-
-// const onClassChange = function() {
-//   const {
-//     /* 需要读取的属性 */
-//   } = this.properties
-//   /**
-//    * _class 和 _style 是组件内部维护的，
-//    * 保存类名和样式的 data
-//    */
-//   this.setData({
-//     _class: `新的类名`
-//   })
-// }
-
-// const onStyleChange = function() {
-//   const {
-//     /* 需要读取的属性 */
-//   } = this.properties
-//   this.setData({
-//     _style: `新的样式`
-//   })
-// }
-
-// /* 使用 dataHook 来监听 props 或 data 的变化 */
-
-// options = mixinComponent(
-//   options,
-//   dataHook(["这些属性变化，会触发 _style 刷新"], onStyleChange)
-// )
-
-// options = mixinComponent(
-//   options,
-//   dataHook(["这些属性变化，会触发 _class 刷新"], onClassChange)
-// )
-
-// /* 初始化样式，将 onStyleChange 和 onClassChange 添加到组件的 methods */
-
-// options = mixinComponent(options, {
-//   methods: {
-//     onClassChange,
-//     onStyleChange
-//   },
-
-//   attached() {
-//     // 在组件加载时执行样式的初始化
-//     this.onClassChange()
-//     this.onStyleChange()
-//   }
-// })
-
-/* 混入其他配置项 */
-
-// options = mixinComponent(options, {
-//   /* 要混入的配置项 */
-// })
 
 Component(options)
