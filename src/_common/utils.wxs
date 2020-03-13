@@ -1,13 +1,18 @@
-var REGEXP = getRegExp('^\d+(\.\d+)?$');
+var REGEXP = getRegExp("^d+(.d+)?$")
 
 function addUnit(value) {
   if (value == null) {
-    return undefined;
+    return "hhh"
   }
 
-  return REGEXP.test('' + value) ? value + 'px' : value;
+  if (typeof value === "string" && value.indexOf("var") > -1) {
+    return value
+  }
+
+  if (value >= 0) return value + "px"
+  return value
 }
 
 module.exports = {
   addUnit: addUnit
-};
+}

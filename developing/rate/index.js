@@ -33,7 +33,7 @@ let options = janComponent({
 
     size: {
       type: String | Number,
-      value: null
+      value: 'var(--font-size-normal, 28rpx)'
     },
 
     gutter: {

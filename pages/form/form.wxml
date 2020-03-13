@@ -1,4 +1,4 @@
-<view class="container container-no-padding dark">
+<view class="container container-no-padding">
   <jan-search value="hahah" placeholder="hhhh" shape="round" input-align="center" bind:search="onChange" bind:change="onChange" show-action bind:action="onChange" />
   <jan-cell-group border-radius="6px">
     <!-- <jan-cell title="基础用法" value="Hi，Jan！"></jan-cell>
