@@ -4,12 +4,12 @@
   color: var(--font-color-weight, #212121);
   box-sizing: border-box;
   overflow: hidden;
-  padding: 22rpx 28rpx;
 }
 
 .jan-field-container {
   width: 100%;
-  min-height: 70rpx;
+  padding: 22rpx 28rpx;
+  min-height: 88rpx;
   overflow: hidden;
   box-sizing: border-box;
   font-size: inherit;
