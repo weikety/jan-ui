@@ -1,6 +1,7 @@
 .jan-rate {
   display: inline-flex;
   user-select: none;
+  font-size: var(--font-size-normal);
 }
 
 .jan-rate--disabled {
