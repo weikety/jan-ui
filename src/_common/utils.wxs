@@ -1,8 +1,6 @@
-var REGEXP = getRegExp("^d+(.d+)?$")
-
 function addUnit(value) {
   if (value == null) {
-    return "hhh"
+    return ""
   }
 
   if (typeof value === "string" && value.indexOf("var") > -1) {
