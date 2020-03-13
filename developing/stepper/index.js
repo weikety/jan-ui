@@ -1,6 +1,6 @@
 /**
  * 组件：stepper
- * 版本：v0.0.1
+ * 版本：v0.0.2
  * 维护人：Meeken
  */
 const janComponent = require("../_common/jan-component")
@@ -20,6 +20,7 @@ let options = janComponent({
       type: Boolean,
       observer: "check"
     },
+    inCell: Boolean,
     disabled: Boolean,
     inputWidth: null,
     buttonSize: null,

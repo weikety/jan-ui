@@ -1,4 +1,4 @@
-<view class="jan-stepper {{ _class }}" style="{{ _style }}">
+<view class="jan-stepper {{ _class }}" style="{{ _style }}{{ inCell ? 'height: 50rpx' : '' }}">
     <view wx:if="{{ showMinus }}" class="jan-stepper-button minus {{ _value * 1 <= min * 1 || disabled || disableMinus ? 'disabled' : '' }}" hover-class="hover" bind:tap="{{ disabled || disableMinus ? 'onEnabled' : 'onDecrease' }}" bind:touchstart="{{ disabled || disableMinus ? 'onEnabled' : 'onStartDecrease' }}" bind:touchend="onCancel">
         <jan-icon name="minus" />
     </view>
