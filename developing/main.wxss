@@ -50,6 +50,10 @@ page .dark {
   font-weight: 500;
 }
 
+.jan-form-style input, .jan-form-style textarea {
+  color: var(--font-color, #515a6e);
+}
+
 /* —————— 动画 —————— */
 
 .jan-ripple {
@@ -67,11 +71,7 @@ page .dark {
   top: 0;
   left: 0;
   pointer-events: none;
-  background-image: radial-gradient(
-    circle,
-    var(--ripple-color, rgba(0, 0, 0, 0.25)) 10%,
-    transparent 10%
-  );
+  background-image: radial-gradient(circle, var(--ripple-color, rgba(0, 0, 0, 0.25)) 10%, transparent 10%);
   background-repeat: no-repeat;
   background-position: 50%;
   transform: scale(10, 10);
