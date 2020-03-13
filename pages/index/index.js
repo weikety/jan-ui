@@ -11,6 +11,7 @@ Page({
   },
 
   onClick(e) {
+    console.log(e)
     this.setData({
       color: this.data.color == "#212121" ? "#515151" : "#212121"
     })
