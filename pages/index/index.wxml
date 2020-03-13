@@ -78,5 +78,5 @@
   </jan-popup>
 
   <jan-rate value="{{ 2.5 }}" allowHalf="{{ true }}" size="20" bind:change="onClick"></jan-rate>
-  <jan-slider></jan-slider>
+  <jan-slider min="{{ 10 }}" max="{{ 20 }}"></jan-slider>
 </view>
