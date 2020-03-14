@@ -7,7 +7,8 @@ Page({
   data: {
     list: [{
         key: "test",
-        title: "测试",
+        title: "没有推特",
+        icon: "twitter-circle-fill",
         default: false,
         type: "switch"
       },
