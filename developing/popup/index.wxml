@@ -1,8 +1,9 @@
-<view
-  class="jan-popup--overlay {{ show ? '' : 'jan-popup--overlay--hide' }}"
-  bind:tap="onOverlayTap"
-  style="z-index: {{ zindex }}; visibility: {{ show ? 'visible' : 'hidden' }}; transition-duration: {{ duration / 1000 }}s;"
-></view>
+<jan-overlay
+  show="{{ show }}"
+  zindex="{{ zindex }}"
+  duration="{{ duration }}"
+  bind:click="onOverlayTap"
+></jan-overlay>
 
 <view
   class="jan-popup--container jan-popup--container--{{ position }} {{ show ? '' : 'jan-popup--container--' + position + '--hide' }}"

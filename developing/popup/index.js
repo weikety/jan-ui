@@ -1,6 +1,6 @@
 /**
  * 组件：popup
- * 版本：v0.0.2
+ * 版本：v0.0.3
  * 维护人：SU
  */
 const janComponent = require("../_common/jan-component")
