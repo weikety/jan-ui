@@ -59,6 +59,14 @@
 					"id": -1,
 					"name": "form 调试",
 					"pathName": "pages/form/form",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "upload 调试",
+					"pathName": "pages/upload/upload",
+					"query": "",
 					"scene": null
 				}
 			]

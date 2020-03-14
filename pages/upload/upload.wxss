@@ -1,0 +1,23 @@
+.tips {
+  color: var(--primary-color);
+}
+
+.container {
+  width: 100vw;
+  padding: 88rpx 40rpx;
+}
+
+.container-no-padding {
+  width: 100vw;
+  padding: 0;
+}
+
+button {
+  margin: 11px 22px;
+}
+
+.block {
+  width: 100%;
+  height: 44px;
+  background: #e98282;
+}
