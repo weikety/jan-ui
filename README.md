@@ -1,7 +1,7 @@
 <p align="center">
   <img alt="logo" src="https://img.meek3n.cn/jan-ui/jan.gif" width="220" style="margin-bottom: 10px;">
 </p>
-<h3 align="center">JanUI 是精美、规范、可定制的小程序 UI 库</h3>
+<h3 align="center">精美、规范、可定制的小程序 UI 库</h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/demo-%E5%BC%80%E5%8F%91%E4%B8%AD-blue?style=for-the-badge">
