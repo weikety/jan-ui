@@ -80,7 +80,7 @@ const onValueChange = function() {
       (_value
         ? `background-color: ${activeColor || "var(--style-color, #4379ff)"};`
         : `background-color: ${inactiveColor ||
-            "var(--wrapper-color, #fafafa)"};`) +
+            "var(--wrapper-color, #f0f3f6)"};`) +
       (disabled || this.data._disabled
         ? "opacity: 0.5;background-color: var(--disabled-color, #c6c6c6);"
         : ""),

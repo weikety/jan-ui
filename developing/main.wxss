@@ -9,7 +9,7 @@ page {
   --font-color-weight: #212121;
   --font-color-light: #7d8288;
   --style-color: #4379ff;
-  --default-color: #fafafa;
+  --default-color: #f0f3f6;
   --primary-color: #07c160;
   --border-color: rgba(81, 90, 110, 0.05);
   --info-color: #1989fa;
@@ -17,7 +17,7 @@ page {
   --warning-color: #ff976a;
   --disabled-color: #c6c6c6;
   --bg-color: #fff;
-  --wrapper-color: #fafafa;
+  --wrapper-color: #f0f3f6;
   --ripple-color: rgba(0, 0, 0, 0.25);
   --font-size-normal: 28rpx;
   --font-size-large: 32rpx;

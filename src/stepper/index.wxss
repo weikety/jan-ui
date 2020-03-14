@@ -12,14 +12,14 @@
 .jan-stepper-node {
   width: 112rpx;
   min-height: 56rpx;
-  background-color: var(--bg-color, #fafafa);
+  background-color: var(--bg-color, #f0f3f6);
   text-align: center;
 }
 
 .jan-stepper-button {
   width: 66rpx;
   height: 56rpx;
-  background-color: var(--bg-color, #fafafa);
+  background-color: var(--bg-color, #f0f3f6);
   display: flex;
   justify-content: center;
   align-items: center;

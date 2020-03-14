@@ -4,11 +4,14 @@
   width: 100%;
   padding: 22rpx;
   overflow: hidden;
+  background-color: var(--wrapper-color, #f0f3f6);
 }
 
 .jan-form-group-container {
   width: 100%;
   overflow: hidden;
+  background-color: var(--bg-color, #fff);
+  box-sizing: border-box;
 }
 
 .joy-form-item-wrapper {

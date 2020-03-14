@@ -1,4 +1,4 @@
-<view class="container container-no-padding dark">
+<view class="container container-no-padding">
   <jan-search value="hahah" placeholder="hhhh" shape="round" input-align="center" bind:search="onChange" bind:change="onChange" show-action bind:action="onChange" />
 
 
@@ -22,7 +22,7 @@
 
   </jan-cell-group>
 
-  <jan-form-group border-radius="6px" clickable data="{{ list }}" bind:change="onSwitchChange" extra-props="{{ {showLabel: false, disabled: false, size: 'small'} }}" />
+  <jan-form-group border-radius="6px" clickable data="{{ list }}" bind:change="onSwitchChange" extra-props="{{ {showLabel: false, disabled: false, size: 'small'} }}" style="border-radius: 80px" />
 
   <view style="width: calc(100% - 44rpx);margin: 22rpx;">
     <jan-button type="primary" size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)" bind:click="onClick" bindlongpress="onLongtap">
