@@ -1,3 +1,3 @@
 <view class="container dark">
-  <jan-upload list="{{ ['https://img.yzcdn.cn/vant/sand.jpg'] }}" deletable="{{ true }}" />
+  <jan-upload list="{{ list }}" deletable="{{ true }}" bind:delete="log" bind:before-read="before" bind:after-read="log" max-size="2mb" bind:oversize="log" />
 </view>
