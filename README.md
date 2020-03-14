@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="logo" src="https://img.meek3n.cn/jan-ui/jan.gif" width="120" style="margin-bottom: 10px;">
+  <img alt="logo" src="https://img.meek3n.cn/jan-ui/jan.gif" width="220" style="margin-bottom: 10px;">
 </p>
 <h3 align="center">JanUI 是精美、规范、可定制的小程序 UI 库</h3>
 
