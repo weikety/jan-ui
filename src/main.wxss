@@ -47,7 +47,7 @@ page .dark {
 }
 
 .jan-form-style {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .jan-form-style input, .jan-form-style textarea {

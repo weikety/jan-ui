@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "jan-upload": "../../developing/upload"
+  }
 }

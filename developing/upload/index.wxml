@@ -1,3 +1,18 @@
-<view class="{{ _class }}" style="{{ style }}">
-
+<view class="jan-uploader {{ customClass }}">
+    <view wx:for="{{ list }}" wx:key="key" class="jan-uploader-image-node" style="{{ _spacing }}{{ _size }}">
+        <view class="jan-uploader-image-node" style="{{ _size }}">
+            <image src="{{ item }}" class="jan-uploader-image" mode="{{ imageFit }}" />
+            <view wx:if="{{ deletable }}" class="jan-uploader-image-delete" bindtap="onDelete">
+                <jan-icon name="close" color="#fff" size="8" />
+            </view>
+        </view>
+    </view>
+    <view wx:if="{{ !list.length || !maxCount || list.length < maxCount }}" class="jan-uploader-container" style="{{ _spacing }}{{ _size }}">
+        <view class="jan-uploader-node jan-ripple" style="{{ _size }}">
+            <view class="jan-uploader-tips">
+                <jan-icon name="camera-fill" size="22" />
+                <view wx:if="{{ blankTips }}">{{ blankTips }}</view>
+            </view>
+        </view>
+    </view>
 </view>

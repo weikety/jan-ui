@@ -50,7 +50,8 @@ page .dark {
   font-weight: 500;
 }
 
-.jan-form-style input, .jan-form-style textarea {
+.jan-form-style input,
+.jan-form-style textarea {
   color: var(--font-color, #515a6e);
 }
 
@@ -62,7 +63,7 @@ page .dark {
   transform: translate3d(0, 0, 0);
 }
 
-.jan-ripple::after {
+.jan-ripple::before {
   content: "";
   display: block;
   position: absolute;
@@ -71,7 +72,11 @@ page .dark {
   top: 0;
   left: 0;
   pointer-events: none;
-  background-image: radial-gradient(circle, var(--ripple-color, rgba(0, 0, 0, 0.25)) 10%, transparent 10%);
+  background-image: radial-gradient(
+    circle,
+    var(--ripple-color, rgba(0, 0, 0, 0.25)) 10%,
+    transparent 10%
+  );
   background-repeat: no-repeat;
   background-position: 50%;
   transform: scale(10, 10);
@@ -80,7 +85,7 @@ page .dark {
   z-index: 0;
 }
 
-.jan-ripple:active::after {
+.jan-ripple:active::before {
   transform: scale(0, 0);
   opacity: 0.2;
   transition: 0s;
