@@ -23,11 +23,7 @@ Jan UI 是一个微信小程序 UI 组件库，由两名 [兽人爱好者](https
 - 涟漪（ripple）动画效果
 - 全局使用响应式尺寸 [rpx](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html)
 
-<<<<<<< HEAD
-- > Logo 上的小狼叫小简，作者是 Aow。
-=======
 > Logo 上的小狼叫小简，作者是 Aow。
->>>>>>> b0b196a46ca219b51c6dc7872be95264c89cb8bf
 
 ## 路线图
 
