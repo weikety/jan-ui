@@ -28,7 +28,7 @@ Jan UI 是一个微信小程序 UI 组件库，由两名 [兽人爱好者](https
 当然，它也有缺点，比如暂时没有使用 `webpack` 编译和压缩样式，体积比较大。目前只有两个学生业余维护，组件不够全面，很多细节没有考虑周全等。
 
 <p align="center">
-  <img alt="form-demo" src="https://img.meek3n.cn/jan/demo.gif" style="margin-bottom: 11px">
+  <img alt="form-demo" src="/static/demo.gif" style="margin-bottom: 11px">
 </p>
 
 ## 路线图
