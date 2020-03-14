@@ -1,0 +1,5 @@
+<view
+  class="jan-overlay {{ show ? '' : 'jan-overlay--hide' }}"
+  bind:tap="onTap"
+  style="z-index: {{ zindex }}; visibility: {{ show ? 'visible' : 'hidden' }}; transition-duration: {{ duration / 1000 }}s;"
+></view>
