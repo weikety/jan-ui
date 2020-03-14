@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    style: '',
     list: [{
         key: "test",
         title: "没有推特",
@@ -15,7 +16,7 @@ Page({
 
       {
         key: "yooo",
-        title: "测试 checkbox",
+        title: "Github 是啥",
         icon: "github-fill",
         default: false,
         type: "checkbox"
@@ -24,24 +25,31 @@ Page({
 
     list2: [{
         key: "test",
-        title: "测试",
+      title: "没有推特",
+      icon: "twitter-circle-fill",
         value: true,
       },
 
       {
         key: "yooo",
-        title: "测试 checkbox",
+        title: "Github 是啥",
         icon: "github-fill",
         value: false,
       },
 
       {
         key: "yooo1",
-        title: "测试 checkbox",
-        icon: "github-fill",
+        title: "不存在的网站罢了",
+        icon: "google-circle-fill",
         value: false,
       }
     ]
+  },
+
+  onClick() {
+    this.setData({
+      style: 'dark'
+    })
   },
 
   onSwitchChange(e) {

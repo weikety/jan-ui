@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="logo" src="https://img.meek3n.cn/jan-ui/jan.gif" width="220" style="margin-bottom: 10px;">
+  <img alt="logo" src="https://img.meek3n.cn/jan-ui/jan.gif" width="220" style="margin-bottom: 11px;">
 </p>
 <h3 align="center">精美、规范、可定制的小程序 UI 库</h3>
 
@@ -18,12 +18,18 @@
 
 Jan UI 是一个微信小程序 UI 组件库，由两名 [兽人爱好者](https://zh.wikipedia.org/zh/%E7%8D%B8%E8%BF%B7) 开发。
 
+和其他 UI 库比较，它有以下优点：
+
 - 基于原生，没有 npm 包依赖
 - 昼夜双版，可以定制主题
 - 涟漪（ripple）动画效果
 - 全局使用响应式尺寸 [rpx](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html)
 
-> Logo 上的小狼叫小简，作者是 Aow。
+当然，它也有缺点，比如暂时没有使用 `webpack` 编译和压缩样式，体积比较大。目前只有两个学生业余维护，组件不够全面，很多细节没有考虑周全等。
+
+<p align="center">
+  <img alt="form-demo" src="https://img.meek3n.cn/jan/demo.gif" style="margin-bottom: 11px">
+</p>
 
 ## 路线图
 
@@ -62,7 +68,7 @@ $ git clone https://github.com/Authing/jan-ui && cd jan-ui
 
 ### 特殊目录说明
 
-#### 1. `/template` 组件模版
+#### 1. template 组件模版
 
 **简单组件模版**
 
@@ -78,7 +84,7 @@ Mixin 组件以类似 `gulp` 的流形式工作，通过混入配置项，我们
 - 复制目录到 `/developing`，并修改为新组件名。
 - 可以根据注释，方便地配置一个新的 Component。
 
-#### 2. `/developing` 开发中组件
+#### 2. developing 开发中组件
 
 用于放置正在开发中，且**没有形成可用版本**的组件。
 
@@ -86,23 +92,22 @@ Mixin 组件以类似 `gulp` 的流形式工作，通过混入配置项，我们
 - 若组件调试无误，将其复制到 `/src` 目录下，表明这个组件是一个：有发行版本的组件。
 - 发行版本的组件通常会有配套的 Wiki 文档，这样子。
 
-#### 3. `/src` 可用组件
+#### 3. src 可用组件
 
 开发完成的、有发行版本的组件放置在这个目录中。
 
-#### 4. `developing/main.wxss` 和 `src/main.wxss`
+#### 4. main.wxss 全局样式表
 
 `main.wxss` 是组件库的全局样式表，可以用于定制主题。
 
-#### 5. `/pages/*` 页面
+#### 5. 页面
 
 展示的页面。这里可以用来随意调试，JanUI 的发布版本会配套一个展示小程序，这个展示小程序届时会重写。
 
-### Wiki 文档书写规范
+## 贡献者
 
-为了便于整理文档的时候不太费劲，需要先统一个规范。
-
-> 待补充...
+[Meeken](https://github.com/Meeken1998)
+[SU](https://github.com/recallfuture)
 
 ## 协议
 

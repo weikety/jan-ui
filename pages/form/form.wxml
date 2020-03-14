@@ -1,4 +1,4 @@
-<view class="container container-no-padding">
+<view class="container container-no-padding {{ style }}">
   <jan-search value="白色高级轿车警告" placeholder="白色高级轿车" shape="round" input-align="center" bind:search="onChange" bind:change="onChange" show-action bind:action="onChange" />
 
 
@@ -14,7 +14,7 @@
     <jan-cell icon="twitter" title="我的推特" is-link clickable></jan-cell>
     <jan-cell title="我是标题文字" label="我是附加说明" value="我是内容"></jan-cell>
     <jan-cell title="欢迎使用 JanUI" icon="phone" label="这是一个可以点击的 cell 哦" is-link align="center" value="看看" border clickable bind:click="onLongtap"></jan-cell> -->
-    <jan-field bind:change="onChange" value="" error-message="手机号格式有误，请重试" placeholder="试试" title="输入手机号" placeholder="(=・ω・=)" align="right" clearable right-icon="github-fill" autosize show-confirm-bar="{{ false }}" use-right-slot border>
+    <jan-field bind:change="onChange" value="" error-message="手机号格式有误，请重试" placeholder="试试" title="输入手机号" placeholder="(=・ω・=)" input-align="right" clearable right-icon="github-fill" autosize show-confirm-bar="{{ false }}" use-right-slot border>
       <jan-button type="info" size="mini" round>发送验证码</jan-button>
     </jan-field>
 
@@ -26,7 +26,7 @@
 
   <view style="width: calc(100% - 44rpx);margin: 22rpx;">
     <jan-button type="primary" size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)" bind:click="onClick" bindlongpress="onLongtap">
-      关闭页面
+      {{ style ? '开':'关' }}灯
     </jan-button>
   </view>
 
