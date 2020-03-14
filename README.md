@@ -1,5 +1,3 @@
-## JanUI
-
 <p align="center">
   <img alt="logo" src="https://img.meek3n.cn/jan-ui/jan.gif" width="120" style="margin-bottom: 10px;">
 </p>
