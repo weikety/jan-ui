@@ -1,0 +1,9 @@
+.jan-tag {
+  font-size: var(--font-size-mini, 20rpx);
+  color: #fff;
+
+  box-sizing: border-box;
+  padding: 4rpx 12rpx;
+  border-radius: 6rpx;
+  display: inline-block;
+}

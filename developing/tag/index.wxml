@@ -1,0 +1,3 @@
+<view class="jan-tag {{ customClass }}" style="{{ _style }}">
+    <slot></slot>
+</view>

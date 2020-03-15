@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "jan-upload": "../../src/upload"
+    "jan-upload": "../../src/upload",
+    "jan-tag": "../../developing/tag"
   }
 }

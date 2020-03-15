@@ -1,3 +1,5 @@
 <view class="container dark">
   <jan-upload list="{{ list }}" deletable="{{ true }}" bind:delete="log" bind:before-read="before" bind:after-read="log" max-size="2mb" bind:oversize="log" />
+
+  <jan-tag bg-color="#ffe1e1" text-color="red" size="large" round>哈哈哈</jan-tag>
 </view>
