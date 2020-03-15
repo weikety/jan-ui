@@ -8,6 +8,7 @@
     "jan-col": "../../developing/col",
     "jan-popup": "../../developing/popup",
     "jan-rate": "../../developing/rate",
-    "jan-slider": "../../developing/slider"
+    "jan-slider": "../../developing/slider",
+    "jan-progress-linear": "../../developing/progress-linear"
   }
 }
