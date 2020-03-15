@@ -1,6 +1,6 @@
 /**
  * 组件：upload
- * 版本：v0.0.1
+ * 版本：v0.0.2
  * 维护人：Meeken
  */
 const janComponent = require("../_common/jan-component")
@@ -207,6 +207,8 @@ options = mixinComponent(options, {
       }
       if (multiple && maxCount > 0) {
         options.count = maxCount - list.length
+      } else {
+        options.count = 1
       }
       wx.chooseImage(options)
     }
