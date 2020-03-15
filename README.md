@@ -52,6 +52,7 @@ Jan UI 是一个微信小程序 UI 组件库，由两名 [兽人爱好者](https
 | 13  | 步进器 Stepper         | Meeken | 2020/03/13 | v0.0.2 |
 | 14  | 文件上传 Upload        | Meeken | 2020/03/14 | v0.0.1 |
 | 15  | 进度条 Progress Linear | SU     | 2020/03/15 | v0.0.1 |
+| 16  | 标记 Tag               | Meeken | 2020/03/16 | v0.0.1 |
 
 ## 加入我们
 
