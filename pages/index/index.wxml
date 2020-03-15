@@ -79,4 +79,5 @@
 
   <jan-rate value="{{ 2.5 }}" allowHalf="{{ true }}" size="20" bind:change="onClick"></jan-rate>
   <jan-slider min="{{ 10 }}" max="{{ 20 }}"></jan-slider>
+  <jan-progress-linear value="{{ 10 }}" height="{{ 10 }}" background-opacity="{{ 0.1 }}"></jan-progress-linear>
 </view>

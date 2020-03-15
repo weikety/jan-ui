@@ -1,0 +1,12 @@
+<wxs src="../_common/utils.wxs" module="utils" />
+
+<view class="jan-progress-linear">
+  <view
+    class="jan-progress-linear--value"
+    style="width: {{ value }}%; height: {{ utils.addUnit(height) }}; background: {{ color ? color : 'var(--primary-color)' }};"
+  ></view>
+  <view
+    class="jan-progress-linear--background"
+    style="background: {{ color ? color : 'var(--primary-color)' }}; opacity: {{ backgroundOpacity }}"
+  ></view>
+</view>
