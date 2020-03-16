@@ -1,8 +1,10 @@
-<view class="jan-tabbar-item-container {{ customClass }}" style="{{ style }}">
+<view class="jan-tabbar-item-container {{ clickable ? 'jan-ripple' : '' }} {{ customClass }}" hover-class="jan-tabbar-item-hover" style="{{ style }}">
     <view class="jan-tabbar-item">
-        <jan-icon name="{{ icon }}" size="{{ size }}"></jan-icon>
+        <jan-icon name="{{ icon }}" size="{{ _size }}"></jan-icon>
         <text class="jan-tabbar-item-name">{{ name }}</text>
-        <!-- <view class="jan-tabbar-item-dot"></view> -->
-        <view class="jan-tabbar-item-info">20</view>
+        <view wx:if="{{ dot && !_info }}" class="jan-tabbar-item-dot"></view>
+        <view wx:if="{{ _info }}" class="jan-tabbar-item-info" style="{{ maxLen }}">
+            {{ _info }}
+        </view>
     </view>
 </view>
