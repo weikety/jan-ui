@@ -10,7 +10,7 @@
     <view wx:if="{{ !_list.length || !maxCount || _list.length < maxCount }}" class="jan-uploader-container" style="{{ _spacing }}{{ _size }}" bindtap="onChooseImage">
         <view class="jan-uploader-node {{ disabled ? '' : 'jan-ripple' }}" style="{{ _size }}">
             <view class="jan-uploader-tips">
-                <jan-icon name="camera-fill" size="22" />
+                <jan-icon name="camera-fill" size="44rpx" />
                 <view wx:if="{{ blankTips }}">{{ blankTips }}</view>
             </view>
         </view>
