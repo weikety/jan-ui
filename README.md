@@ -68,6 +68,19 @@ Jan UI 是一个微信小程序 UI 组件库，由两名 [兽人爱好者](https
 $ git clone https://github.com/Authing/jan-ui && cd jan-ui
 ```
 
+### 开发 Q&A
+
+1. 为什么没有我不能 `import`
+   - JanUI 内部遵循 CommonJS 规范，即使用 `require()` 引入模块，使用 `module.exports` 导出模块，而不是 ES6 的 `import / export`
+2. 为什么不用 less，Babel，webpack 等
+   - 不是不用，而是暂未使用，没有使用预编译器是因为目前两个开发者都不是很懒
+   - 目前正在开发组件，为了保证最大的兼容性，没有引入额外的 npm 包，因为这还将导致打包后体积更大
+   - 我们计划在组件开发完成后，使用 `webpack` 压缩代码，并使用 `jest` 做单元测试
+3. 为什么使用 Mixin 而非微信小程序官方提供的 `Behavior` 构造器？ 
+   - Mixin 组件模版能使组件配置更符合语义，如果不需要一部分功能，直接注释即可
+   - 可以使用 `dataHook` 方法将多个监听语句写在一起，在一个 Hook 函数里处理数据
+   - 将 data 和 properties 分离，所有 Mixin 模版构建的组件都是有状态的
+
 ### 特殊目录说明
 
 #### 1. template 组件模版
