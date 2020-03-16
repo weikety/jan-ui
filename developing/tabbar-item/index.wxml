@@ -1,0 +1,8 @@
+<view class="jan-tabbar-item-container {{ customClass }}" style="{{ style }}">
+    <view class="jan-tabbar-item">
+        <jan-icon name="{{ icon }}" size="{{ size }}"></jan-icon>
+        <text class="jan-tabbar-item-name">{{ name }}</text>
+        <!-- <view class="jan-tabbar-item-dot"></view> -->
+        <view class="jan-tabbar-item-info">20</view>
+    </view>
+</view>

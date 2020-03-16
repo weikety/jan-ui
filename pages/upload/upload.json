@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "jan-upload": "../../src/upload",
-    "jan-tag": "../../developing/tag"
+    "jan-tag": "../../developing/tag",
+    "jan-tabbar-item": "../../developing/tabbar-item"
   }
 }
