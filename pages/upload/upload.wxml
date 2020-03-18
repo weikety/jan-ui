@@ -1,7 +1,11 @@
-<view class="container">
+<view class="container dark">
   <jan-upload list="{{ list }}" deletable="{{ true }}" bind:delete="log" bind:before-read="before" bind:after-read="log" max-size="2mb" bind:oversize="log" />
 
   <jan-tag bg-color="#ffe1e1" text-color="#000" size="mini" round>哈哈哈</jan-tag>
+
+  <jan-loading size="mini" direction="column" text="加载中" use-slot color="var(--info-color)" show="{{ maskShow }}">
+    <view style="width: 300px;height: 300px;background: #ffd029;"></view>
+  </jan-loading>
 </view>
 
 <jan-tabbar active-name="购物车" bind:change="onChange" border>

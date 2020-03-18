@@ -1,0 +1,67 @@
+.jan-loading {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.jan-loading-node {
+  width: 100rpx;
+  height: 100rpx;
+  border: 18rpx solid var(--font-color);
+  border-radius: 50%;
+  -webkit-animation: loader-06 1s ease-out infinite;
+  animation: loader 1s ease-out infinite;
+  font-size: var(--font-size-normal);
+}
+
+.jan-loading--slot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.jan-loading-node--slot {
+  position: absolute;
+  background-color: purple;
+}
+
+.jan-loading--large .jan-loading-node {
+  width: 150rpx;
+  height: 150rpx;
+  border: 24rpx solid var(--font-color);
+  font-size: var(--font-size-large);
+}
+
+.jan-loading--small .jan-loading-node {
+  width: 80rpx;
+  height: 80rpx;
+  border: 12rpx solid var(--font-color);
+  font-size: var(--font-size-small);
+}
+
+.jan-loading--mini .jan-loading-node {
+  width: 50rpx;
+  height: 50rpx;
+  border: 8rpx solid var(--font-color);
+  font-size: var(--font-size-mini);
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}

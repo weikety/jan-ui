@@ -3,6 +3,7 @@
     "jan-upload": "../../src/upload",
     "jan-tag": "../../developing/tag",
     "jan-tabbar-item": "../../src/tabbar-item",
-    "jan-tabbar": "../../src/tabbar"
+    "jan-tabbar": "../../src/tabbar",
+    "jan-loading": "../../developing/loading"
   }
 }

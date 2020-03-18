@@ -1,0 +1,13 @@
+<view wx:if="{{ show && !useSlot }}" class="jan-loading {{ customClass }} {{ _size ? 'jan-loading--' + _size : '' }}" style="{{ _color }}flex-direction: {{ direction === 'column' ? 'column' : 'row' }};font-size: var(--font-size-{{ _size }});">
+    <view class="jan-loading-node" style="{{ _color }}" />
+    <text wx:if="{{ text }}" class="jan-loading-text" style="{{ _color }}{{ direction === 'column' ? 'margin-top: 8rpx' : 'margin-left: 8rpx' }};">{{ text }}</text>
+</view>
+<view wx:if="{{ useSlot }}" class="jan-loading--slot">
+    <view id="{{ _id }}">
+        <slot></slot>
+    </view>
+    <view wx:if="{{ _loadingMaskShow }}" class="jan-loading-node--slot jan-loading {{ customClass }} {{ _size ? 'jan-loading--' + _size : '' }}" style="width: {{ _nodeWidth }}; height: {{ _nodeHeight }};flex-direction: {{ direction === 'column' ? 'column' : 'row' }};font-size: var(--font-size-{{ _size }});{{ maskStyle }}">
+        <view class="jan-loading-node" style="{{ _color }}" />
+        <text wx:if="{{ text }}" class="jan-loading-text" style="{{ _color }}{{ direction === 'column' ? 'margin-top: 8rpx' : 'margin-left: 8rpx' }};">{{ text }}</text>
+    </view>
+</view>

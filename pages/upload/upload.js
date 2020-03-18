@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: ['https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg']
+    list: ['https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg', 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=188407285,2211968961&fm=26&gp=0.jpg'],
+    maskShow: false
   },
 
   log(e) {
@@ -28,6 +29,11 @@ Page({
 
   onLoad() {
     console.log(wx.getSystemInfoSync())
+    setTimeout(() => {
+      this.setData({
+        maskShow: true
+      }, 3000)
+    })
   }
 
 })
