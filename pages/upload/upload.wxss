@@ -21,3 +21,14 @@ button {
   height: 44px;
   background: #e98282;
 }
+
+.jan-tabbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.jan-tabbar jan-tabbar-item, .jan-tabbar > view {
+  flex-basis: 25vw;
+}

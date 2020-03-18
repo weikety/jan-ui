@@ -20,6 +20,10 @@ Page({
     } = e.detail
     console.log(e)
     callback(true)
+  },
+
+  onChange(e) {
+    console.log(e)
   }
 
 })

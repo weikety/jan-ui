@@ -20,10 +20,23 @@ function addUnit(value) {
   return value
 }
 
+let parentNode = null
+
+function onParentChange(target) {
+  parentNode = target
+  const { options } = target.data
+  if (options) {
+    this.setData({
+      _options: options
+    })
+  }
+}
+
 /* 使用 janComponent 初始化组件配置 */
 
 let options = janComponent({
   properties: {
+    title: String,
     name: String,
     icon: String,
     dot: Boolean,
@@ -34,8 +47,22 @@ let options = janComponent({
     },
     clickable: Boolean
   },
+
+  relations: {
+    "../tabbar/index": {
+      type: "parent", // 关联的目标节点应为父节点
+      linked: onParentChange,
+      linkChanged: onParentChange
+    }
+  },
+
   data: {
-    _info: ""
+    _info: "",
+    _active: true,
+    _options: {
+      activeColor: "var(--info-color, #1989fa)",
+      inactiveColor: "var(--font-color, #515a6e)"
+    }
   }
 })
 
@@ -62,7 +89,23 @@ options = mixinComponent(options, dataHook(["size"], onPropsChange))
 
 options = mixinComponent(options, {
   methods: {
-    onPropsChange
+    onPropsChange,
+
+    onTap() {
+      if (parentNode && parentNode.data && parentNode.data.childTap) {
+        parentNode.data.childTap({
+          title: this.properties.title,
+          name: this.properties.name
+        })
+      }
+    },
+
+    setActive(actived) {
+      if (typeof actived !== "boolean") return
+      this.setData({
+        _active: actived
+      })
+    }
   },
 
   attached() {

@@ -1,0 +1,3 @@
+<view class="jan-tabbar">
+    <slot></slot>
+</view>
