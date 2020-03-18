@@ -10,7 +10,7 @@
 
 .jan-tabbar jan-tabbar-item,
 .jan-tabbar > view {
-  flex-basis: 50vw;
+  flex-basis: 100vw;
 }
 
 .jan-tabbar--fixed {
