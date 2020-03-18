@@ -23,10 +23,6 @@
   font-size: var(--font-size-mini, 20rpx);
 }
 
-.jan-tabbar-item-name {
-  margin-top: -6rpx;
-}
-
 .jan-tabbar-item-dot {
   position: absolute;
   justify-self: flex-start;
