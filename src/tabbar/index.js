@@ -50,6 +50,7 @@ Component({
   },
 
   properties: {
+    customClass: String,
     activeName: String,
     activeColor: {
       type: String,

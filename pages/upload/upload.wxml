@@ -8,7 +8,7 @@
   </jan-loading>
 </view>
 
-<jan-tabbar active-name="购物车" bind:change="onChange" border>
+<jan-tabbar active-name="购物车" bind:change="onChange" border customClass="dark">
   <jan-tabbar-item title="首页" name="首页" icon="github-fill" info="22" clickable />
   <jan-tabbar-item name="资讯" icon="github-fill" dot clickable />
   <jan-tabbar-item name="购物车" icon="github-fill" info="22" clickable />
