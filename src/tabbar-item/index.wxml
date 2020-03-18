@@ -1,4 +1,4 @@
-<view class="jan-tabbar-item-container {{ clickable ? 'jan-ripple' : '' }} {{ customClass }}" hover-class="jan-tabbar-item-hover" style="{{ style }}" bindtap="onTap">
+<view class="jan-tabbar-item-container {{ customClass }} {{ clickable ? 'jan-ripple' : '' }} {{ customClass }}" hover-class="jan-tabbar-item-hover" bindtap="onTap">
     <view class="jan-tabbar-item">
         <jan-icon name="{{ icon }}" size="{{ _size }}" color="{{ _active ? _options.activeColor : _options.inactiveColor }}"></jan-icon>
         <text class="jan-tabbar-item-name" style="color: {{ _active ? _options.activeColor : _options.inactiveColor }};">{{ title || name }}</text>
