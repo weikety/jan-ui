@@ -13,20 +13,6 @@ function setItemsActive(activeName) {
       item.setData({
         _active: activeName == item.properties.name
       })
-    } else {
-      item.setData({
-        _active: index == 0
-      })
-    }
-  })
-}
-
-function setItemsActive(activeName) {
-  this.getRelationNodes("../tabbar-item/index").forEach((item, index) => {
-    if (activeName) {
-      item.setData({
-        _active: activeName == item.properties.name
-      })
     } else if (this.properties.activeName) {
       item.setData({
         _active: this.properties.activeName == item.properties.name
