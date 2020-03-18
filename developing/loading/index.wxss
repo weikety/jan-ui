@@ -26,7 +26,6 @@
 
 .jan-loading-node--slot {
   position: absolute;
-  background-color: purple;
 }
 
 .jan-loading--large .jan-loading-node {
