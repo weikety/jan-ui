@@ -1,3 +1,5 @@
+@import "../main.wxss";
+
 .jan-tabbar {
   width: 100%;
   display: flex;
@@ -9,4 +11,13 @@
 .jan-tabbar jan-tabbar-item,
 .jan-tabbar > view {
   flex-basis: 25vw;
+}
+
+.jan-tabbar--fixed {
+  position: fixed;
+  bottom: 0;
+}
+
+.jan-tabbar--border {
+  border-top: 2rpx solid var(--border-color, rgba(81, 90, 110, 0.05));
 }

@@ -3,6 +3,8 @@
  * 版本：v0.0.1
  * 维护人：Meeken
  */
+
+const { isIphoneX } = require("../_common/is-iphonex")
 let that = {}
 
 function setItemsActive(activeName) {
@@ -58,6 +60,19 @@ Component({
       type: String,
       value: "var(--font-color, #515a6e)",
       observer: "onPropsChange"
+    },
+    safeAreaInsetBottom: {
+      type: Boolean,
+      value: true
+    },
+    fixed: {
+      type: Boolean,
+      value: true
+    },
+    border: Boolean,
+    zIndex: {
+      type: Number,
+      value: 1
     }
   },
 
@@ -66,6 +81,7 @@ Component({
       activeColor: "var(--info-color, #1989fa)",
       inactiveColor: "var(--font-color, #515a6e)"
     },
+    isX: isIphoneX(),
     childTap(e) {
       that.onChildTap(e.name)
       that.triggerEvent("change", e)

@@ -24,6 +24,10 @@ Page({
 
   onChange(e) {
     console.log(e)
+  },
+
+  onLoad() {
+    console.log(wx.getSystemInfoSync())
   }
 
 })
