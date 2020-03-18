@@ -89,7 +89,6 @@ Component({
       query
         .select("#" + randomId)
         .boundingClientRect(function(res) {
-          console.log(res)
           if (res && res.width && res.height) {
             that.setData({
               _nodeWidth: res.width + "px",
