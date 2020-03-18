@@ -64,7 +64,7 @@ const onClassChange = function() {
 const onStyleChange = function() {
   const { titleWidth, titleMaxRows, arrowDirection } = this.properties
   this.setData({
-    _titleWidth: titleWidth ? `max-width: ${titleWidth};overflow: hidden;` : "",
+    _titleWidth: titleWidth ? `width: ${titleWidth};overflow: hidden;` : "",
 
     _titleMaxRows: titleMaxRows
       ? `overflow: hidden;

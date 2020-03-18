@@ -35,6 +35,7 @@ let options = janComponent({
     confirmHold: Boolean,
     holdKeyboard: Boolean,
     errorMessage: String,
+    titleWidth: String,
     placeholderStyle: {
       type: String,
       value: "color: var(--font-color-light, #c6c6c6);opacity: 0.8;"
@@ -79,27 +80,29 @@ let options = janComponent({
 
   data: {
     _value: "",
-    _focused: false
+    _focused: false,
+    _titleWidth: ""
   }
 })
 
 /* 监听 class 和 style 变化的方法 */
 
 const onPropsChange = function() {
-  const { value, inputAlign } = this.properties
+  const { value, inputAlign, titleWidth } = this.properties
   /**
    * _class 和 _style 是组件内部维护的，
    * 保存类名和样式的 data
    */
   this.setData({
     _value: value,
-    _inputAlign: `text-align: ${inputAlign};`
+    _inputAlign: `text-align: ${inputAlign};`,
+    _titleWidth: titleWidth ? `width: ${titleWidth};overflow: hidden;` : ""
   })
 }
 
 options = mixinComponent(
   options,
-  dataHook(["value", "inputAlign"], onPropsChange)
+  dataHook(["value", "inputAlign", "titleWidth"], onPropsChange)
 )
 
 /* 初始化样式，将 onStyleChange 和 onClassChange 添加到组件的 methods */

@@ -1,6 +1,6 @@
 <view class="jan-field-wrapper {{ hasPadding ? 'jan-field-has-padding' : '' }}">
     <view class="jan-field-container">
-        <view wx:if="{{ title }}" class="jan-field-title {{ required ? 'jan-field-title-required' : '' }}">
+        <view wx:if="{{ title }}" class="jan-field-title {{ required ? 'jan-field-title-required' : '' }}" style="{{ _titleWidth }}">
             <jan-icon wx:if="{{ icon }}" name="{{ icon }}" style="margin-right: 16rpx;"></jan-icon>
             <view>{{ title }}</view>
         </view>
