@@ -73,7 +73,7 @@ Component({
     border: Boolean,
     zIndex: {
       type: Number,
-      value: 1
+      value: 10
     }
   },
 
