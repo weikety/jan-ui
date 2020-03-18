@@ -6,6 +6,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   overflow: hidden;
+  background-color: var(--bg-color, #fff);
 }
 
 .jan-tabbar jan-tabbar-item,
