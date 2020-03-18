@@ -9,7 +9,7 @@ page {
   --font-color-weight: #212121;
   --font-color-light: #7d8288;
   --style-color: #4379ff;
-  --default-color: #fafafa;
+  --default-color: #f0f3f6;
   --primary-color: #07c160;
   --border-color: rgba(81, 90, 110, 0.05);
   --info-color: #1989fa;
@@ -47,10 +47,11 @@ page .dark {
 }
 
 .jan-form-style {
-  font-weight: 400;
+  font-weight: 500;
 }
 
-.jan-form-style input, .jan-form-style textarea {
+.jan-form-style input,
+.jan-form-style textarea {
   color: var(--font-color, #515a6e);
 }
 
@@ -62,7 +63,7 @@ page .dark {
   transform: translate3d(0, 0, 0);
 }
 
-.jan-ripple::after {
+.jan-ripple::before {
   content: "";
   display: block;
   position: absolute;
@@ -71,7 +72,11 @@ page .dark {
   top: 0;
   left: 0;
   pointer-events: none;
-  background-image: radial-gradient(circle, var(--ripple-color, rgba(0, 0, 0, 0.25)) 10%, transparent 10%);
+  background-image: radial-gradient(
+    circle,
+    var(--ripple-color, rgba(0, 0, 0, 0.25)) 10%,
+    transparent 10%
+  );
   background-repeat: no-repeat;
   background-position: 50%;
   transform: scale(10, 10);
@@ -80,8 +85,14 @@ page .dark {
   z-index: 0;
 }
 
-.jan-ripple:active::after {
+.jan-ripple:active::before {
   transform: scale(0, 0);
   opacity: 0.2;
   transition: 0s;
+}
+
+/* 安全适配 */
+
+.jan-ipx-bottom {
+  padding-bottom: 30rpx;
 }
