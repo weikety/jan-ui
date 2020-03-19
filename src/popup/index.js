@@ -14,7 +14,7 @@ let options = janComponent({
       value: false
     },
 
-    "zindex": {
+    "zIndex": {
       type: Number,
       value: 100
     },

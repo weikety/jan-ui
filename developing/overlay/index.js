@@ -10,7 +10,7 @@ Component({
       value: false
     },
 
-    "zindex": {
+    "zIndex": {
       type: Number,
       value: 100
     },

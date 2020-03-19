@@ -74,7 +74,7 @@
   <button bind:tap="showPopupTop">从上边打开弹出层</button>
   <button bind:tap="showPopupBottom">从下边打开弹出层</button>
   <jan-popup show="{{ show }}" position="{{ position }}" bind:close="closePopup">
-    内容
+    <view style="width: 100%;height: 200px;"></view>
   </jan-popup>
 
   <jan-rate value="{{ 2.5 }}" allowHalf="{{ true }}" size="20" bind:change="onClick"></jan-rate>
