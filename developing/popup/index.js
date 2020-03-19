@@ -9,6 +9,7 @@ const janComponent = require("../_common/jan-component")
 
 let options = janComponent({
   properties: {
+    customClass: String,
     show: {
       type: Boolean,
       value: false

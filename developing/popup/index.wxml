@@ -1,4 +1,4 @@
 <jan-overlay show="{{ show }}" zIndex="{{ zIndex }}" duration="{{ duration }}" bind:click="onOverlayTap"></jan-overlay>
-<view class="jan-popup--container jan-popup--container--{{ position }} {{ show ? '' : 'jan-popup--container--' + position + '--hide' }}" style="z-index: {{ zIndex }}; visibility: {{ show ? 'visible' : 'hidden' }}; transition-duration: {{ duration / 1000 }}s;{{ hasPadding ? '' : 'padding: 0 !important;' }}">
+<view class="jan-popup--container jan-popup--container--{{ position }} {{ show ? '' : 'jan-popup--container--' + position + '--hide' }} {{ customClass }}" style="z-index: {{ zIndex }}; visibility: {{ show ? 'visible' : 'hidden' }}; transition-duration: {{ duration / 1000 }}s;{{ hasPadding ? '' : 'padding: 0 !important;' }}">
   <slot></slot>
 </view>
