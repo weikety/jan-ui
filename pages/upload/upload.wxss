@@ -38,5 +38,5 @@ button {
 }
 
 .test {
-  opacity: 0.1 !important;
+  min-height: 0 !important;
 }

@@ -7,7 +7,9 @@ const janComponent = function(options = {}) {
         addGlobalClass: true
       },
       externalClasses: ["custom-class", "customClass"],
-      properties: {},
+      properties: {
+        customClass: String
+      },
       data: {
         _class: "",
         _style: ""
