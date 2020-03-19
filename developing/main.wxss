@@ -94,5 +94,17 @@ page .dark {
 /* 安全适配 */
 
 .jan-ipx-bottom {
-  padding-bottom: 30rpx;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.jan-ipx-top {
+  padding-bottom: env(safe-area-inset-top);
+}
+
+.jan-ipx-bottom--margin {
+  margin-top: env(safe-area-inset-bottom);
+}
+
+.jan-ipx-top--margin {
+  margin-top: env(safe-area-inset-top);
 }
