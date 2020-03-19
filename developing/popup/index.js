@@ -1,6 +1,6 @@
 /**
  * 组件：popup
- * 版本：v0.0.3
+ * 版本：v0.0.4
  * 维护人：SU
  */
 const janComponent = require("../_common/jan-component")
@@ -32,6 +32,11 @@ let options = janComponent({
     model: {
       type: Boolean,
       value: false
+    },
+
+    hasPadding: {
+      type: Boolean,
+      value: true
     }
   },
 
