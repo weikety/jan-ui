@@ -1,3 +1,5 @@
-<view class="jan-action-sheet">
-    <jan-popup position="bottom" show="{{ show }}" custom-class="{{ customClass }}" z-index="{{ zIndex }}" bind:close="onClosePopup" />
+<view class="jan-action-sheet {{ customClass }}">
+    <jan-popup position="bottom" show="{{ show }}" custom-class="{{ customClass }}" z-index="{{ zIndex }}" bind:close="onClosePopup">
+        <view class="jan-action-sheet--node">hhh</view>
+    </jan-popup>
 </view>

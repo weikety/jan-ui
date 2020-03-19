@@ -5,7 +5,7 @@
   font-size: var(--font-size-normal, 28rpx);
   display: inline-block;
   padding: 0 66rpx;
-  background: #2d2d2d;
+  background: var(--default-color);
   color: #fff;
   transition: all 0.3s;
   border-radius: 6rpx;

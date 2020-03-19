@@ -46,6 +46,20 @@ page .dark {
   --font-size-mini: 20rpx;
 }
 
+page,
+view {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+view,
+text,
+block {
+  font-family: PingFang SC, "Helvetica Neue", Arial, sans-serif;
+  color: var(--font-color);
+}
+
 .jan-form-style {
   font-weight: 500;
 }

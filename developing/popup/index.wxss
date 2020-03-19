@@ -1,3 +1,5 @@
+@import "../main.wxss";
+
 .jan-popup--container--center--hide {
   transform: translate3d(-50%, -50%, 0) scale(0) !important;
   opacity: 0;
