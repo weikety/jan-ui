@@ -36,7 +36,6 @@ function onParentChange(target) {
 
 let options = janComponent({
   properties: {
-    customClass: String,
     title: String,
     name: String,
     icon: String,

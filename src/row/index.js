@@ -11,7 +11,6 @@ const dataHook = require("../_common/data-hook")
 
 let options = janComponent({
   properties: {
-    customClass: String,
     gutter: {
       type: String,
       value: ""
