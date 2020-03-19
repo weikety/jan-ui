@@ -1,0 +1,3 @@
+<view class="jan-action-sheet {{ customClass }}">
+    <jan-popup position="bottom" show="{{ show }}" custom-class="fuck" z-index="{{ zIndex }}" bind:close="onClosePopup" />
+</view>

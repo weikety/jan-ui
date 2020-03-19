@@ -1,17 +1,26 @@
-<view class="container dark">
-  <jan-upload list="{{ list }}" deletable="{{ true }}" bind:delete="log" bind:before-read="before" bind:after-read="log" max-size="2mb" bind:oversize="log" />
+<scroll-view scroll-y class="scroller">
+  <view class="container dark">
+    <jan-upload list="{{ list }}" deletable="{{ true }}" bind:delete="log" bind:before-read="before" bind:after-read="log" max-size="2mb" bind:oversize="log" />
 
-  <jan-tag bg-color="#ffe1e1" text-color="#000" size="mini" round>哈哈哈</jan-tag>
+    <!-- <jan-tag bg-color="#ffe1e1" text-color="#000" size="mini" round >哈哈哈</jan-tag>
 
-  <jan-loading size="small" direction="column" text="加载中" use-slot color="var(--info-color)" show="{{ maskShow }}">
-    <view style="width: 300px;height: 300px;background: #ffd029;"></view>
-  </jan-loading>
-</view>
+    <jan-loading size="small" direction="column" text="加载中" use-slot color="var(--info-color)" show="{{ maskShow }}" style="margin-top: 44rpx;"> 
+      <view style="width: 300px;height: 300px;background: #ffd029;"></view>
+    </jan-loading> -->
 
-<jan-tabbar active-name="购物车" bind:change="onChange" border customClass="dark">
+    <jan-button bind:click="onClick">哈哈哈</jan-button>
+  </view>
+
+</scroll-view>
+
+<jan-tabbar active-name="购物车" bind:change="onChange" border custom-class="dark">
   <jan-tabbar-item title="首页" name="首页" icon="github-fill" info="22" clickable />
   <jan-tabbar-item name="资讯" icon="github-fill" dot clickable />
   <jan-tabbar-item name="购物车" icon="github-fill" info="22" clickable />
   <jan-tabbar-item name="发布" icon="github-fill" clickable />
   <jan-tabbar-item name="我的" icon="github-fill" clickable />
 </jan-tabbar>
+
+<view class="dark">
+  <jan-action-sheet show="{{ actionShow }}" bind:close="onClick" custom-class="test" />
+</view>

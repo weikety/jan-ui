@@ -4,6 +4,8 @@
     "jan-tag": "../../developing/tag",
     "jan-tabbar-item": "../../src/tabbar-item",
     "jan-tabbar": "../../src/tabbar",
-    "jan-loading": "../../developing/loading"
+    "jan-loading": "../../developing/loading",
+    "jan-button": "../../src/button",
+    "jan-action-sheet": "../../developing/action-sheet"
   }
 }

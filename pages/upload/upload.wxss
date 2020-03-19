@@ -4,7 +4,6 @@
 
 .container {
   width: 100vw;
-  padding: 88rpx 40rpx;
 }
 
 .container-no-padding {
@@ -31,4 +30,13 @@ button {
 
 .jan-tabbar jan-tabbar-item, .jan-tabbar > view {
   flex-basis: 25vw;
+}
+
+.scroller {
+  width: 100vw;
+  height: 100vh;
+}
+
+.test {
+  opacity: 0.1 !important;
 }
