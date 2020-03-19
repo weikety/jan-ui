@@ -3,11 +3,12 @@ const mixinComponent = require("./mixin-component")
 const janComponent = function(options = {}) {
   options = mixinComponent(
     {
+      options: {
+        addGlobalClass: true
+      },
+      externalClasses: ["custom-class", "customClass"],
       properties: {
-        customClass: {
-          type: String,
-          value: ""
-        }
+        customClass: String
       },
       data: {
         _class: "",
