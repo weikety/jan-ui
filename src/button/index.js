@@ -70,7 +70,9 @@ const onStyleChange = function() {
   this.setData({
     _style: line
       ? `border: 2rpx solid ${color};color: ${color};`
-      : `background: ${color}; color: ${isDeepColor ? "#515a6e" : "#fff"};`
+      : `background: ${color}; color: ${
+          isDeepColor ? "#515a6e" : "#fff"
+        } !important;`
   })
 }
 
@@ -87,11 +89,6 @@ options = mixinComponent(options, {
   methods: {
     onClassChange,
     onStyleChange
-  },
-
-  attached() {
-    this.onClassChange()
-    this.onStyleChange()
   }
 })
 

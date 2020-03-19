@@ -53,9 +53,9 @@ view {
   padding: 0;
 }
 
-view,
-text,
-block {
+.jan-styled view,
+.jan-styled text,
+.jan-styled block {
   font-family: PingFang SC, "Helvetica Neue", Arial, sans-serif;
   color: var(--font-color);
 }
