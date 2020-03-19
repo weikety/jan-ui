@@ -17,6 +17,10 @@ function addUnit(value) {
 }
 
 Component({
+  options: {
+    addGlobalClass: true
+  },
+  externalClasses: ["custom-class", "customClass"],
   properties: {
     customClass: String,
     type: {

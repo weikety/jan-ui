@@ -4,11 +4,15 @@
  * 维护人：Meeken
  */
 Component({
+  options: {
+    addGlobalClass: true
+  },
+  externalClasses: ["custom-class", "customClass"],
   properties: {
     customClass: String,
     borderRadius: {
       type: String,
-      value: ''
+      value: ""
     }
   },
 

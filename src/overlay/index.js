@@ -1,9 +1,13 @@
-/** 
+/**
  * 组件：overlay
  * 版本：v0.0.1
  * 维护人：SU
  */
 Component({
+  options: {
+    addGlobalClass: true
+  },
+  externalClasses: ["custom-class", "customClass"],
   properties: {
     customClass: String,
     show: {
@@ -11,7 +15,7 @@ Component({
       value: false
     },
 
-    "zIndex": {
+    zIndex: {
       type: Number,
       value: 100
     },
@@ -19,7 +23,7 @@ Component({
     duration: {
       type: Number,
       value: 400
-    },
+    }
   },
 
   methods: {

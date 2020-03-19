@@ -16,6 +16,10 @@ const getRandomId = function() {
 
 const randomId = getRandomId()
 Component({
+  options: {
+    addGlobalClass: true
+  },
+  externalClasses: ["custom-class", "customClass"],
   properties: {
     customClass: String,
     show: {
