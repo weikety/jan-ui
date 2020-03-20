@@ -51,13 +51,7 @@ view {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-.jan-styled view,
-.jan-styled text,
-.jan-styled block {
   font-family: PingFang SC, "Helvetica Neue", Arial, sans-serif;
-  color: var(--font-color);
 }
 
 .jan-form-style {

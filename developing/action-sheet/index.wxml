@@ -3,8 +3,8 @@
         <view class="jan-action-sheet--node">
             <jan-button size="large">分享</jan-button>
             <jan-button size="large">收藏</jan-button>
-            <view class="jan-action-sheet--divider"></view>
-            <jan-button size="large">取消</jan-button>
+            <!-- <view class="jan-action-sheet--divider"></view> -->
+            <jan-button size="large" type="danger">取消</jan-button>
         </view>
     </jan-popup>
 </view>
