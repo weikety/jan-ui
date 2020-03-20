@@ -12,10 +12,7 @@ const openType = require("../_common/open-type")
 
 let options = janComponent({
   properties: {
-    type: {
-      type: String,
-      value: "black"
-    },
+    type: String,
     size: {
       type: String,
       value: "normal"
@@ -56,7 +53,9 @@ const onClassChange = function() {
   this.setData({
     _class: `jan-button-type-${type} jan-button-size-${size} ${customClass} ${
       round ? "jan-button-round" : ""
-    } ${line ? "jan-button-line" : ""} ${disabled ? "jan-button-disabled" : ""}`
+    } ${line ? "jan-button-line" : ""} ${
+      disabled ? "jan-button-disabled" : ""
+    } ${type ? "" : "jan-button--normal-color"}`
   })
 }
 
@@ -70,12 +69,20 @@ const onStyleChange = function() {
   this.setData({
     _style: line
       ? `border: 2rpx solid ${color};color: ${color};`
-      : `background: ${color}; color: ${isDeepColor ? "#515a6e" : "#fff"} !important;`
+      : `background: ${color}; color: ${
+          isDeepColor ? "#515a6e" : "#fff"
+        } !important;`
   })
 }
 
 /* 当这些属性改变时，动态设置 class */
-options = mixinComponent(options, dataHook(["type", "size"], onClassChange))
+options = mixinComponent(
+  options,
+  dataHook(
+    ["type", "size", "round", "line", "disabled", "customClass"],
+    onClassChange
+  )
+)
 /* 当这些属性改变时，动态设置 style */
 options = mixinComponent(
   options,

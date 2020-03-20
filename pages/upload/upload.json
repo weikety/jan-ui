@@ -5,7 +5,7 @@
     "jan-tabbar-item": "../../src/tabbar-item",
     "jan-tabbar": "../../src/tabbar",
     "jan-loading": "../../developing/loading",
-    "jan-button": "../../src/button",
+    "jan-button": "../../developing/button",
     "jan-action-sheet": "../../developing/action-sheet"
   }
 }
