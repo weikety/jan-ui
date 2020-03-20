@@ -1,5 +1,10 @@
 <view class="jan-action-sheet {{ customClass }}">
     <jan-popup position="bottom" show="{{ show }}" custom-class="{{ customClass }} jan-styled" z-index="{{ zIndex }}" has-padding="{{ false }}" bind:close="onClosePopup">
-        <view class="jan-action-sheet--node">hhh</view>
+        <view class="jan-action-sheet--node">
+            <jan-button size="large">分享</jan-button>
+            <jan-button size="large">收藏</jan-button>
+            <view class="jan-action-sheet--divider"></view>
+            <jan-button size="large">取消</jan-button>
+        </view>
     </jan-popup>
 </view>

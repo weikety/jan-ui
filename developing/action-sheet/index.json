@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "jan-popup": "../popup/index"
+    "jan-popup": "../popup/index",
+    "jan-button": "../button/index"
   }
 }

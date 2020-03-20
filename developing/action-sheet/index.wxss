@@ -1,2 +1,11 @@
 .jan-action-sheet {
 }
+
+.jan-action-sheet--node button {
+  margin: 0;
+}
+
+.jan-action-sheet--divider {
+  width: 100%;
+  height: 22rpx;
+}
