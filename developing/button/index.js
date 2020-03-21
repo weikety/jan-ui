@@ -48,6 +48,8 @@ let options = janComponent({
 
 options = mixinComponent(options, openType())
 
+console.log(options)
+
 const onClassChange = function() {
   const { type, size, round, line, disabled, customClass } = this.properties
   this.setData({

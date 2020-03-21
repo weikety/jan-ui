@@ -2,7 +2,7 @@
     <jan-popup position="bottom" show="{{ show }}" custom-class="jan-action--no-min-height {{ customClass }} jan-styled" z-index="{{ zIndex }}" has-padding="{{ false }}" bind:close="onClosePopup">
         <view class="jan-action-sheet--node {{ safeAreaInsetBottom && isX ? 'jan-ipx-bottom' : '' }}">
             <view wx:for="{{ action }}" wx:key="key" class="jan-action-button">
-                <jan-button size="large" icon="{{ item.icon }}">{{ item.title }}</jan-button>
+                <jan-button size="large" icon="{{ item.icon }}" open-type="{{ item.openType }}" bindgetuserinfo="bindGetUserInfo" bindcontact="bindContact" bindgetphonenumber="bindGetPhoneNumber" binderror="bindError" bindlaunchapp="bindLaunchApp" bindopensetting="bindOpenSetting" lang="{{ lang }}" open-type="{{ openType }}" business-id="{{ businessId }}" session-from="{{ sessionFrom }}" send-message-title="{{ sendMessageTitle }}" send-message-path="{{ sendMessagePath }}" send-message-img="{{ sendMessageImg }}" show-message-card="{{ showMessageCard }}" app-parameter="{{ appParameter }}" aria-label="{{ ariaLabel }}">{{ item.title }}</jan-button>
             </view>
             <view wx:if="{{ showCancel }}" class="jan-action-button">
                 <jan-button size="large" type="{{ cancelType }}" bind:click="onClosePopup">取消</jan-button>

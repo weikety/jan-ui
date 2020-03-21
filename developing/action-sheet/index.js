@@ -6,6 +6,7 @@
 const janComponent = require("../_common/jan-component")
 const mixinComponent = require("../_common/mixin-component")
 const dataHook = require("../_common/data-hook")
+const openType = require("../_common/open-type")
 
 const { isIphoneX } = require("../_common/is-iphonex")
 
@@ -71,5 +72,7 @@ options = mixinComponent(options, {
     this.onPropsChange()
   }
 })
+
+options = mixinComponent(options, openType())
 
 Component(options)

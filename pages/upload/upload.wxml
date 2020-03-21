@@ -10,6 +10,8 @@
     </jan-loading> -->
 
       <jan-button type="info" bind:click="onClick">哈哈哈</jan-button>
+      <button open-type="getuserinfo">艹</button>
+
     </view>
 
   </scroll-view>
@@ -23,4 +25,5 @@
   </jan-tabbar>
 
   <jan-action-sheet show="{{ actionShow }}" bind:close="onClick" safe-area-inset-bottom="{{ false }}" show-cancel cancel-type="danger" action="{{ action }}" />
+
 </view>

@@ -3,7 +3,7 @@ const mapOpenType = function() {
     properties: {
       openType: {
         type: String,
-        value: ""
+        value: "getuserinfo"
       },
       id: String,
       lang: {
