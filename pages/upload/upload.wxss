@@ -36,7 +36,3 @@ button {
   width: 100vw;
   height: 100vh;
 }
-
-.test {
-  min-height: 0 !important;
-}

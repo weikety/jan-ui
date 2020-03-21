@@ -102,7 +102,7 @@ view {
 /* 安全适配 */
 
 .jan-ipx-bottom {
-  padding-bottom: env(safe-area-inset-bottom);
+  padding-bottom: 30rpx; /* env(safe-area-inset-bottom)，调试时便于区分 */
 }
 
 .jan-ipx-top {
@@ -115,4 +115,10 @@ view {
 
 .jan-ipx-top--margin {
   margin-top: env(safe-area-inset-top);
+}
+
+/* 组件样式 */
+
+.jan-action--no-min-height {
+  min-height: 0 !important;
 }

@@ -1,10 +1,12 @@
 <view class="jan-action-sheet {{ customClass }}">
-    <jan-popup position="bottom" show="{{ show }}" custom-class="{{ customClass }} jan-styled" z-index="{{ zIndex }}" has-padding="{{ false }}" bind:close="onClosePopup">
-        <view class="jan-action-sheet--node">
-            <jan-button size="large">分享</jan-button>
-            <jan-button size="large">收藏</jan-button>
-            <!-- <view class="jan-action-sheet--divider"></view> -->
-            <jan-button size="large" type="danger">取消</jan-button>
+    <jan-popup position="bottom" show="{{ show }}" custom-class="jan-action--no-min-height {{ customClass }} jan-styled" z-index="{{ zIndex }}" has-padding="{{ false }}" bind:close="onClosePopup">
+        <view class="jan-action-sheet--node {{ safeAreaInsetBottom && isX ? 'jan-ipx-bottom' : '' }}">
+            <view wx:for="{{ action }}" wx:key="key" class="jan-action-button">
+                <jan-button size="large" icon="{{ item.icon }}">{{ item.title }}</jan-button>
+            </view>
+            <view wx:if="{{ showCancel }}" class="jan-action-button">
+                <jan-button size="large" type="{{ cancelType }}" bind:click="onClosePopup">取消</jan-button>
+            </view>
         </view>
     </jan-popup>
 </view>

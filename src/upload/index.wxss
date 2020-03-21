@@ -77,6 +77,6 @@
   border-radius: 50%;
   position: absolute;
   transform: translate(18rpx, -18rpx);
-  padding-bottom: 4rpx;
+  padding-bottom: 8rpx;
   font-weight: bold !important;
 }

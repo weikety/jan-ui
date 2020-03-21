@@ -1,4 +1,12 @@
-.jan-action-sheet {
+@import "../main.wxss";
+
+.jan-action-sheet--node {
+  box-sizing: border-box;
+}
+
+.jan-action-sheet--node > view.jan-action-button {
+  width: calc(100% - 44rpx);
+  margin: 22rpx;
 }
 
 .jan-action-sheet--node button {
@@ -8,4 +16,8 @@
 .jan-action-sheet--divider {
   width: 100%;
   height: 22rpx;
+}
+
+.jan-action--no-min-height {
+  min-height: 0 !important;
 }

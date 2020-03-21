@@ -7,10 +7,16 @@ const janComponent = require("../_common/jan-component")
 const mixinComponent = require("../_common/mixin-component")
 const dataHook = require("../_common/data-hook")
 
+const { isIphoneX } = require("../_common/is-iphonex")
+
 /* 使用 janComponent 初始化组件配置 */
 
 let options = janComponent({
   properties: {
+    action: {
+      type: Array,
+      value: []
+    },
     show: {
       type: Boolean,
       value: false
@@ -18,11 +24,21 @@ let options = janComponent({
     zIndex: {
       type: Number,
       value: 200
-    }
+    },
+    safeAreaInsetBottom: {
+      type: Boolean,
+      value: true
+    },
+    cancelType: {
+      type: String,
+      value: "info"
+    },
+    showCancel: Boolean
   },
 
   data: {
-    _show: false
+    _show: false,
+    isX: isIphoneX()
   }
 })
 
@@ -55,6 +71,5 @@ options = mixinComponent(options, {
     this.onPropsChange()
   }
 })
-
 
 Component(options)
