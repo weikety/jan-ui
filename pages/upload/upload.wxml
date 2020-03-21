@@ -24,6 +24,6 @@
     <jan-tabbar-item name="我的" icon="github-fill" clickable />
   </jan-tabbar>
 
-  <jan-action-sheet show="{{ actionShow }}" bind:close="onClick" safe-area-inset-bottom="{{ false }}" show-cancel cancel-type="danger" action="{{ action }}" bind:getuserinfo="onChange" bind:click="onChange" close-on-action-click />
+  <jan-action-sheet show="{{ actionShow }}" bind:close="onClick" safe-area-inset-bottom="{{ false }}" show-cancel cancel-type="danger" action="{{ action }}" bind:getuserinfo="onChange" bind:click="onChange" close-on-action-click show-overlay="{{ true }}" />
 
 </view>

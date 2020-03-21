@@ -35,7 +35,11 @@ let options = janComponent({
       value: "info"
     },
     showCancel: Boolean,
-    closeOnActionClick: Boolean
+    closeOnActionClick: Boolean,
+    showOverlay: {
+      type: Boolean,
+      value: true
+    }
   },
 
   data: {

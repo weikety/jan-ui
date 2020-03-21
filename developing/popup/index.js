@@ -37,6 +37,11 @@ let options = janComponent({
     hasPadding: {
       type: Boolean,
       value: true
+    },
+
+    opacity: {
+      type: Number,
+      value: 1
     }
   },
 
