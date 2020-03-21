@@ -34,7 +34,8 @@ let options = janComponent({
       type: String,
       value: "info"
     },
-    showCancel: Boolean
+    showCancel: Boolean,
+    closeOnActionClick: Boolean
   },
 
   data: {
@@ -64,6 +65,17 @@ options = mixinComponent(options, {
 
     onClosePopup() {
       this.triggerEvent("close", null)
+    },
+
+    onTap(e) {
+      const info = e.currentTarget.dataset.info
+      this.triggerEvent("click", info)
+      if (this.properties.closeOnActionClick) {
+        this.setData({
+          _show: false
+        })
+        this.triggerEvent("close", null)
+      }
     }
   },
 

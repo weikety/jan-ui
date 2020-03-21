@@ -10,7 +10,7 @@
     </jan-loading> -->
 
       <jan-button open-type="getUserInfo" type="info" bind:click="onClick">哈哈哈</jan-button>
-      <button open-type="getUserInfo">艹</button>
+      <button>艹</button>
 
     </view>
 
@@ -24,6 +24,6 @@
     <jan-tabbar-item name="我的" icon="github-fill" clickable />
   </jan-tabbar>
 
-  <jan-action-sheet show="{{ actionShow }}" bind:close="onClick" safe-area-inset-bottom="{{ false }}" show-cancel cancel-type="danger" action="{{ action }}" />
+  <jan-action-sheet show="{{ actionShow }}" bind:close="onClick" safe-area-inset-bottom="{{ false }}" show-cancel cancel-type="danger" action="{{ action }}" bind:getuserinfo="onChange" bind:click="onChange" close-on-action-click />
 
 </view>
