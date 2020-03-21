@@ -3,7 +3,7 @@ const mapOpenType = function() {
     properties: {
       openType: {
         type: String,
-        value: "getuserinfo"
+        value: ""
       },
       id: String,
       lang: {
@@ -20,6 +20,10 @@ const mapOpenType = function() {
       ariaLabel: String
     },
     methods: {
+      $emit(type, e) {
+        this.triggerEvent(type, e)
+      },
+
       bindGetUserInfo(event) {
         this.$emit("getuserinfo", event.detail)
       },
