@@ -1,4 +1,4 @@
-<view class="dark">
+<view class="light">
   <scroll-view scroll-y class="scroller">
     <view class="container">
       <jan-upload list="{{ list }}" deletable="{{ true }}" bind:delete="log" bind:before-read="before" bind:after-read="log" max-size="2mb" bind:oversize="log" />
