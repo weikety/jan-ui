@@ -23,6 +23,11 @@ Component({
     duration: {
       type: Number,
       value: 400
+    },
+
+    opacity: {
+      type: Number,
+      value: 1
     }
   },
 
