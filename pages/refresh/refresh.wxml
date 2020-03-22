@@ -1,3 +1,5 @@
-<jan-refresher custom-class="yoo">
-  <view class="test-block"></view>
-</jan-refresher>
+<view class="container dark">
+  <jan-refresher custom-class="yoo" bind:refresh="onRefresh" use-slot-style="{{ true }}" triggered="{{ refresherState }}" bind:pulling="onPulling">
+    <view class="test-block"></view>
+  </jan-refresher>
+</view>
