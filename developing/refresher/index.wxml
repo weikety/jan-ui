@@ -1,3 +1,4 @@
-<view class="jan-refresher {{ _class }}">
+<scroll-view class="jan-refresher {{ customClass }}" scroll-y enable-back-to-top refresher-enabled>
     <slot></slot>
-</view>
+    <view style="width:2rpx;height:2rpx;bottom:-2rpx;position:absolute;" />
+</scroll-view>
