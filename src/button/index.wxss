@@ -156,3 +156,7 @@ button.jan-button:not([size="mini"]) {
   color: var(--font-color) !important;
   opacity: 0.8;
 }
+
+.jan-button-slot {
+  display: inline;
+}

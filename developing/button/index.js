@@ -1,6 +1,6 @@
 /**
  * 组件：button
- * 版本：v0.0.4
+ * 版本：v0.0.5
  * 维护人：Meeken
  */
 const janComponent = require("../_common/jan-component")

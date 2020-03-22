@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "jan-button": "../../developing/button",
+    "jan-button": "../../src/button",
     "jan-icon": "../../developing/icon",
     "jan-cell": "../../developing/cell",
     "jan-cell-group": "../../developing/cell-group",

@@ -1,6 +1,8 @@
 <button class="jan-button {{ _class }}" style="{{ _style }}{{ type ? '' : 'color: var(--font-color);' }}" disabled="{{ disabled }}" bindgetuserinfo="bindGetUserInfo" bindcontact="bindContact" bindgetphonenumber="bindGetPhoneNumber" binderror="bindError" bindlaunchapp="bindLaunchApp" bindopensetting="bindOpenSetting" lang="{{ lang }}" open-type="{{ openType }}" business-id="{{ businessId }}" session-from="{{ sessionFrom }}" send-message-title="{{ sendMessageTitle }}" send-message-path="{{ sendMessagePath }}" send-message-img="{{ sendMessageImg }}" show-message-card="{{ showMessageCard }}" app-parameter="{{ appParameter }}" aria-label="{{ ariaLabel }}" bindtap="onTap">
-  <view class="content">
+  <view class="jan-button-content">
     <jan-icon wx:if="{{ icon }}" name="{{ icon }}" style="margin-right: 8rpx;" />
-    <slot></slot>
+    <view class="jan-button-slot">
+      <slot></slot>
+    </view>
   </view>
 </button>
