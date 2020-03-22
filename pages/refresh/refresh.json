@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "jan-refresher": "../../developing/refresher"
+  }
+}

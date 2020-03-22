@@ -1,0 +1,3 @@
+<view class="jan-refresher {{ _class }}">
+    <slot></slot>
+</view>

@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/form/form",
-    "pages/upload/upload"
+    "pages/upload/upload",
+    "pages/refresh/refresh"
   ],
   "window": {
     "backgroundTextStyle": "light",
