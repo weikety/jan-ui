@@ -89,7 +89,6 @@ options = mixinComponent(
   dataHook(["color", "customClass"], onStyleChange)
 )
 
-/* 在组件生命周期中初始化样式 */
 options = mixinComponent(options, {
   methods: {
     onClassChange,
