@@ -106,11 +106,11 @@ view {
 }
 
 .jan-ipx-top {
-  padding-bottom: env(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
 }
 
 .jan-ipx-bottom--margin {
-  margin-top: env(safe-area-inset-bottom);
+  margin-bottom: env(safe-area-inset-bottom);
 }
 
 .jan-ipx-top--margin {
