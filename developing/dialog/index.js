@@ -11,23 +11,42 @@ const dataHook = require("../_common/data-hook")
 
 let options = janComponent({
   properties: {
-    title: String
+    title: String,
+    show: Boolean,
+    autoClose: {
+      type: Boolean,
+      value: true
+    }
+  },
+
+  data: {
+    _show: false
   }
 })
 
 const onPropsChange = function() {
-  const { title } = this.properties
-  /**
-   * _class 和 _style 是组件内部维护的，
-   * 保存类名和样式的 data
-   */
+  const { title, show } = this.properties
   this.setData({
-    _class: `新的类名`
+    _show: show || false
   })
 }
 
 /* 使用 dataHook 来监听 props 或 data 的变化 */
 
-options = mixinComponent(options, dataHook(["title"], onPropsChange))
+options = mixinComponent(options, dataHook(["title", "show"], onPropsChange))
+
+options = mixinComponent(options, {
+  methods: {
+    onClose() {
+      if (this.properties.autoClose) {
+        this.setData({
+          _show: false
+        })
+      }
+      this.triggerEvent("close")
+    },
+    onPropsChange
+  }
+})
 
 Component(options)

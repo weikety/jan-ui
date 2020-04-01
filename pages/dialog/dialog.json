@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "jan-dialog": "../../developing/dialog/index"
+    "jan-dialog": "../../developing/dialog/index",
+    "jan-button": "../../developing/button/index"
   }
 }

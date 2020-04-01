@@ -1,3 +1,4 @@
 <view class="container container-no-padding dark">
-  <jan-dialog />
+  <jan-button bind:click="onShow">弹出</jan-button>
+  <jan-dialog show="{{ show }}">哈哈哈</jan-dialog>
 </view>

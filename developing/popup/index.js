@@ -42,7 +42,9 @@ let options = janComponent({
     opacity: {
       type: Number,
       value: 1
-    }
+    },
+
+    customStyle: String
   },
 
   methods: {

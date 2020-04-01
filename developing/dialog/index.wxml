@@ -1,1 +1,9 @@
-<view class="jan-dialog--wrapper {{ customClass }}">Hello, jan!</view>
+<view class="jan-dialog--wrapper {{ customClass }}">
+  <jan-popup
+    show="{{ _show }}"
+    bind:close="onClose"
+    custom-style="border-radius: 20rpx;overflow: hidden;"
+  >
+    <slot></slot>
+  </jan-popup>
+</view>
