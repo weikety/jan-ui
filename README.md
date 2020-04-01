@@ -57,6 +57,7 @@ Jan UI 是一个微信小程序 UI 组件库，由两名 [兽人爱好者](https
 | 18  | 加载 Loading          | Meeken | 2020/03/19 | v0.0.1 |
 | 19  | 上拉菜单 ActionSheet  | Meeken | 2020/03/21 | v0.0.1 |
 | 20  | 下拉刷新 Refresher    | Meeken | 2020/03/22 | v0.0.1 |
+| 21  | 弹出框 Dialog         | Meeken | 2020/04/01 | v0.0.1 |
 
 ## 加入我们
 
