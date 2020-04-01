@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/form/form",
     "pages/upload/upload",
-    "pages/refresh/refresh"
+    "pages/refresh/refresh",
+    "pages/dialog/dialog"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -70,9 +70,16 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "pages/refresh/refresh",
+					"id": 2,
+					"name": "refresh 调试",
 					"pathName": "pages/refresh/refresh",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "dialog 调试",
+					"pathName": "pages/dialog/dialog",
 					"query": "",
 					"scene": null
 				}

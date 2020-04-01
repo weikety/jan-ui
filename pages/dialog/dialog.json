@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "jan-dialog": "../../developing/dialog/index"
+  }
+}

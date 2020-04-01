@@ -1,0 +1,1 @@
+<view class="jan-dialog--wrapper {{ customClass }}">Hello, jan!</view>
