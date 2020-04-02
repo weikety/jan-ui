@@ -15,6 +15,6 @@ page, view {
   background-color: var(--wrapper-color, #fff);
   font-size: var(--font-size-normal, 24rpx);
   font-family: PingFang SC, 'Helvetica Neue', Arial, sans-serif;
-  color: var(--font-color);
+  color: var(--font-color, #515151);
   line-height: 1.5;
 }
