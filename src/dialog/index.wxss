@@ -33,5 +33,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  transform: translateY(10rpx);
+  border-top: 1rpx solid var(--border-color);
+  /* transform: translateY(10rpx); */
+}
+
+.button-bar button {
+  border-radius: 0 !important;
 }

@@ -10,8 +10,8 @@
         <slot></slot>
       </view>
       <view wx:if="{{ showConfirm || showCancel }}" class="button-bar">
-        <jan-button wx:if="{{ showConfirm }}" size="large" style="width: 100%;" color="{{ confirmColor }}">{{ confirmText }}</jan-button>
-        <jan-button wx:if="{{ showCancel }}" size="large" style="width: 100%;" color="{{ cancelColor }}" bind:click="onCancel">{{ cancelText }}</jan-button>
+        <jan-button wx:if="{{ showConfirm }}" type="ghost" size="large" style="width: 100%;" color="{{ confirmColor }}">{{ confirmText }}</jan-button>
+        <jan-button wx:if="{{ showCancel }}" type="ghost" size="large" style="width: 100%;" color="{{ cancelColor }}" bind:click="onCancel">{{ cancelText }}</jan-button>
       </view>
     </view>
   </jan-popup>
