@@ -1,0 +1,73 @@
+.jan-notify--node {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  color: #fff;
+  font-size: var(--font-size-normal);
+  min-height: var(--font-size-normal);
+  width: 100vw;
+  padding: 22rpx;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+
+  background-color: var(--primary-color);
+}
+
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+}
+
+@keyframes slideOutUp {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.show {
+  animation: slideInDown 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.hide {
+  animation: slideOutUp 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.jan-notify--type-info {
+  background-color: var(--info-color);
+}
+
+.jan-notify--type-danger {
+  background-color: var(--danger-color);
+}
+
+.jan-notify--type-primary {
+  background-color: var(--primary-color);
+}
+
+.jan-notify--type-warning {
+  background-color: var(--warning-color);
+}

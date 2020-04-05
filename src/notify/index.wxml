@@ -1,0 +1,6 @@
+<view class="jan-notify--node {{ customClass }} {{ animate }} jan-notify--type-{{ type }} {{ safeAreaInsetTop ? 'jan-ipx-top--margin' : '' }}" style="z-index: {{ zIndex }};" bindtap="onTap">
+    <view wx:if="{{ !useSlot }}">{{ text || '' }}</view>
+    <view wx:else>
+        <slot></slot>
+    </view>
+</view>
