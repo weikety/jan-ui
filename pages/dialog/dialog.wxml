@@ -4,4 +4,4 @@
 
   <jan-dialog show="{{ show }}" title="请注意" auto-close>您的废旧手机都可以换一个不锈钢脸盆！</jan-dialog>
 </view>
-<jan-notify show="{{ notifyShow }}" text="hhh" type="" bind:hide="onHide_" />
+<jan-notify show="{{ notifyShow }}" use-slot type="" bind:hide="onHide_">您的废旧手机都可以换一个不锈钢脸盆！</jan-notify>
