@@ -1,7 +1,9 @@
 {
+  "navigationStyle": "custom",
   "usingComponents": {
     "jan-dialog": "../../developing/dialog/index",
     "jan-button": "../../developing/button/index",
-    "jan-notify": "../../developing/notify/index"
+    "jan-notify": "../../developing/notify/index",
+    "jan-navbar": "../../developing/navbar/index"
   }
 }
