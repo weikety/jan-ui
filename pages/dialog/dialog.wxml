@@ -1,7 +1,12 @@
-<view class="container container-no-padding">
-  <jan-button bind:click="onShow">弹出</jan-button>
-  <jan-button bind:click="onShow">显示 toast</jan-button>
+<view class="dark">
+  <jan-navbar is-fixed="{{ true }}">我好棒棒</jan-navbar>
+  <jan-navbar is-fixed="{{ false }}" custom-style="visibility: hidden;">榴莲味的蚯蚓干</jan-navbar>
 
-  <jan-dialog show="{{ show }}" title="请注意" auto-close>您的废旧手机都可以换一个不锈钢脸盆！</jan-dialog>
+  <view class="container container-no-padding">
+    <jan-button bind:click="onShow">弹出</jan-button>
+    <jan-button bind:click="onShow">显示 toast</jan-button>
+
+    <jan-dialog show="{{ show }}" title="请注意" auto-close>您的废旧手机都可以换一个不锈钢脸盆！</jan-dialog>
+  </view>
+  <jan-notify show="{{ notifyShow }}" text="hhh" type="" bind:hide="onHide_" />
 </view>
-<jan-notify show="{{ notifyShow }}" text="hhh" type="" bind:hide="onHide_" />

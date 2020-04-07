@@ -1,0 +1,5 @@
+<view class="jan-index--nav-bar" style="{{ navigatorBarStyle }}{{ color ? 'color: ' + color + ';' : '' }}{{ backgroundColor ? 'background:' + backgroundColor + ';' : '' }}{{ customStyle }}{{ _fixed }};z-index:{{ zIndex }}">
+    <view class="jan-transition-bar" style="{{ nodeStyle }}">
+        <slot></slot>
+    </view>
+</view>

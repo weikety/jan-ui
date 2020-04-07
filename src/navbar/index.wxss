@@ -1,0 +1,9 @@
+.jan-index--nav-bar {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--font-color);
+}
+
+.jan-transition-bar {
+  transition: all 0.3s;
+}
