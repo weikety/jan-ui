@@ -73,7 +73,6 @@ options = mixinComponent(options, {
     onPulling(e) {
       const dy = e.detail.dy,
         threshold = this.properties.threshold
-      console.log(dy / threshold)
       this.setData({
         _process: dy / threshold,
         _stateCode: 1,
