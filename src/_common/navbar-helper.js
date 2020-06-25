@@ -1,7 +1,7 @@
 const getMenuButtonStyle = function () {
   /* 模拟胶囊键的样式 */
   const menuButton = wx.getMenuButtonBoundingClientRect()
-  return `width: ${menuButton.height}px;height: ${menuButton.height};top: ${menuButton.top}px;left: calc(100vw - ${menuButton.left}px - ${menuButton.width}px);`
+  return `width: ${menuButton.height}px;height: ${menuButton.height}px;top: ${menuButton.top}px;left: calc(100vw - ${menuButton.left}px - ${menuButton.width}px);`
 }
 
 const getCustomNavigationBarStyle = function () {
