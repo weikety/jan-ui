@@ -10,7 +10,7 @@ const getCustomNavigationBarStyle = function () {
     menuButton = wx.getMenuButtonBoundingClientRect()
   return `width: 100%;height: calc(${menuButton.top}px + ${
     menuButton.height
-  }px + 8px);padding-top: ${
+  }px + 12px);padding-top: ${
     menuButton.top
   }px;display: flex;flex-direction: row;justify-content: ${
     system.includes("iOS") ? "center" : "flex-start"
